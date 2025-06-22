@@ -53,11 +53,6 @@ export function Footer() {
                   Flow Inc
                 </span>
               </Link>
-              <p className="text-muted-foreground mb-6 max-w-sm">
-                Transforming businesses through AI-native solutions. We empower
-                organizations with cutting-edge artificial intelligence to drive
-                innovation and growth.
-              </p>
 
               <div className="space-y-2 mb-6">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
