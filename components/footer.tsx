@@ -1,13 +1,17 @@
-import Link from 'next/link';
-import { Sparkles, Mail, MapPin, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import Link from 'next/link'
+import { Waves, Mail, MapPin, Phone } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/flowinc', icon: '𝕏' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/flow-inc', icon: 'in' },
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/flow-inc',
+    icon: 'in',
+  },
   { name: 'Instagram', href: 'https://instagram.com/flowinc', icon: '📷' },
-];
+]
 
 const footerLinks = {
   Services: [
@@ -33,7 +37,7 @@ const footerLinks = {
     { name: 'Terms of Service', href: '/terms' },
     { name: 'IR Information', href: '/ir/announcement' },
   ],
-};
+}
 
 export function Footer() {
   return (
@@ -44,16 +48,17 @@ export function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <Link href="/" className="flex items-center space-x-2 group mb-4">
-                <Sparkles className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
+                <Waves className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
                 <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                   Flow Inc
                 </span>
               </Link>
               <p className="text-muted-foreground mb-6 max-w-sm">
-                Transforming businesses through AI-native solutions. We empower organizations 
-                with cutting-edge artificial intelligence to drive innovation and growth.
+                Transforming businesses through AI-native solutions. We empower
+                organizations with cutting-edge artificial intelligence to drive
+                innovation and growth.
               </p>
-              
+
               <div className="space-y-2 mb-6">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4" />
@@ -78,7 +83,11 @@ export function Footer() {
                     asChild
                     className="w-9 h-9 p-0"
                   >
-                    <Link href={social.href} target="_blank" rel="noopener noreferrer">
+                    <Link
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <span className="text-sm font-medium">{social.icon}</span>
                       <span className="sr-only">{social.name}</span>
                     </Link>
@@ -120,5 +129,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
