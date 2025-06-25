@@ -1,28 +1,28 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Badge } from '@/components/ui/badge';
-import { Label } from '@/components/ui/label';
-import { toast } from 'sonner';
+import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as z from 'zod'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Badge } from '@/components/ui/badge'
+import { Label } from '@/components/ui/label'
+import { toast } from 'sonner'
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Please enter a valid email address'),
   company: z.string().min(2, 'Company name is required'),
   message: z.string().min(10, 'Message must be at least 10 characters'),
-});
+})
 
-type ContactForm = z.infer<typeof contactSchema>;
+type ContactForm = z.infer<typeof contactSchema>
 
 const contactInfo = [
   {
@@ -43,11 +43,11 @@ const contactInfo = [
     content: 'San Francisco, CA',
     description: 'Come say hello at our HQ',
   },
-];
+]
 
 export function ContactSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const {
     register,
@@ -56,19 +56,19 @@ export function ContactSection() {
     reset,
   } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema),
-  });
+  })
 
   const onSubmit = async (data: ContactForm) => {
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast.success('Message sent successfully! We\'ll get back to you soon.');
-      reset();
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+
+      toast.success("Message sent successfully! We'll get back to you soon.")
+      reset()
     } catch (error) {
-      toast.error('Failed to send message. Please try again.');
+      toast.error('Failed to send message. Please try again.')
     }
-  };
+  }
 
   return (
     <section id="contact" ref={ref} className="py-20">
@@ -79,13 +79,15 @@ export function ContactSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4">Get In Touch</Badge>
+          <Badge variant="outline" className="mb-4">
+            Get In Touch
+          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Business?
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Let's discuss how Flow Inc can help you harness the power of AI to drive 
-            innovation and growth in your organization.
+            Let's discuss how Flow Inc. can help you harness the power of AI to
+            drive innovation and growth in your organization.
           </p>
         </motion.div>
 
@@ -98,10 +100,12 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-4">Let's Start a Conversation</h3>
+              <h3 className="text-2xl font-bold mb-4">
+                Let's Start a Conversation
+              </h3>
               <p className="text-muted-foreground mb-8">
-                Whether you're looking to implement AI solutions, train your team, 
-                or transform your business processes, we're here to help.
+                Whether you're looking to implement AI solutions, train your
+                team, or transform your business processes, we're here to help.
               </p>
             </div>
 
@@ -110,7 +114,9 @@ export function ContactSection() {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  animate={
+                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  }
                   transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
@@ -121,8 +127,12 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">{info.title}</h4>
-                    <p className="text-primary font-medium mb-1">{info.content}</p>
-                    <p className="text-sm text-muted-foreground">{info.description}</p>
+                    <p className="text-primary font-medium mb-1">
+                      {info.content}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {info.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -151,7 +161,9 @@ export function ContactSection() {
                         className={errors.name ? 'border-destructive' : ''}
                       />
                       {errors.name && (
-                        <p className="text-sm text-destructive">{errors.name.message}</p>
+                        <p className="text-sm text-destructive">
+                          {errors.name.message}
+                        </p>
                       )}
                     </div>
                     <div className="space-y-2">
@@ -164,7 +176,9 @@ export function ContactSection() {
                         className={errors.email ? 'border-destructive' : ''}
                       />
                       {errors.email && (
-                        <p className="text-sm text-destructive">{errors.email.message}</p>
+                        <p className="text-sm text-destructive">
+                          {errors.email.message}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -178,7 +192,9 @@ export function ContactSection() {
                       className={errors.company ? 'border-destructive' : ''}
                     />
                     {errors.company && (
-                      <p className="text-sm text-destructive">{errors.company.message}</p>
+                      <p className="text-sm text-destructive">
+                        {errors.company.message}
+                      </p>
                     )}
                   </div>
 
@@ -192,11 +208,17 @@ export function ContactSection() {
                       className={errors.message ? 'border-destructive' : ''}
                     />
                     {errors.message && (
-                      <p className="text-sm text-destructive">{errors.message.message}</p>
+                      <p className="text-sm text-destructive">
+                        {errors.message.message}
+                      </p>
                     )}
                   </div>
 
-                  <Button type="submit" disabled={isSubmitting} className="w-full">
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full"
+                  >
                     {isSubmitting ? (
                       'Sending...'
                     ) : (
@@ -213,5 +235,5 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

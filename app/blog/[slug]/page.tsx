@@ -1,18 +1,19 @@
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { ArrowLeft, Calendar, Clock, User, Tag, Share2 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Separator } from '@/components/ui/separator'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 // Mock blog posts data (in a real app, this would come from a CMS or database)
 const blogPosts = [
   {
     id: 'getting-started-with-llm-agents',
     title: 'Getting Started with LLM Agents: A Comprehensive Guide',
-    excerpt: 'Learn how to build and deploy intelligent agents using Large Language Models for business automation.',
+    excerpt:
+      'Learn how to build and deploy intelligent agents using Large Language Models for business automation.',
     content: `
 # Getting Started with LLM Agents: A Comprehensive Guide
 
@@ -249,35 +250,39 @@ The future of AI is agentic, and by mastering these technologies today, you'll b
 
 ---
 
-*Want to learn more about building LLM agents? Contact Flow Inc for personalized training and consulting services.*
+*Want to learn more about building LLM agents? Contact Flow Inc. for personalized training and consulting services.*
 `,
     author: 'Alex Thompson',
-    authorBio: 'CEO & Co-Founder at Flow Inc. Former AI Research Director at Google.',
-    authorAvatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
+    authorBio:
+      'CEO & Co-Founder at Flow Inc.. Former AI Research Director at Google.',
+    authorAvatar:
+      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
     date: '2024-01-15',
     readTime: '8 min read',
     tags: ['LLM', 'Agents', 'AI Development'],
   },
   // Add other blog posts here...
-];
+]
 
 interface BlogPostPageProps {
   params: {
-    slug: string;
-  };
+    slug: string
+  }
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = blogPosts.find(p => p.id === params.slug);
-  
+export async function generateMetadata({
+  params,
+}: BlogPostPageProps): Promise<Metadata> {
+  const post = blogPosts.find((p) => p.id === params.slug)
+
   if (!post) {
     return {
-      title: 'Post Not Found - Flow Inc Blog',
-    };
+      title: 'Post Not Found - Flow Inc. Blog',
+    }
   }
 
   return {
-    title: `${post.title} - Flow Inc Blog`,
+    title: `${post.title} - Flow Inc. Blog`,
     description: post.excerpt,
     authors: [{ name: post.author }],
     openGraph: {
@@ -287,14 +292,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       publishedTime: post.date,
       authors: [post.author],
     },
-  };
+  }
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogPosts.find(p => p.id === params.slug);
+  const post = blogPosts.find((p) => p.id === params.slug)
 
   if (!post) {
-    notFound();
+    notFound()
   }
 
   return (
@@ -325,21 +330,24 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             {post.title}
           </h1>
 
-          <p className="text-xl text-muted-foreground mb-8">
-            {post.excerpt}
-          </p>
+          <p className="text-xl text-muted-foreground mb-8">{post.excerpt}</p>
 
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center space-x-4">
               <Avatar>
                 <AvatarImage src={post.authorAvatar} alt={post.author} />
                 <AvatarFallback>
-                  {post.author.split(' ').map(n => n[0]).join('')}
+                  {post.author
+                    .split(' ')
+                    .map((n) => n[0])
+                    .join('')}
                 </AvatarFallback>
               </Avatar>
               <div>
                 <div className="font-semibold">{post.author}</div>
-                <div className="text-sm text-muted-foreground">{post.authorBio}</div>
+                <div className="text-sm text-muted-foreground">
+                  {post.authorBio}
+                </div>
               </div>
             </div>
 
@@ -365,7 +373,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         {/* Article Content */}
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>') }} />
+            <div
+              dangerouslySetInnerHTML={{
+                __html: post.content.replace(/\n/g, '<br/>'),
+              }}
+            />
           </div>
         </div>
 
@@ -377,15 +389,22 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               <Avatar className="w-16 h-16">
                 <AvatarImage src={post.authorAvatar} alt={post.author} />
                 <AvatarFallback className="text-lg">
-                  {post.author.split(' ').map(n => n[0]).join('')}
+                  {post.author
+                    .split(' ')
+                    .map((n) => n[0])
+                    .join('')}
                 </AvatarFallback>
               </Avatar>
               <div>
                 <h3 className="font-bold text-lg mb-2">About {post.author}</h3>
                 <p className="text-muted-foreground mb-4">{post.authorBio}</p>
                 <div className="flex space-x-2">
-                  <Button variant="outline" size="sm">Follow</Button>
-                  <Button variant="ghost" size="sm">View Profile</Button>
+                  <Button variant="outline" size="sm">
+                    Follow
+                  </Button>
+                  <Button variant="ghost" size="sm">
+                    View Profile
+                  </Button>
                 </div>
               </div>
             </div>
@@ -393,5 +412,5 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </article>
     </div>
-  );
+  )
 }

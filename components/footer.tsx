@@ -50,7 +50,7 @@ export function Footer() {
               <Link href="/" className="flex items-center space-x-2 group mb-4">
                 <Waves className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
                 <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                  Flow Inc
+                  Flow Inc.
                 </span>
               </Link>
 
@@ -116,7 +116,7 @@ export function Footer() {
 
         <div className="py-6 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Flow Inc. All rights reserved.
+            © {new Date().getFullYear()} Flow Inc.. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground mt-2 sm:mt-0">
             Built with ❤️ using Next.js and AI

@@ -1,21 +1,23 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Metadata } from 'next'
+import Link from 'next/link'
+import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-  title: 'Blog - Flow Inc',
-  description: 'Latest insights, tutorials, and news about AI development, machine learning, and business transformation.',
-};
+  title: 'Blog - Flow Inc.',
+  description:
+    'Latest insights, tutorials, and news about AI development, machine learning, and business transformation.',
+}
 
 // Mock blog posts data
 const blogPosts = [
   {
     id: 'getting-started-with-llm-agents',
     title: 'Getting Started with LLM Agents: A Comprehensive Guide',
-    excerpt: 'Learn how to build and deploy intelligent agents using Large Language Models for business automation.',
+    excerpt:
+      'Learn how to build and deploy intelligent agents using Large Language Models for business automation.',
     content: 'This is a comprehensive guide to building LLM agents...',
     author: 'Alex Thompson',
     date: '2024-01-15',
@@ -26,8 +28,10 @@ const blogPosts = [
   {
     id: 'rag-systems-best-practices',
     title: 'RAG Systems: Best Practices for Enterprise Implementation',
-    excerpt: 'Discover proven strategies for implementing Retrieval-Augmented Generation systems in enterprise environments.',
-    content: 'RAG systems have become essential for enterprise AI applications...',
+    excerpt:
+      'Discover proven strategies for implementing Retrieval-Augmented Generation systems in enterprise environments.',
+    content:
+      'RAG systems have become essential for enterprise AI applications...',
     author: 'Sarah Martinez',
     date: '2024-01-10',
     readTime: '12 min read',
@@ -37,8 +41,10 @@ const blogPosts = [
   {
     id: 'ai-training-roi-measurement',
     title: 'Measuring ROI from AI Training Programs',
-    excerpt: 'How to quantify the impact of AI education initiatives and demonstrate value to stakeholders.',
-    content: 'Measuring the ROI of AI training programs requires careful planning...',
+    excerpt:
+      'How to quantify the impact of AI education initiatives and demonstrate value to stakeholders.',
+    content:
+      'Measuring the ROI of AI training programs requires careful planning...',
     author: 'Rachel Kim',
     date: '2024-01-05',
     readTime: '6 min read',
@@ -48,7 +54,8 @@ const blogPosts = [
   {
     id: 'future-of-ai-consulting',
     title: 'The Future of AI Consulting: Trends and Predictions',
-    excerpt: 'Explore the evolving landscape of AI consulting and what businesses should expect in the coming years.',
+    excerpt:
+      'Explore the evolving landscape of AI consulting and what businesses should expect in the coming years.',
     content: 'The AI consulting landscape is rapidly evolving...',
     author: 'David Chen',
     date: '2024-01-01',
@@ -56,11 +63,11 @@ const blogPosts = [
     tags: ['Consulting', 'Trends', 'Future'],
     featured: false,
   },
-];
+]
 
 export default function BlogPage() {
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const featuredPost = blogPosts.find((post) => post.featured)
+  const regularPosts = blogPosts.filter((post) => !post.featured)
 
   return (
     <div className="min-h-screen pt-16">
@@ -69,11 +76,11 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Flow Inc Blog
+              Flow Inc. Blog
             </h1>
             <p className="text-xl text-muted-foreground">
-              Insights, tutorials, and the latest news from the world of AI development 
-              and business transformation.
+              Insights, tutorials, and the latest news from the world of AI
+              development and business transformation.
             </p>
           </div>
         </div>
@@ -91,7 +98,9 @@ export default function BlogPage() {
                 <div className="md:w-1/3 bg-gradient-to-br from-primary/10 to-emerald-500/10 p-8 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-2xl font-bold text-primary">AI</span>
+                      <span className="text-2xl font-bold text-primary">
+                        AI
+                      </span>
                     </div>
                     <Badge variant="outline">Featured</Badge>
                   </div>
@@ -100,7 +109,11 @@ export default function BlogPage() {
                   <CardHeader>
                     <div className="flex flex-wrap gap-2 mb-2">
                       {featuredPost.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="text-xs">
+                        <Badge
+                          key={tag}
+                          variant="secondary"
+                          className="text-xs"
+                        >
                           <Tag className="w-3 h-3 mr-1" />
                           {tag}
                         </Badge>
@@ -147,7 +160,10 @@ export default function BlogPage() {
           <h2 className="text-2xl font-bold mb-8">Latest Posts</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post) => (
-              <Card key={post.id} className="hover:shadow-lg transition-shadow h-full flex flex-col">
+              <Card
+                key={post.id}
+                className="hover:shadow-lg transition-shadow h-full flex flex-col"
+              >
                 <CardHeader>
                   <div className="flex flex-wrap gap-2 mb-2">
                     {post.tags.slice(0, 2).map((tag) => (
@@ -163,9 +179,7 @@ export default function BlogPage() {
                     )}
                   </div>
                   <h3 className="text-xl font-bold mb-2 hover:text-primary transition-colors">
-                    <Link href={`/blog/${post.id}`}>
-                      {post.title}
-                    </Link>
+                    <Link href={`/blog/${post.id}`}>{post.title}</Link>
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {post.excerpt}
@@ -198,5 +212,5 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
