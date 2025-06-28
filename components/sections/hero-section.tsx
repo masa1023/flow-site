@@ -1,24 +1,24 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap, Target } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion'
+import { ArrowRight, Sparkles, Zap, Target } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 
 export function HeroSection() {
   const handleScrollToContact = () => {
-    const element = document.querySelector('#contact');
+    const element = document.querySelector('#contact')
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' })
     }
-  };
+  }
 
   const handleScrollToServices = () => {
-    const element = document.querySelector('#services');
+    const element = document.querySelector('#services')
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' })
     }
-  };
+  }
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
@@ -64,9 +64,10 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Flow Inc delivers cutting-edge AI development, comprehensive training programs, 
-            and strategic consulting to help businesses harness the power of artificial intelligence 
-            for unprecedented growth and innovation.
+            Flow Inc. delivers cutting-edge AI development, comprehensive
+            training programs, and strategic consulting to help businesses
+            harness the power of artificial intelligence for unprecedented
+            growth and innovation.
           </motion.p>
 
           {/* Feature Pills */}
@@ -86,7 +87,9 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
               <Sparkles className="w-4 h-4 text-purple-500" />
-              <span className="text-sm font-medium">Digital Transformation</span>
+              <span className="text-sm font-medium">
+                Digital Transformation
+              </span>
             </div>
           </motion.div>
 
@@ -124,19 +127,29 @@ export function HeroSection() {
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              <div className="text-sm text-muted-foreground">
+                Projects Delivered
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-500 mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-emerald-500 mb-2">
+                98%
+              </div>
+              <div className="text-sm text-muted-foreground">
+                Client Satisfaction
+              </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-500 mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Support Available</div>
+              <div className="text-3xl font-bold text-purple-500 mb-2">
+                24/7
+              </div>
+              <div className="text-sm text-muted-foreground">
+                Support Available
+              </div>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  );
+  )
 }
