@@ -3,7 +3,12 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Linkedin, Twitter, Github } from 'lucide-react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faLinkedin,
+  faXTwitter,
+} from '@fortawesome/free-brands-svg-icons'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -17,9 +22,9 @@ const team = [
     avatar: '/images/avatar/masa.jpg',
     skills: ['AI Strategy', 'Machine Learning', 'Leadership'],
     social: {
-      linkedin: '#',
-      twitter: '#',
       github: '#',
+      x: '#',
+      linkedin: '#',
     },
   },
   {
@@ -30,9 +35,9 @@ const team = [
       'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
     skills: ['LLM Development', 'System Architecture', 'DevOps'],
     social: {
-      linkedin: '#',
-      twitter: '#',
       github: '#',
+      x: '#',
+      linkedin: '#',
     },
   },
   {
@@ -43,9 +48,9 @@ const team = [
       'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
     skills: ['Research', 'Deep Learning', 'Computer Vision'],
     social: {
-      linkedin: '#',
-      twitter: '#',
       github: '#',
+      x: '#',
+      linkedin: '#',
     },
   },
   {
@@ -56,9 +61,9 @@ const team = [
       'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
     skills: ['Business Strategy', 'Client Relations', 'Market Research'],
     social: {
-      linkedin: '#',
-      twitter: '#',
       github: '#',
+      x: '#',
+      linkedin: '#',
     },
   },
 ]
@@ -134,29 +139,35 @@ export function TeamSection() {
                   <div className="flex justify-center space-x-2">
                     <Button variant="ghost" size="sm" asChild>
                       <a
-                        href={member.social.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Linkedin className="w-4 h-4" />
-                      </a>
-                    </Button>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a
-                        href={member.social.twitter}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Twitter className="w-4 h-4" />
-                      </a>
-                    </Button>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a
                         href={member.social.github}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Github className="w-4 h-4" />
+                        <div className="h-4 w-4">
+                          <FontAwesomeIcon icon={faGithub} />
+                        </div>
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="sm" asChild>
+                      <a
+                        href={member.social.x}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="h-4 w-4">
+                          <FontAwesomeIcon icon={faXTwitter} />
+                        </div>
+                      </a>
+                    </Button>
+                    <Button variant="ghost" size="sm" asChild>
+                      <a
+                        href={member.social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div className="h-4 w-4">
+                          <FontAwesomeIcon icon={faLinkedin} />
+                        </div>
                       </a>
                     </Button>
                   </div>
