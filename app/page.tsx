@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <ServicesSection />
       <ExpertiseSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <TeamSection />
       <ContactSection />
     </>
