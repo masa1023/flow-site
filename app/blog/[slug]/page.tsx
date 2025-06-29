@@ -254,7 +254,7 @@ The future of AI is agentic, and by mastering these technologies today, you'll b
 `,
     author: 'Alex Thompson',
     authorBio:
-      'CEO & Co-Founder at Flow Inc.. Former AI Research Director at Google.',
+      'CEO & Co-Founder at Flow Inc. Former AI Research Director at Google.',
     authorAvatar:
       'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop',
     date: '2024-01-15',

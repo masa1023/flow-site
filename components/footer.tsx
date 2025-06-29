@@ -116,7 +116,7 @@ export function Footer() {
 
         <div className="py-6 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Flow Inc.. All rights reserved.
+            © {new Date().getFullYear()} Flow Inc. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground mt-2 sm:mt-0">
             Built with ❤️ using Next.js and AI

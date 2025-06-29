@@ -62,7 +62,7 @@ export function TestimonialsSection() {
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             Don't just take our word for it. Here's what industry leaders have
-            to say about their experience working with Flow Inc..
+            to say about their experience working with Flow Inc.
           </p>
         </motion.div>
 
