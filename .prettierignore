@@ -1,0 +1,34 @@
+# Dependencies
+node_modules
+.pnp*
+
+# Build outputs
+.next/
+out/
+build
+dist
+
+# Cache and logs
+.cache
+.*cache
+logs
+*.log
+*-debug.log*
+*-error.log*
+
+# Coverage
+coverage
+
+# Environment
+.env*
+
+# Misc
+.DS_Store
+*.pem
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Generated files
+public/*.xml
