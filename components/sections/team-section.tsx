@@ -11,11 +11,10 @@ import { Badge } from '@/components/ui/badge'
 
 const team = [
   {
-    name: 'Alex Thompson',
-    role: 'CEO & Co-Founder',
+    name: 'Masa',
+    role: 'CEO & Founder',
     bio: 'Former AI Research Director at Google. PhD in Machine Learning from Stanford.',
-    avatar:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
+    avatar: '/images/avatar/masa.jpg',
     skills: ['AI Strategy', 'Machine Learning', 'Leadership'],
     social: {
       linkedin: '#',
