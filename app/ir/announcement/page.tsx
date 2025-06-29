@@ -203,7 +203,7 @@ export default function IRAnnouncementPage() {
               <div>
                 <h4 className="font-semibold mb-2">For Investor Inquiries</h4>
                 <p className="text-sm text-muted-foreground mb-1">
-                  Email: investors@flow-inc.com
+                  Email: investors@flow-inc.ai
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Phone: +1 (555) 123-4567
@@ -212,7 +212,7 @@ export default function IRAnnouncementPage() {
               <div>
                 <h4 className="font-semibold mb-2">Media Inquiries</h4>
                 <p className="text-sm text-muted-foreground mb-1">
-                  Email: media@flow-inc.com
+                  Email: media@flow-inc.ai
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Phone: +1 (555) 123-4568

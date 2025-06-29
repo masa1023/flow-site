@@ -28,7 +28,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    content: 'hello@flow-inc.com',
+    content: 'hello@flow-inc.ai',
     description: 'Send us an email anytime',
   },
   {

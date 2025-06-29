@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://flow-inc.com',
+    url: 'https://flow-inc.ai',
     siteName: 'Flow Inc.',
     title: 'Flow Inc. - AI-Native Solutions for Business Transformation',
     description:

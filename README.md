@@ -307,7 +307,7 @@ This project is proprietary software owned by Flow Inc. All rights reserved.
 
 For technical support or questions about the website:
 
-- **Email**: tech@flow-inc.com
+- **Email**: tech@flow-inc.ai
 - **Documentation**: [Internal Wiki](link-to-internal-docs)
 - **Issues**: Use GitHub Issues for bug reports and feature requests
 
