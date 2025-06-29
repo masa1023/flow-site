@@ -53,19 +53,6 @@ const team = [
       linkedin: '#',
     },
   },
-  {
-    name: 'Rachel Kim',
-    role: 'VP of Business Development',
-    bio: 'Former McKinsey consultant specializing in AI transformation strategies.',
-    avatar:
-      'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-    skills: ['Business Strategy', 'Client Relations', 'Market Research'],
-    social: {
-      github: '#',
-      x: '#',
-      linkedin: '#',
-    },
-  },
 ]
 
 export function TeamSection() {
@@ -94,7 +81,7 @@ export function TeamSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <motion.div
               key={index}
