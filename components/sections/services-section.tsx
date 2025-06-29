@@ -1,21 +1,27 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { 
-  Bot, 
-  GraduationCap, 
-  Settings, 
-  Cpu, 
-  Brain, 
+import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
+import {
+  Bot,
+  GraduationCap,
+  Settings,
+  Cpu,
+  Brain,
   Workflow,
   Users,
   BarChart3,
-  Zap
-} from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+  Zap,
+} from 'lucide-react'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 
 const services = [
   {
@@ -41,7 +47,8 @@ const services = [
       { icon: Brain, text: 'Hands-on Workshop Sessions' },
       { icon: GraduationCap, text: 'Certification Programs' },
     ],
-    color: 'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
+    color:
+      'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
     badge: 'Growing Fast',
   },
   {
@@ -54,14 +61,15 @@ const services = [
       { icon: Settings, text: 'Zapier & Dify Integration' },
       { icon: BarChart3, text: 'Internal Process Automation' },
     ],
-    color: 'bg-purple-500/10 text-purple-600 border-purple-200 dark:border-purple-800',
+    color:
+      'bg-purple-500/10 text-purple-600 border-purple-200 dark:border-purple-800',
     badge: 'Enterprise Ready',
   },
-];
+]
 
 export function ServicesSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
     <section id="services" ref={ref} className="py-20">
@@ -72,13 +80,15 @@ export function ServicesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4">Our Services</Badge>
+          <Badge variant="outline" className="mb-4">
+            Our Services
+          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Comprehensive AI Solutions for Every Business Need
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            From development to deployment, training to transformation, we provide 
-            end-to-end AI services that drive real business results.
+            From development to deployment, training to transformation, we
+            provide end-to-end AI services that drive real business results.
           </p>
         </motion.div>
 
@@ -98,13 +108,17 @@ export function ServicesSection() {
                     </Badge>
                   </div>
                 )}
-                
+
                 <CardHeader className="space-y-4">
-                  <div className={`inline-flex w-12 h-12 rounded-lg items-center justify-center ${service.color} group-hover:scale-110 transition-transform`}>
+                  <div
+                    className={`inline-flex w-12 h-12 rounded-lg items-center justify-center ${service.color} group-hover:scale-110 transition-transform`}
+                  >
                     <service.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                    <CardTitle className="text-xl mb-2">
+                      {service.title}
+                    </CardTitle>
                     <CardDescription className="text-base">
                       {service.description}
                     </CardDescription>
@@ -114,7 +128,10 @@ export function ServicesSection() {
                 <CardContent>
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-3">
+                      <div
+                        key={featureIndex}
+                        className="flex items-center space-x-3"
+                      >
                         <div className="flex-shrink-0">
                           <feature.icon className="w-4 h-4 text-muted-foreground" />
                         </div>
@@ -131,5 +148,5 @@ export function ServicesSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

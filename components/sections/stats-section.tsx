@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { TrendingUp, Users, Award, Zap } from 'lucide-react';
+import { motion } from 'framer-motion'
+import { useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { TrendingUp, Users, Award, Zap } from 'lucide-react'
 
 const stats = [
   {
@@ -30,11 +30,11 @@ const stats = [
     label: 'System Uptime',
     description: 'Reliable AI infrastructure you can trust',
   },
-];
+]
 
 export function StatsSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
     <section ref={ref} className="py-16 bg-muted/30">
@@ -49,8 +49,8 @@ export function StatsSection() {
             Proven Results That Speak for Themselves
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Our track record demonstrates the transformative power of AI-driven solutions 
-            across industries and organizations of all sizes.
+            Our track record demonstrates the transformative power of AI-driven
+            solutions across industries and organizations of all sizes.
           </p>
         </motion.div>
 
@@ -70,11 +70,13 @@ export function StatsSection() {
                 {stat.value}
               </div>
               <div className="font-semibold mb-2">{stat.label}</div>
-              <div className="text-sm text-muted-foreground">{stat.description}</div>
+              <div className="text-sm text-muted-foreground">
+                {stat.description}
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
