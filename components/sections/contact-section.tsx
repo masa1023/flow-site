@@ -31,18 +31,18 @@ const contactInfo = [
     content: 'hello@flow-inc.ai',
     description: 'Send us an email anytime',
   },
-  {
-    icon: Phone,
-    title: 'Call Us',
-    content: '+1 (555) 123-4567',
-    description: 'Mon-Fri from 8am to 6pm PST',
-  },
-  {
-    icon: MapPin,
-    title: 'Visit Us',
-    content: 'San Francisco, CA',
-    description: 'Come say hello at our HQ',
-  },
+  // {
+  //   icon: Phone,
+  //   title: 'Call Us',
+  //   content: '+1 (555) 123-4567',
+  //   description: 'Mon-Fri from 8am to 6pm PST',
+  // },
+  // {
+  //   icon: MapPin,
+  //   title: 'Visit Us',
+  //   content: 'San Francisco, CA',
+  //   description: 'Come say hello at our HQ',
+  // },
 ]
 
 export function ContactSection() {
