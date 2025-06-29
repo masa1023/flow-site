@@ -3,6 +3,7 @@ import { Calendar, Download, Eye } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'IR Announcements - Flow Inc.',
@@ -80,6 +81,8 @@ const getTypeColor = (type: string) => {
 }
 
 export default function IRAnnouncementPage() {
+  return notFound()
+
   return (
     <div className="min-h-screen pt-16">
       {/* Header */}

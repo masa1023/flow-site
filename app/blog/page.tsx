@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'Blog - Flow Inc.',
@@ -66,6 +67,7 @@ const blogPosts = [
 ]
 
 export default function BlogPage() {
+  return notFound()
   const featuredPost = blogPosts.find((post) => post.featured)
   const regularPosts = blogPosts.filter((post) => !post.featured)
 

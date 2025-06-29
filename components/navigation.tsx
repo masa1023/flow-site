@@ -11,12 +11,11 @@ import { cn } from '@/lib/utils'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Services', href: '#services' },
-  { name: 'Expertise', href: '#expertise' },
-  { name: 'Team', href: '#team' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'IR', href: '/ir/announcement' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Team', href: '/#team' },
+  // { name: 'Blog', href: '/blog' },
+  // { name: 'IR', href: '/ir/announcement' },
+  { name: 'Contact', href: '/#contact' },
 ]
 
 export function Navigation() {

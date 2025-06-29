@@ -296,6 +296,8 @@ export async function generateMetadata({
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
+  return notFound()
+
   const post = blogPosts.find((p) => p.id === params.slug)
 
   if (!post) {
