@@ -16,27 +16,28 @@ const socialLinks = [
 const footerLinks = {
   Services: [
     { name: 'AI Development', href: '#services' },
-    { name: 'AI Training', href: '#services' },
     { name: 'DX Consulting', href: '#services' },
+    { name: 'AI Training', href: '#services' },
     { name: 'Custom Solutions', href: '#contact' },
   ],
   Company: [
     { name: 'About Us', href: '#about' },
     { name: 'Our Team', href: '#team' },
-    { name: 'Careers', href: '#contact' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Careers', href: '#contact' },
+    // { name: 'Blog', href: '/blog' },
   ],
   Resources: [
-    { name: 'Case Studies', href: '/blog' },
-    { name: 'White Papers', href: '/blog' },
-    { name: 'Documentation', href: '/blog' },
+    // { name: 'Case Studies', href: '/blog' },
+    // { name: 'White Papers', href: '/blog' },
+    // { name: 'Documentation', href: '/blog' },
+    { name: "Founder's Blog", href: 'https://masa373.work/' },
     { name: 'Support', href: '#contact' },
   ],
-  Legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'IR Information', href: '/ir/announcement' },
-  ],
+  // Legal: [
+  //   { name: 'Privacy Policy', href: '/privacy' },
+  //   { name: 'Terms of Service', href: '/terms' },
+  //   { name: 'IR Information', href: '/ir/announcement' },
+  // ],
 }
 
 export function Footer() {
@@ -44,9 +45,9 @@ export function Footer() {
     <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-12 lg:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {/* Company Info */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-3">
               <Link href="/" className="flex items-center space-x-2 group mb-4">
                 <Waves className="h-8 w-8 text-primary transition-transform group-hover:scale-110" />
                 <span className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
