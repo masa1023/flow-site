@@ -60,12 +60,22 @@ export function ContactSection() {
 
   const onSubmit = async (data: ContactForm) => {
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
 
       toast.success("Message sent successfully! We'll get back to you soon.")
       reset()
     } catch (error) {
+      console.error('Error sending message:', error)
       toast.error('Failed to send message. Please try again.')
     }
   }
