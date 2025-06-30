@@ -7,7 +7,6 @@ import {
   Zap,
   GraduationCap,
   Settings,
-  Workflow,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -89,15 +88,15 @@ export function HeroSection() {
               <span className="text-sm font-medium">AI Development</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <GraduationCap className="w-4 h-4 text-sky-500" />
+              <Settings className="w-4 h-4 text-emerald-500" />
               <span className="text-sm font-medium">
-                AI Training for Enterprise
+                Digital Transformation
               </span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Workflow className="w-4 h-4 text-emerald-500" />
+              <GraduationCap className="w-4 h-4 text-sky-500" />
               <span className="text-sm font-medium">
-                Digital Transformation
+                AI Training for Enterprise
               </span>
             </div>
           </motion.div>

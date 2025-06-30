@@ -12,7 +12,6 @@ import {
   BarChart3,
   Zap,
   Settings,
-  Settings2,
 } from 'lucide-react'
 import {
   Card,
@@ -53,7 +52,7 @@ const services = [
     badge: 'Growing Fast',
   },
   {
-    icon: Workflow,
+    icon: Settings,
     title: 'DX & Consulting Business',
     description: 'Digital transformation through intelligent automation',
     features: [
