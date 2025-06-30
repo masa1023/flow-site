@@ -40,18 +40,6 @@ const services = [
     badge: 'Most Popular',
   },
   {
-    icon: GraduationCap,
-    title: 'AI Training Business',
-    description: 'Comprehensive education programs for AI transformation',
-    features: [
-      { icon: GraduationCap, text: 'Employee Training Programs' },
-      { icon: BarChart3, text: 'Executive AI Strategy Seminars' },
-      { icon: Users, text: 'Hands-on Workshop Sessions' },
-    ],
-    color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
-    badge: 'Growing Fast',
-  },
-  {
     icon: Settings,
     title: 'DX & Consulting Business',
     description: 'Digital transformation through intelligent automation',
@@ -63,6 +51,18 @@ const services = [
     color:
       'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
     badge: 'Enterprise Ready',
+  },
+  {
+    icon: GraduationCap,
+    title: 'AI Training Business',
+    description: 'Comprehensive education programs for AI transformation',
+    features: [
+      { icon: GraduationCap, text: 'Employee Training Programs' },
+      { icon: BarChart3, text: 'Executive AI Strategy Seminars' },
+      { icon: Users, text: 'Hands-on Workshop Sessions' },
+    ],
+    color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
+    badge: 'Growing Fast',
   },
 ]
 

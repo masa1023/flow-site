@@ -3,16 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import {
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Smartphone,
-  Globe,
-  Cpu,
-  BarChart3,
-} from 'lucide-react'
+import { Code, Cpu, Settings } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 
 const technologies = [
@@ -20,68 +11,37 @@ const technologies = [
     category: 'AI & Machine Learning',
     icon: Cpu,
     items: [
-      'TensorFlow',
-      'PyTorch',
       'OpenAI GPT',
       'Anthropic Claude',
-      'Hugging Face',
+      'Google Gemini',
+      'Eleven Labs',
       'LangChain',
+      'PyTorch',
+      'TensorFlow',
     ],
-    color: 'bg-blue-500/10 text-blue-600 border-blue-200 dark:border-blue-800',
+    color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
   },
   {
     category: 'Development',
     icon: Code,
-    items: ['Python', 'TypeScript', 'React', 'Next.js', 'Node.js', 'FastAPI'],
-    color:
-      'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
-  },
-  {
-    category: 'Data & Analytics',
-    icon: BarChart3,
     items: [
-      'PostgreSQL',
-      'MongoDB',
-      'Redis',
-      'Apache Spark',
-      'Elasticsearch',
-      'BigQuery',
-    ],
-    color:
-      'bg-purple-500/10 text-purple-600 border-purple-200 dark:border-purple-800',
-  },
-  {
-    category: 'Cloud & Infrastructure',
-    icon: Cloud,
-    items: [
+      'Python',
+      'React',
+      'Next.js',
+      'Node.js',
+      'Ruby on Rails',
       'AWS',
       'Google Cloud',
-      'Azure',
-      'Docker',
-      'Kubernetes',
-      'Terraform',
     ],
     color:
-      'bg-orange-500/10 text-orange-600 border-orange-200 dark:border-orange-800',
-  },
-  {
-    category: 'Security & Compliance',
-    icon: Shield,
-    items: [
-      'OAuth 2.0',
-      'JWT',
-      'GDPR',
-      'SOC 2',
-      'ISO 27001',
-      'End-to-end encryption',
-    ],
-    color: 'bg-red-500/10 text-red-600 border-red-200 dark:border-red-800',
+      'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
   },
   {
     category: 'Integration & Automation',
-    icon: Globe,
-    items: ['Zapier', 'Dify', 'REST APIs', 'GraphQL', 'Webhooks', 'RPA'],
-    color: 'bg-teal-500/10 text-teal-600 border-teal-200 dark:border-teal-800',
+    icon: Settings,
+    items: ['Dify', 'n8n', 'Zapier', 'GAS', 'Webhooks'],
+    color:
+      'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
   },
 ]
 
