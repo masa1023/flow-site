@@ -4,15 +4,15 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import {
-  Bot,
   GraduationCap,
-  Settings,
   Cpu,
   Brain,
   Workflow,
   Users,
   BarChart3,
   Zap,
+  Settings,
+  Settings2,
 } from 'lucide-react'
 import {
   Card,
@@ -25,16 +25,19 @@ import { Badge } from '@/components/ui/badge'
 
 const services = [
   {
-    icon: Bot,
+    icon: Zap,
     title: 'AI Development Business',
     description: 'Cutting-edge AI solutions tailored to your business needs',
     features: [
-      { icon: Cpu, text: 'Generative AI Systems (Agents, RAG, MCP)' },
-      { icon: Brain, text: 'Custom LLM Integration & Fine-tuning' },
-      { icon: Workflow, text: 'Business Process Optimization' },
-      { icon: Settings, text: 'Advanced Model Development' },
+      { icon: Cpu, text: 'Generative AI Integration (LLM, Agents, RAG, MCP)' },
+      { icon: Brain, text: 'Custom LLM & Fine-tuning' },
+      {
+        icon: Settings,
+        text: 'ML/DL Model Development',
+      },
     ],
-    color: 'bg-blue-500/10 text-blue-600 border-blue-200 dark:border-blue-800',
+    color:
+      'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
     badge: 'Most Popular',
   },
   {
@@ -42,27 +45,24 @@ const services = [
     title: 'AI Training Business',
     description: 'Comprehensive education programs for AI transformation',
     features: [
-      { icon: Users, text: 'Employee Training Programs' },
+      { icon: GraduationCap, text: 'Employee Training Programs' },
       { icon: BarChart3, text: 'Executive AI Strategy Seminars' },
-      { icon: Brain, text: 'Hands-on Workshop Sessions' },
-      { icon: GraduationCap, text: 'Certification Programs' },
+      { icon: Users, text: 'Hands-on Workshop Sessions' },
     ],
-    color:
-      'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
+    color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
     badge: 'Growing Fast',
   },
   {
-    icon: Settings,
+    icon: Workflow,
     title: 'DX & Consulting Business',
     description: 'Digital transformation through intelligent automation',
     features: [
       { icon: Workflow, text: 'Workflow Optimization' },
       { icon: Zap, text: 'AI Tool Implementation' },
-      { icon: Settings, text: 'Zapier & Dify Integration' },
       { icon: BarChart3, text: 'Internal Process Automation' },
     ],
     color:
-      'bg-purple-500/10 text-purple-600 border-purple-200 dark:border-purple-800',
+      'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
     badge: 'Enterprise Ready',
   },
 ]
@@ -102,7 +102,7 @@ export function ServicesSection() {
             >
               <Card className="h-full hover:shadow-lg transition-all duration-300 group relative overflow-hidden">
                 {service.badge && (
-                  <div className="absolute top-4 right-4 z-10">
+                  <div className="absolute top-6 right-6 z-10">
                     <Badge variant="secondary" className="text-xs">
                       {service.badge}
                     </Badge>

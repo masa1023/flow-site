@@ -1,7 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles, Zap, Target } from 'lucide-react'
+import {
+  ArrowRight,
+  Sparkles,
+  Zap,
+  GraduationCap,
+  Settings,
+  Workflow,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
@@ -52,7 +59,7 @@ export function HeroSection() {
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent leading-tight"
           >
             Transform Your Business with{' '}
-            <span className="bg-gradient-to-r from-primary to-emerald-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-sky-500 bg-clip-text text-transparent">
               AI Excellence
             </span>
           </motion.h1>
@@ -78,15 +85,17 @@ export function HeroSection() {
             className="flex flex-wrap justify-center gap-4 mb-10"
           >
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Zap className="w-4 h-4 text-primary" />
+              <Zap className="w-4 h-4 text-primary text-yellow-500" />
               <span className="text-sm font-medium">AI Development</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Target className="w-4 h-4 text-emerald-500" />
-              <span className="text-sm font-medium">Training & Consulting</span>
+              <GraduationCap className="w-4 h-4 text-sky-500" />
+              <span className="text-sm font-medium">
+                AI Training for Enterprise
+              </span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Sparkles className="w-4 h-4 text-purple-500" />
+              <Workflow className="w-4 h-4 text-emerald-500" />
               <span className="text-sm font-medium">
                 Digital Transformation
               </span>
