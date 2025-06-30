@@ -16,11 +16,11 @@ import { Badge } from '@/components/ui/badge'
 
 const team = [
   {
-    name: 'Masa',
+    name: 'Masanobu Minami (Masa)',
     role: 'CEO & Founder',
     bio: 'Former AI Research Director at Google. PhD in Machine Learning from Stanford.',
     avatar: '/images/avatar/masa.jpg',
-    skills: ['AI Strategy', 'Machine Learning', 'Leadership'],
+    skills: ['AI Strategy', 'Generative AI', 'Web Development', 'Leadership'],
     social: {
       github: 'https://github.com/masa1023',
       x: 'https://x.com/masaa373',
@@ -28,8 +28,8 @@ const team = [
     },
   },
   {
-    name: 'Sarah Martinez',
-    role: 'CTO & Co-Founder',
+    name: "We're hiring!",
+    role: 'Senior AI Engineer',
     bio: 'Ex-Senior Engineer at OpenAI. Expert in LLM architectures and deployment.',
     avatar:
       'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
@@ -41,8 +41,8 @@ const team = [
     },
   },
   {
-    name: 'David Chen',
-    role: 'Head of AI Research',
+    name: "We're hiring!",
+    role: 'Senior AI Consultant',
     bio: 'Published researcher with 50+ papers in top-tier ML conferences.',
     avatar:
       'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
