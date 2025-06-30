@@ -3,15 +3,15 @@ import { Waves, Mail, MapPin, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 
-const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/flowinc', icon: '𝕏' },
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/company/flow-inc',
-    icon: 'in',
-  },
-  { name: 'Instagram', href: 'https://instagram.com/flowinc', icon: '📷' },
-]
+// const socialLinks = [
+//   { name: 'Twitter', href: 'https://twitter.com/flowinc', icon: '𝕏' },
+//   {
+//     name: 'LinkedIn',
+//     href: 'https://linkedin.com/company/flow-inc',
+//     icon: 'in',
+//   },
+//   { name: 'Instagram', href: 'https://instagram.com/flowinc', icon: '📷' },
+// ]
 
 const footerLinks = {
   Services: [
@@ -70,7 +70,7 @@ export function Footer() {
                 </div> */}
               </div>
 
-              <div className="flex space-x-2">
+              {/* <div className="flex space-x-2">
                 {socialLinks.map((social) => (
                   <Button
                     key={social.name}
@@ -89,7 +89,7 @@ export function Footer() {
                     </Link>
                   </Button>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* Footer Links */}
@@ -101,6 +101,14 @@ export function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
+                        target={
+                          link.href.startsWith('http') ? '_blank' : undefined
+                        }
+                        rel={
+                          link.href.startsWith('http')
+                            ? 'noopener noreferrer'
+                            : undefined
+                        }
                         className="text-sm text-muted-foreground hover:text-primary transition-colors"
                       >
                         {link.name}
