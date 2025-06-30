@@ -57,16 +57,16 @@ export function Footer() {
               <div className="space-y-2 mb-6">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <MapPin className="h-4 w-4" />
-                  <span>San Francisco, CA</span>
+                  <span>Tokyo, Japan</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Mail className="h-4 w-4" />
                   <span>hello@flow-inc.ai</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                {/* <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4" />
                   <span>+1 (555) 123-4567</span>
-                </div>
+                </div> */}
               </div>
 
               <div className="flex space-x-2">
