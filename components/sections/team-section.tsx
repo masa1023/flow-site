@@ -22,9 +22,9 @@ const team = [
     avatar: '/images/avatar/masa.jpg',
     skills: ['AI Strategy', 'Machine Learning', 'Leadership'],
     social: {
-      github: '#',
-      x: '#',
-      linkedin: '#',
+      github: 'https://github.com/masa1023',
+      x: 'https://x.com/masaa373',
+      linkedin: 'https://www.linkedin.com/in/masanobu-minami-295597126/',
     },
   },
   {
