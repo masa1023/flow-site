@@ -298,121 +298,121 @@ export async function generateMetadata({
 export default function BlogPostPage({ params }: BlogPostPageProps) {
   return notFound()
 
-  const post = blogPosts.find((p) => p.id === params.slug)
+  // const post = blogPosts.find((p) => p.id === params.slug)
 
-  if (!post) {
-    notFound()
-  }
+  // if (!post) {
+  //   notFound()
+  // }
 
-  return (
-    <div className="min-h-screen pt-16">
-      <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Back Button */}
-        <div className="mb-8">
-          <Button variant="ghost" asChild>
-            <Link href="/blog">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Link>
-          </Button>
-        </div>
+  // return (
+  //   <div className="min-h-screen pt-16">
+  //     <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  //       {/* Back Button */}
+  //       <div className="mb-8">
+  //         <Button variant="ghost" asChild>
+  //           <Link href="/blog">
+  //             <ArrowLeft className="w-4 h-4 mr-2" />
+  //             Back to Blog
+  //           </Link>
+  //         </Button>
+  //       </div>
 
-        {/* Article Header */}
-        <header className="max-w-4xl mx-auto mb-12">
-          <div className="flex flex-wrap gap-2 mb-4">
-            {post.tags.map((tag) => (
-              <Badge key={tag} variant="secondary">
-                <Tag className="w-3 h-3 mr-1" />
-                {tag}
-              </Badge>
-            ))}
-          </div>
+  //       {/* Article Header */}
+  //       <header className="max-w-4xl mx-auto mb-12">
+  //         <div className="flex flex-wrap gap-2 mb-4">
+  //           {post.tags.map((tag) => (
+  //             <Badge key={tag} variant="secondary">
+  //               <Tag className="w-3 h-3 mr-1" />
+  //               {tag}
+  //             </Badge>
+  //           ))}
+  //         </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            {post.title}
-          </h1>
+  //         <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+  //           {post.title}
+  //         </h1>
 
-          <p className="text-xl text-muted-foreground mb-8">{post.excerpt}</p>
+  //         <p className="text-xl text-muted-foreground mb-8">{post.excerpt}</p>
 
-          <div className="flex items-center justify-between flex-wrap gap-4">
-            <div className="flex items-center space-x-4">
-              <Avatar>
-                <AvatarImage src={post.authorAvatar} alt={post.author} />
-                <AvatarFallback>
-                  {post.author
-                    .split(' ')
-                    .map((n) => n[0])
-                    .join('')}
-                </AvatarFallback>
-              </Avatar>
-              <div>
-                <div className="font-semibold">{post.author}</div>
-                <div className="text-sm text-muted-foreground">
-                  {post.authorBio}
-                </div>
-              </div>
-            </div>
+  //         <div className="flex items-center justify-between flex-wrap gap-4">
+  //           <div className="flex items-center space-x-4">
+  //             <Avatar>
+  //               <AvatarImage src={post.authorAvatar} alt={post.author} />
+  //               <AvatarFallback>
+  //                 {post.author
+  //                   .split(' ')
+  //                   .map((n) => n[0])
+  //                   .join('')}
+  //               </AvatarFallback>
+  //             </Avatar>
+  //             <div>
+  //               <div className="font-semibold">{post.author}</div>
+  //               <div className="text-sm text-muted-foreground">
+  //                 {post.authorBio}
+  //               </div>
+  //             </div>
+  //           </div>
 
-            <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-1">
-                <Calendar className="w-4 h-4" />
-                <span>{new Date(post.date).toLocaleDateString()}</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <Clock className="w-4 h-4" />
-                <span>{post.readTime}</span>
-              </div>
-              <Button variant="ghost" size="sm">
-                <Share2 className="w-4 h-4 mr-2" />
-                Share
-              </Button>
-            </div>
-          </div>
-        </header>
+  //           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+  //             <div className="flex items-center space-x-1">
+  //               <Calendar className="w-4 h-4" />
+  //               <span>{new Date(post.date).toLocaleDateString()}</span>
+  //             </div>
+  //             <div className="flex items-center space-x-1">
+  //               <Clock className="w-4 h-4" />
+  //               <span>{post.readTime}</span>
+  //             </div>
+  //             <Button variant="ghost" size="sm">
+  //               <Share2 className="w-4 h-4 mr-2" />
+  //               Share
+  //             </Button>
+  //           </div>
+  //         </div>
+  //       </header>
 
-        <Separator className="my-8" />
+  //       <Separator className="my-8" />
 
-        {/* Article Content */}
-        <div className="max-w-4xl mx-auto">
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.content.replace(/\n/g, '<br/>'),
-              }}
-            />
-          </div>
-        </div>
+  //       {/* Article Content */}
+  //       <div className="max-w-4xl mx-auto">
+  //         <div className="prose prose-lg dark:prose-invert max-w-none">
+  //           <div
+  //             dangerouslySetInnerHTML={{
+  //               __html: post.content.replace(/\n/g, '<br/>'),
+  //             }}
+  //           />
+  //         </div>
+  //       </div>
 
-        {/* Author Bio */}
-        <Separator className="my-12" />
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-muted/30 rounded-lg p-6">
-            <div className="flex items-start space-x-4">
-              <Avatar className="w-16 h-16">
-                <AvatarImage src={post.authorAvatar} alt={post.author} />
-                <AvatarFallback className="text-lg">
-                  {post.author
-                    .split(' ')
-                    .map((n) => n[0])
-                    .join('')}
-                </AvatarFallback>
-              </Avatar>
-              <div>
-                <h3 className="font-bold text-lg mb-2">About {post.author}</h3>
-                <p className="text-muted-foreground mb-4">{post.authorBio}</p>
-                <div className="flex space-x-2">
-                  <Button variant="outline" size="sm">
-                    Follow
-                  </Button>
-                  <Button variant="ghost" size="sm">
-                    View Profile
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-  )
+  //       {/* Author Bio */}
+  //       <Separator className="my-12" />
+  //       <div className="max-w-4xl mx-auto">
+  //         <div className="bg-muted/30 rounded-lg p-6">
+  //           <div className="flex items-start space-x-4">
+  //             <Avatar className="w-16 h-16">
+  //               <AvatarImage src={post.authorAvatar} alt={post.author} />
+  //               <AvatarFallback className="text-lg">
+  //                 {post.author
+  //                   .split(' ')
+  //                   .map((n) => n[0])
+  //                   .join('')}
+  //               </AvatarFallback>
+  //             </Avatar>
+  //             <div>
+  //               <h3 className="font-bold text-lg mb-2">About {post.author}</h3>
+  //               <p className="text-muted-foreground mb-4">{post.authorBio}</p>
+  //               <div className="flex space-x-2">
+  //                 <Button variant="outline" size="sm">
+  //                   Follow
+  //                 </Button>
+  //                 <Button variant="ghost" size="sm">
+  //                   View Profile
+  //                 </Button>
+  //               </div>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </article>
+  //   </div>
+  // )
 }

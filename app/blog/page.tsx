@@ -68,151 +68,151 @@ const blogPosts = [
 
 export default function BlogPage() {
   return notFound()
-  const featuredPost = blogPosts.find((post) => post.featured)
-  const regularPosts = blogPosts.filter((post) => !post.featured)
+  // const featuredPost = blogPosts.find((post) => post.featured)
+  // const regularPosts = blogPosts.filter((post) => !post.featured)
 
-  return (
-    <div className="min-h-screen pt-16">
-      {/* Header */}
-      <section className="bg-gradient-to-br from-background via-background to-primary/5 py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Flow Inc. Blog
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Insights, tutorials, and the latest news from the world of AI
-              development and business transformation.
-            </p>
-          </div>
-        </div>
-      </section>
+  // return (
+  //   <div className="min-h-screen pt-16">
+  //     {/* Header */}
+  //     <section className="bg-gradient-to-br from-background via-background to-primary/5 py-16">
+  //       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+  //         <div className="text-center max-w-3xl mx-auto">
+  //           <h1 className="text-4xl md:text-5xl font-bold mb-4">
+  //             Flow Inc. Blog
+  //           </h1>
+  //           <p className="text-xl text-muted-foreground">
+  //             Insights, tutorials, and the latest news from the world of AI
+  //             development and business transformation.
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </section>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Featured Post */}
-        {featuredPost && (
-          <div className="mb-16">
-            <div className="flex items-center gap-2 mb-6">
-              <Badge variant="default">Featured Post</Badge>
-            </div>
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="md:flex">
-                <div className="md:w-1/3 bg-gradient-to-br from-primary/10 to-emerald-500/10 p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
-                      <span className="text-2xl font-bold text-primary">
-                        AI
-                      </span>
-                    </div>
-                    <Badge variant="outline">Featured</Badge>
-                  </div>
-                </div>
-                <div className="md:w-2/3">
-                  <CardHeader>
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      {featuredPost.tags.map((tag) => (
-                        <Badge
-                          key={tag}
-                          variant="secondary"
-                          className="text-xs"
-                        >
-                          <Tag className="w-3 h-3 mr-1" />
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                    <h2 className="text-2xl font-bold mb-2 hover:text-primary transition-colors">
-                      <Link href={`/blog/${featuredPost.id}`}>
-                        {featuredPost.title}
-                      </Link>
-                    </h2>
-                    <p className="text-muted-foreground mb-4">
-                      {featuredPost.excerpt}
-                    </p>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span>{featuredPost.author}</span>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(featuredPost.date).toLocaleDateString()}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {featuredPost.readTime}
-                        </div>
-                      </div>
-                      <Button variant="ghost" asChild>
-                        <Link href={`/blog/${featuredPost.id}`}>
-                          Read More
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </div>
-              </div>
-            </Card>
-          </div>
-        )}
+  //     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  //       {/* Featured Post */}
+  //       {featuredPost && (
+  //         <div className="mb-16">
+  //           <div className="flex items-center gap-2 mb-6">
+  //             <Badge variant="default">Featured Post</Badge>
+  //           </div>
+  //           <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+  //             <div className="md:flex">
+  //               <div className="md:w-1/3 bg-gradient-to-br from-primary/10 to-emerald-500/10 p-8 flex items-center justify-center">
+  //                 <div className="text-center">
+  //                   <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+  //                     <span className="text-2xl font-bold text-primary">
+  //                       AI
+  //                     </span>
+  //                   </div>
+  //                   <Badge variant="outline">Featured</Badge>
+  //                 </div>
+  //               </div>
+  //               <div className="md:w-2/3">
+  //                 <CardHeader>
+  //                   <div className="flex flex-wrap gap-2 mb-2">
+  //                     {featuredPost.tags.map((tag) => (
+  //                       <Badge
+  //                         key={tag}
+  //                         variant="secondary"
+  //                         className="text-xs"
+  //                       >
+  //                         <Tag className="w-3 h-3 mr-1" />
+  //                         {tag}
+  //                       </Badge>
+  //                     ))}
+  //                   </div>
+  //                   <h2 className="text-2xl font-bold mb-2 hover:text-primary transition-colors">
+  //                     <Link href={`/blog/${featuredPost.id}`}>
+  //                       {featuredPost.title}
+  //                     </Link>
+  //                   </h2>
+  //                   <p className="text-muted-foreground mb-4">
+  //                     {featuredPost.excerpt}
+  //                   </p>
+  //                 </CardHeader>
+  //                 <CardContent>
+  //                   <div className="flex items-center justify-between">
+  //                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
+  //                       <span>{featuredPost.author}</span>
+  //                       <div className="flex items-center gap-1">
+  //                         <Calendar className="w-4 h-4" />
+  //                         {new Date(featuredPost.date).toLocaleDateString()}
+  //                       </div>
+  //                       <div className="flex items-center gap-1">
+  //                         <Clock className="w-4 h-4" />
+  //                         {featuredPost.readTime}
+  //                       </div>
+  //                     </div>
+  //                     <Button variant="ghost" asChild>
+  //                       <Link href={`/blog/${featuredPost.id}`}>
+  //                         Read More
+  //                         <ArrowRight className="w-4 h-4 ml-2" />
+  //                       </Link>
+  //                     </Button>
+  //                   </div>
+  //                 </CardContent>
+  //               </div>
+  //             </div>
+  //           </Card>
+  //         </div>
+  //       )}
 
-        {/* Regular Posts Grid */}
-        <div>
-          <h2 className="text-2xl font-bold mb-8">Latest Posts</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularPosts.map((post) => (
-              <Card
-                key={post.id}
-                className="hover:shadow-lg transition-shadow h-full flex flex-col"
-              >
-                <CardHeader>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {post.tags.slice(0, 2).map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        <Tag className="w-3 h-3 mr-1" />
-                        {tag}
-                      </Badge>
-                    ))}
-                    {post.tags.length > 2 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{post.tags.length - 2} more
-                      </Badge>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 hover:text-primary transition-colors">
-                    <Link href={`/blog/${post.id}`}>{post.title}</Link>
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                    <span>{post.author}</span>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </div>
-                    <Button variant="ghost" size="sm" asChild>
-                      <Link href={`/blog/${post.id}`}>
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+  //       {/* Regular Posts Grid */}
+  //       <div>
+  //         <h2 className="text-2xl font-bold mb-8">Latest Posts</h2>
+  //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  //           {regularPosts.map((post) => (
+  //             <Card
+  //               key={post.id}
+  //               className="hover:shadow-lg transition-shadow h-full flex flex-col"
+  //             >
+  //               <CardHeader>
+  //                 <div className="flex flex-wrap gap-2 mb-2">
+  //                   {post.tags.slice(0, 2).map((tag) => (
+  //                     <Badge key={tag} variant="secondary" className="text-xs">
+  //                       <Tag className="w-3 h-3 mr-1" />
+  //                       {tag}
+  //                     </Badge>
+  //                   ))}
+  //                   {post.tags.length > 2 && (
+  //                     <Badge variant="outline" className="text-xs">
+  //                       +{post.tags.length - 2} more
+  //                     </Badge>
+  //                   )}
+  //                 </div>
+  //                 <h3 className="text-xl font-bold mb-2 hover:text-primary transition-colors">
+  //                   <Link href={`/blog/${post.id}`}>{post.title}</Link>
+  //                 </h3>
+  //                 <p className="text-muted-foreground text-sm leading-relaxed">
+  //                   {post.excerpt}
+  //                 </p>
+  //               </CardHeader>
+  //               <CardContent className="flex-1 flex flex-col justify-between">
+  //                 <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+  //                   <span>{post.author}</span>
+  //                   <div className="flex items-center gap-1">
+  //                     <Clock className="w-4 h-4" />
+  //                     {post.readTime}
+  //                   </div>
+  //                 </div>
+  //                 <div className="flex items-center justify-between">
+  //                   <div className="flex items-center gap-1 text-sm text-muted-foreground">
+  //                     <Calendar className="w-4 h-4" />
+  //                     {new Date(post.date).toLocaleDateString()}
+  //                   </div>
+  //                   <Button variant="ghost" size="sm" asChild>
+  //                     <Link href={`/blog/${post.id}`}>
+  //                       Read More
+  //                       <ArrowRight className="w-4 h-4 ml-2" />
+  //                     </Link>
+  //                   </Button>
+  //                 </div>
+  //               </CardContent>
+  //             </Card>
+  //           ))}
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // )
 }
