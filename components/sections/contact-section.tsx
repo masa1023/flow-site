@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -60,12 +60,22 @@ export function ContactSection() {
 
   const onSubmit = async (data: ContactForm) => {
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
 
       toast.success("Message sent successfully! We'll get back to you soon.")
       reset()
     } catch (error) {
+      console.error('Error sending message:', error)
       toast.error('Failed to send message. Please try again.')
     }
   }
