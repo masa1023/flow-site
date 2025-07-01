@@ -18,40 +18,46 @@ const team = [
   {
     name: 'Masanobu Minami (Masa)',
     role: 'CEO & Founder',
-    bio: 'Former AI Research Director at Google. PhD in Machine Learning from Stanford.',
+    bio: 'Full Stack Web Developer & AI Enthusiast. Proficient at integrating Gen AI models into web apps and AI-driven development.',
     avatar: '/images/avatar/masa.jpg',
     skills: ['AI Strategy', 'Generative AI', 'Web Development', 'Leadership'],
-    social: {
-      github: 'https://github.com/masa1023',
-      x: 'https://x.com/masaa373',
-      linkedin: 'https://www.linkedin.com/in/masanobu-minami-295597126/',
-    },
+    social: [
+      {
+        icon: <FontAwesomeIcon icon={faGithub} />,
+        link: 'https://github.com/masa1023',
+      },
+      {
+        icon: <FontAwesomeIcon icon={faXTwitter} />,
+        link: 'https://x.com/masaa373',
+      },
+      {
+        icon: <FontAwesomeIcon icon={faLinkedin} />,
+        link: 'https://www.linkedin.com/in/masanobu-minami-295597126/',
+      },
+    ],
   },
   {
     name: "We're hiring!",
     role: 'Senior AI Engineer',
-    bio: 'Ex-Senior Engineer at OpenAI. Expert in LLM architectures and deployment.',
+    bio: 'Expert in ML/DL, Foundation Models and AI system design. Passionate about building scalable AI solutions.',
     avatar:
       'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-    skills: ['LLM Development', 'System Architecture', 'DevOps'],
-    social: {
-      github: '#',
-      x: '#',
-      linkedin: '#',
-    },
+    skills: [
+      'LLM Development',
+      'Model Tuning',
+      'System Architecture',
+      'DevOps',
+    ],
+    social: [],
   },
   {
     name: "We're hiring!",
     role: 'Senior AI Consultant',
-    bio: 'Published researcher with 50+ papers in top-tier ML conferences.',
+    bio: 'Specializes in AI strategy, business transformation, and digital innovation. Experienced in leading AI projects across industries.',
     avatar:
-      'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-    skills: ['Research', 'Deep Learning', 'Computer Vision'],
-    social: {
-      github: '#',
-      x: '#',
-      linkedin: '#',
-    },
+      'https://images.pexels.com/photos/3778958/pexels-photo-3778958.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
+    skills: ['AI Consulting', 'Business Strategy', 'Change Management'],
+    social: [],
   },
 ]
 
@@ -124,39 +130,22 @@ export function TeamSection() {
                   </div>
 
                   <div className="flex justify-center space-x-2">
-                    <Button variant="ghost" size="sm" asChild>
-                      <a
-                        href={member.social.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {member.social.map((social) => (
+                      <Button
+                        key={social.link}
+                        variant="ghost"
+                        size="sm"
+                        asChild
                       >
-                        <div className="h-4 w-4">
-                          <FontAwesomeIcon icon={faGithub} />
-                        </div>
-                      </a>
-                    </Button>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a
-                        href={member.social.x}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="h-4 w-4">
-                          <FontAwesomeIcon icon={faXTwitter} />
-                        </div>
-                      </a>
-                    </Button>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a
-                        href={member.social.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <div className="h-4 w-4">
-                          <FontAwesomeIcon icon={faLinkedin} />
-                        </div>
-                      </a>
-                    </Button>
+                        <a
+                          href={social.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div className="h-4 w-4">{social.icon}</div>
+                        </a>
+                      </Button>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
