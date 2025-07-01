@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import formData from 'form-data'
 import Mailgun from 'mailgun.js'
 
-const mailgun = new Mailgun(formData)
-
 interface ContactFormData {
   name: string
   email: string
@@ -35,6 +33,8 @@ export async function POST(request: NextRequest) {
     )
   }
 
+  const mailgun = new Mailgun(formData)
+
   const mg = mailgun.client({
     username: 'api',
     key: MAILGUN_API_KEY,
@@ -54,16 +54,6 @@ export async function POST(request: NextRequest) {
         <hr>
         <p><em>This message was sent from the Flow Inc website contact form.</em></p>
       `,
-    text: `
-New Contact Form Submission
-
-Name: ${name}
-Email: ${email}
-Company: ${company}
-Message: ${message}
-
-This message was sent from the Flow Inc website contact form.
-      `.trim(),
   }
 
   try {
