@@ -3,8 +3,8 @@ import { ServicesSection } from '@/components/sections/services-section'
 import { ExpertiseSection } from '@/components/sections/expertise-section'
 import { TeamSection } from '@/components/sections/team-section'
 import { ContactSection } from '@/components/sections/contact-section'
-import { StatsSection } from '@/components/sections/stats-section'
-import { TestimonialsSection } from '@/components/sections/testimonials-section'
+// import { StatsSection } from '@/components/sections/stats-section'
+// import { TestimonialsSection } from '@/components/sections/testimonials-section'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
