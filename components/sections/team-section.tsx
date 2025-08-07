@@ -32,7 +32,7 @@ const team = [
       },
       {
         icon: <FontAwesomeIcon icon={faLinkedin} />,
-        link: 'https://www.linkedin.com/in/masanobu-minami-295597126/',
+        link: 'https://www.linkedin.com/in/masa373/',
       },
     ],
   },
