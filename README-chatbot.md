@@ -1,26 +1,26 @@
-# FlowBot - RAG AI Chat Widget
+# 🤖 FlowBot - RAG AI Chat Widget
 
 An embeddable chatbot widget powered by Weaviate and Google Gemini for intelligent website assistance.
 
-## Overview
+## ✨ Overview
 
 FlowBot provides the following features:
 
-- **Automatic Web Content Extraction** (Playwright)
-- **Vector Search Database** (Weaviate + Snowflake Embedding API)
-- **AI Response Generation** (Google Gemini API)
-- **Embeddable Web Widget** (Vanilla JavaScript)
+- 🔍 **Automatic Web Content Extraction** (Playwright)
+- 🗄️ **Vector Search Database** (Weaviate + Snowflake Embedding API)
+- 🧠 **AI Response Generation** (Google Gemini API)
+- 🌐 **Embeddable Web Widget** (Vanilla JavaScript)
 
-## Setup Guide
+## 🚀 Setup Guide
 
-### 1. API Configuration
+### 1. 🔑 API Configuration
 
 Obtain API keys from the following services:
 
 - **Weaviate Cloud**: [https://console.weaviate.cloud/](https://console.weaviate.cloud/)
 - **Google Cloud AI Platform**: [https://console.cloud.google.com/](https://console.cloud.google.com/)
 
-### 2. Data Preparation
+### 2. 📊 Data Preparation
 
 ```bash
 # Install dependencies
@@ -36,7 +36,7 @@ node scraper.js https://your-website.com
 node indexer.js
 ```
 
-### 3. Website Embedding
+### 3. 🌐 Website Embedding
 
 ```html
 <script
@@ -49,7 +49,7 @@ node indexer.js
 ></script>
 ```
 
-## File Structure
+## 📁 File Structure
 
 ```
 ├── scripts/
