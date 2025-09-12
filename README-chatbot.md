@@ -57,6 +57,5 @@ node indexer.js
 │   └── indexer.js          # Weaviate data indexing script
 ├── public/
 │   └── chat-widget.js      # Embeddable chat widget
-├── ai-chatbot-package.json # Dependencies definition
 └── README-chatbot.md       # This file
 ```
