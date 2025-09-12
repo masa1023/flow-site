@@ -1,10 +1,12 @@
-# 🤖 FlowBot - RAG AI Chat Widget
+# 🤖 FlowAgent - RAG AI Chat Widget
 
 An embeddable chatbot widget powered by Weaviate and Google Gemini for intelligent website assistance.
+Deploy in minutes with just one script tag.
+Responses are grounded in your website's data, not generic AI knowledge.
 
 ## ✨ Overview
 
-FlowBot provides the following features:
+FlowAgent provides the following features:
 
 - 🔍 **Automatic Web Content Extraction** (Playwright)
 - 🗄️ **Vector Search Database** (Weaviate + Snowflake Embedding API)
