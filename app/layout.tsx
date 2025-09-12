@@ -78,6 +78,14 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#3B82F6" />
+        <script
+          src="/chat-widget.js"
+          data-weaviate-host={process.env.WEAVIATE_HOST}
+          data-weaviate-api-key={process.env.WEAVIATE_API_KEY}
+          data-google-api-key={process.env.GOOGLE_API_KEY}
+          async
+          defer
+        ></script>
       </head>
       <body className={inter.className}>
         <ThemeProvider
