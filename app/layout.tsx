@@ -85,7 +85,7 @@ export default function RootLayout({
           data-google-api-key={process.env.GOOGLE_API_KEY}
           async
           defer
-        ></script>
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider

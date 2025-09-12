@@ -214,18 +214,18 @@
       
       <div id="ai-chat-window">
         <div id="ai-chat-header">
-          <div id="ai-chat-title">AIアシスタント</div>
+          <div id="ai-chat-title">FlowBot</div>
           <button id="ai-chat-close" aria-label="Close chat">&times;</button>
         </div>
         
         <div id="ai-chat-messages">
           <div class="ai-message">
-            こんにちは！ご質問をお気軽にどうぞ。
+            Hi there! Ask me anything about this site.
           </div>
         </div>
         
         <div id="ai-chat-input-container">
-          <textarea id="ai-chat-input" placeholder="メッセージを入力..." rows="1"></textarea>
+          <textarea id="ai-chat-input" placeholder="Type your message..." rows="1"></textarea>
         </div>
       </div>
     </div>
@@ -364,7 +364,7 @@
     const loadingEl = document.createElement('div')
     loadingEl.className = 'ai-message'
     loadingEl.innerHTML =
-      '回答を生成しています<span class="loading-dots"></span>'
+      'Thinking<span class="loading-dots"></span>'
     messagesContainer.appendChild(loadingEl)
 
     // Scroll to bottom
@@ -384,12 +384,12 @@
       }
 
       // Build prompt for Gemini
-      const prompt = `あなたはWebサイトの優秀なアシスタントです。以下の『サイト情報』だけを使って、ユーザーの『質問』に日本語で答えてください。
+      const prompt = `You are FlowBot, a helpful assistant for this website. Use ONLY the following site information to answer the user's question in a friendly and concise manner.
 
-# サイト情報
-${context || '関連する情報が見つかりませんでした。'}
+# Site Information
+${context || 'No relevant information found.'}
 
-# 質問
+# User Question
 ${message}`
 
       // Generate response with Gemini
@@ -401,7 +401,7 @@ ${message}`
     } catch (error) {
       console.error('Error generating response:', error)
       loadingEl.textContent =
-        '申し訳ございませんが、エラーが発生しました。しばらく時間をおいて再度お試しください。'
+        'Sorry, something went wrong. Please try again in a moment.'
     } finally {
       isLoading = false
       input.disabled = false
