@@ -1,3 +1,6 @@
+// Load environment variables from .env.local
+require('dotenv').config({ path: require('path').join(__dirname, '..', '.env.local') })
+
 const weaviate = require('weaviate-client')
 const fs = require('fs')
 

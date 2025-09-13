@@ -214,7 +214,7 @@
       
       <div id="ai-chat-window">
         <div id="ai-chat-header">
-          <div id="ai-chat-title">FlowAgent</div>
+          <div id="ai-chat-title">FlowAgent✨</div>
           <button id="ai-chat-close" aria-label="Close chat">&times;</button>
         </div>
         
@@ -383,7 +383,7 @@
       }
 
       // Build prompt for Gemini
-      const prompt = `You are FlowAgent, a helpful assistant for this website. Use ONLY the following site information to answer the user's question in a friendly and concise manner.
+      const prompt = `You are FlowAgent, a helpful assistant for this website. Use ONLY the following site information to answer the user's question in a friendly, casual and concise manner.
 
 # Site Information
 ${context || 'No relevant information found.'}
