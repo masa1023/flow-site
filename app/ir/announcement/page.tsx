@@ -93,7 +93,7 @@ export default function IRAnnouncementPage() {
               Investor Relations
             </h1>
             <p className="text-xl text-muted-foreground">
-              Stay updated with Flow Inc.'s latest announcements, financial
+              Stay updated with Flow Inc.&apos;s latest announcements, financial
               reports, and corporate developments.
             </p>
           </div>
