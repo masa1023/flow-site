@@ -1,46 +1,43 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { Button } from '@/components/ui/button'
 
 export function LanguageSwitcher() {
   const locale = useLocale()
-  const router = useRouter()
   const pathname = usePathname()
+  const nextLocale = locale === 'ja' ? 'en' : 'ja'
 
-  const switchLocale = () => {
-    const nextLocale = locale === 'ja' ? 'en' : 'ja'
-
-    // Remove current locale prefix from pathname
-    let path = pathname
-    for (const loc of routing.locales) {
-      if (path.startsWith(`/${loc}/`)) {
-        path = path.slice(loc.length + 1)
-        break
-      }
-      if (path === `/${loc}`) {
-        path = '/'
-        break
-      }
+  // Strip current locale prefix from pathname
+  let basePath = pathname
+  for (const loc of routing.locales) {
+    if (basePath.startsWith(`/${loc}/`)) {
+      basePath = basePath.slice(loc.length + 1)
+      break
     }
+    if (basePath === `/${loc}`) {
+      basePath = '/'
+      break
+    }
+  }
 
-    // Add new locale prefix (skip for default locale)
-    const newPath =
-      nextLocale === routing.defaultLocale ? path : `/${nextLocale}${path}`
+  // Build target path
+  const href =
+    nextLocale === routing.defaultLocale
+      ? basePath
+      : `/${nextLocale}${basePath}`
 
-    router.push(newPath)
+  const handleClick = () => {
+    document.cookie = `NEXT_LOCALE=${nextLocale};path=/;max-age=31536000;SameSite=Lax`
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={switchLocale}
-      className="text-xs font-medium px-2"
-    >
-      {locale === 'ja' ? 'EN' : 'JA'}
+    <Button variant="ghost" size="sm" asChild className="text-xs font-medium px-2">
+      <a href={href} onClick={handleClick}>
+        {locale === 'ja' ? 'EN' : 'JA'}
+      </a>
     </Button>
   )
 }
