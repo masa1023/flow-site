@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faGithub,
@@ -14,56 +15,57 @@ import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 
-const team = [
-  {
-    name: 'Masanobu Minami (Masa)',
-    role: 'CEO & Founder',
-    bio: 'Full Stack Web Developer & AI Enthusiast. Proficient at integrating Gen AI models into web apps and AI-driven development.',
-    avatar: '/images/avatar/masa.jpg',
-    skills: ['AI Strategy', 'Generative AI', 'Web Development', 'Leadership'],
-    social: [
-      {
-        icon: <FontAwesomeIcon icon={faGithub} />,
-        link: 'https://github.com/masa1023',
-      },
-      {
-        icon: <FontAwesomeIcon icon={faXTwitter} />,
-        link: 'https://x.com/masaa373',
-      },
-      {
-        icon: <FontAwesomeIcon icon={faLinkedin} />,
-        link: 'https://www.linkedin.com/in/masa373/',
-      },
-    ],
-  },
-  {
-    name: "We're hiring!",
-    role: 'Senior AI Engineer',
-    bio: 'Expert in ML/DL, Foundation Models and AI system design. Passionate about building scalable AI solutions.',
-    avatar:
-      'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-    skills: [
-      'LLM Development',
-      'Model Tuning',
-      'System Architecture',
-      'DevOps',
-    ],
-    social: [],
-  },
-  {
-    name: "We're hiring!",
-    role: 'Senior AI Consultant',
-    bio: 'Specializes in AI strategy, business transformation, and digital innovation. Experienced in leading AI projects across industries.',
-    avatar:
-      'https://images.pexels.com/photos/3778958/pexels-photo-3778958.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-    skills: ['AI Consulting', 'Business Strategy', 'Change Management'],
-    social: [],
-  },
-]
-
 export function TeamSection() {
+  const t = useTranslations('Team')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+
+  const team = [
+    {
+      name: 'Masanobu Minami (Masa)',
+      role: 'CEO & Founder',
+      bio: t('members.masa.bio'),
+      avatar: '/images/avatar/masa.jpg',
+      skills: ['AI Strategy', 'Generative AI', 'Web Development', 'Leadership'],
+      social: [
+        {
+          icon: <FontAwesomeIcon icon={faGithub} />,
+          link: 'https://github.com/masa1023',
+        },
+        {
+          icon: <FontAwesomeIcon icon={faXTwitter} />,
+          link: 'https://x.com/masaa373',
+        },
+        {
+          icon: <FontAwesomeIcon icon={faLinkedin} />,
+          link: 'https://www.linkedin.com/in/masa373/',
+        },
+      ],
+    },
+    {
+      name: t('hiring'),
+      role: 'Senior AI Engineer',
+      bio: t('members.engineer.bio'),
+      avatar:
+        'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
+      skills: [
+        'LLM Development',
+        'Model Tuning',
+        'System Architecture',
+        'DevOps',
+      ],
+      social: [],
+    },
+    {
+      name: t('hiring'),
+      role: 'Senior AI Consultant',
+      bio: t('members.consultant.bio'),
+      avatar:
+        'https://images.pexels.com/photos/3778958/pexels-photo-3778958.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
+      skills: ['AI Consulting', 'Business Strategy', 'Change Management'],
+      social: [],
+    },
+  ]
 
   return (
     <section id="team" ref={ref} className="py-20 bg-muted/30">
@@ -75,15 +77,13 @@ export function TeamSection() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4">
-            Our Team
+            {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Meet the Minds Behind the Innovation
+            {t('heading')}
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Our diverse team of AI experts, researchers, and business
-            strategists brings together decades of experience from leading tech
-            companies and research institutions.
+            {t('description')}
           </p>
         </motion.div>
 

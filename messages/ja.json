@@ -1,0 +1,121 @@
+{
+  "Metadata": {
+    "title": "Flow Inc. - AIで、ビジネスを次のステージへ",
+    "titleTemplate": "%s | Flow Inc.",
+    "description": "AIネイティブなスタートアップとして、AI開発・研修・コンサルティングを通じて、企業のビジネス変革を支援します。"
+  },
+  "Navigation": {
+    "home": "ホーム",
+    "services": "サービス",
+    "team": "チーム",
+    "contact": "お問い合わせ"
+  },
+  "Hero": {
+    "badge": "AI-Native Solutions for the Future",
+    "heading": "AIの力で、ビジネスを",
+    "headingHighlight": "次のステージへ",
+    "subtitle": "Flow Inc.は、最先端のAI開発、実践的な研修プログラム、戦略コンサルティングを通じて、企業のAI活用を総合的にサポートします。",
+    "pillDev": "AI Development",
+    "pillDx": "Digital Transformation",
+    "pillTraining": "AI Training for Enterprise",
+    "ctaPrimary": "Get Started Today",
+    "ctaSecondary": "Explore Our Services"
+  },
+  "Services": {
+    "badge": "Our Services",
+    "heading": "あらゆるビジネスニーズに応えるAIソリューション",
+    "description": "開発からデプロイ、研修からDX推進まで、実際のビジネス成果につながるAIサービスをワンストップで提供します。",
+    "aiDev": {
+      "title": "AI Development Business",
+      "description": "御社のビジネスに最適化されたAIソリューションを開発",
+      "feature1": "Generative AI Integration (LLM, Agents, RAG, MCP)",
+      "feature2": "Custom LLM & Fine-tuning",
+      "feature3": "ML/DL Model Development",
+      "badge": "Most Popular"
+    },
+    "dx": {
+      "title": "DX & Consulting Business",
+      "description": "AIを活用した業務効率化と組織のデジタル変革を推進",
+      "feature1": "Workflow Optimization",
+      "feature2": "AI Tool Implementation",
+      "feature3": "Internal Process Automation",
+      "badge": "Enterprise Ready"
+    },
+    "training": {
+      "title": "AI Training Business",
+      "description": "AI活用人材の育成を支援する研修プログラム",
+      "feature1": "Employee Training Programs",
+      "feature2": "Executive AI Strategy Seminars",
+      "feature3": "Hands-on Workshop Sessions",
+      "badge": "Growing Fast"
+    }
+  },
+  "Expertise": {
+    "badge": "Our Expertise",
+    "heading": "私たちが使いこなすテクノロジー",
+    "description": "常に最新の技術動向をキャッチアップし、最先端のツールとフレームワークでAIソリューションを提供します。",
+    "aiMl": "AI & Machine Learning",
+    "development": "Development",
+    "integration": "Integration & Automation"
+  },
+  "Team": {
+    "badge": "Our Team",
+    "heading": "イノベーションを生み出すチーム",
+    "description": "AI分野の専門家、リサーチャー、ビジネスストラテジストが集結。大手テック企業や研究機関での豊富な経験を活かし、最高のソリューションを提供します。",
+    "hiring": "We're hiring!",
+    "members": {
+      "masa": {
+        "bio": "フルスタックWebエンジニア & AI推進リーダー。生成AIモデルのWebアプリ統合やAI駆動開発を得意とする。"
+      },
+      "engineer": {
+        "bio": "ML/DL、基盤モデル、AIシステム設計のエキスパート。スケーラブルなAIソリューションの構築に情熱を注ぐ。"
+      },
+      "consultant": {
+        "bio": "AI戦略、ビジネス変革、デジタルイノベーションを専門とし、幅広い業界でAIプロジェクトの推進実績を持つ。"
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Get In Touch",
+    "heading": "AIでビジネスを変革しませんか？",
+    "description": "Flow Inc.がAIの力を活用して、御社のイノベーションと成長をどのように支援できるか、ぜひご相談ください。",
+    "conversationHeading": "まずはお気軽にご相談ください",
+    "conversationDescription": "AIソリューションの導入、チームの研修、業務プロセスの変革など、どんなご相談にもお応えします。",
+    "emailTitle": "Email Us",
+    "emailDescription": "いつでもお気軽にメールでご連絡ください",
+    "formTitle": "メッセージを送る",
+    "nameLabel": "お名前",
+    "namePlaceholder": "お名前を入力",
+    "emailLabel": "メールアドレス",
+    "emailPlaceholder": "your@email.com",
+    "companyLabel": "会社名",
+    "companyPlaceholder": "会社名を入力",
+    "messageLabel": "メッセージ",
+    "messagePlaceholder": "プロジェクトの内容やご相談事項をお聞かせください...",
+    "submit": "Send Message",
+    "sending": "送信中...",
+    "successMessage": "メッセージを送信しました。折り返しご連絡いたします。",
+    "errorMessage": "送信に失敗しました。もう一度お試しください。",
+    "validation": {
+      "nameMin": "お名前は2文字以上で入力してください",
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "companyMin": "会社名を入力してください",
+      "messageMin": "メッセージは10文字以上で入力してください"
+    }
+  },
+  "Footer": {
+    "services": "Services",
+    "company": "Company",
+    "resources": "Resources",
+    "aiDevelopment": "AI Development",
+    "dxConsulting": "DX Consulting",
+    "aiTraining": "AI Training",
+    "customSolutions": "Custom Solutions",
+    "aboutUs": "About Us",
+    "ourTeam": "Our Team",
+    "founderBlog": "Founder's Blog",
+    "support": "Support",
+    "copyright": "© {year} Flow Inc. All rights reserved.",
+    "builtWith": "Built with ❤️ using Next.js and AI"
+  }
+}

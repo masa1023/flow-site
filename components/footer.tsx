@@ -1,46 +1,28 @@
 import Link from 'next/link'
-import { Waves, Mail, MapPin, Phone } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { getTranslations } from 'next-intl/server'
+import { Waves, Mail, MapPin } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 
-// const socialLinks = [
-//   { name: 'Twitter', href: 'https://twitter.com/flowinc', icon: '𝕏' },
-//   {
-//     name: 'LinkedIn',
-//     href: 'https://linkedin.com/company/flow-inc',
-//     icon: 'in',
-//   },
-//   { name: 'Instagram', href: 'https://instagram.com/flowinc', icon: '📷' },
-// ]
+export async function Footer() {
+  const t = await getTranslations('Footer')
 
-const footerLinks = {
-  Services: [
-    { name: 'AI Development', href: '#services' },
-    { name: 'DX Consulting', href: '#services' },
-    { name: 'AI Training', href: '#services' },
-    { name: 'Custom Solutions', href: '#contact' },
-  ],
-  Company: [
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Team', href: '#team' },
-    // { name: 'Careers', href: '#contact' },
-    // { name: 'Blog', href: '/blog' },
-  ],
-  Resources: [
-    // { name: 'Case Studies', href: '/blog' },
-    // { name: 'White Papers', href: '/blog' },
-    // { name: 'Documentation', href: '/blog' },
-    { name: "Founder's Blog", href: 'https://masa373.work/' },
-    { name: 'Support', href: '#contact' },
-  ],
-  // Legal: [
-  //   { name: 'Privacy Policy', href: '/privacy' },
-  //   { name: 'Terms of Service', href: '/terms' },
-  //   { name: 'IR Information', href: '/ir/announcement' },
-  // ],
-}
+  const footerLinks = {
+    [t('services')]: [
+      { name: t('aiDevelopment'), href: '#services' },
+      { name: t('dxConsulting'), href: '#services' },
+      { name: t('aiTraining'), href: '#services' },
+      { name: t('customSolutions'), href: '#contact' },
+    ],
+    [t('company')]: [
+      { name: t('aboutUs'), href: '#about' },
+      { name: t('ourTeam'), href: '#team' },
+    ],
+    [t('resources')]: [
+      { name: t('founderBlog'), href: 'https://masa373.work/' },
+      { name: t('support'), href: '#contact' },
+    ],
+  }
 
-export function Footer() {
   return (
     <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,32 +46,7 @@ export function Footer() {
                   <Mail className="h-4 w-4" />
                   <span>hello@flow-inc.ai</span>
                 </div>
-                {/* <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <Phone className="h-4 w-4" />
-                  <span>+1 (555) 123-4567</span>
-                </div> */}
               </div>
-
-              {/* <div className="flex space-x-2">
-                {socialLinks.map((social) => (
-                  <Button
-                    key={social.name}
-                    variant="outline"
-                    size="sm"
-                    asChild
-                    className="w-9 h-9 p-0"
-                  >
-                    <Link
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="text-sm font-medium">{social.icon}</span>
-                      <span className="sr-only">{social.name}</span>
-                    </Link>
-                  </Button>
-                ))}
-              </div> */}
             </div>
 
             {/* Footer Links */}
@@ -125,10 +82,10 @@ export function Footer() {
 
         <div className="py-6 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Flow Inc. All rights reserved.
+            {t('copyright', { year: new Date().getFullYear() })}
           </p>
           <p className="text-sm text-muted-foreground mt-2 sm:mt-0">
-            Built with ❤️ using Next.js and AI
+            {t('builtWith')}
           </p>
         </div>
       </div>

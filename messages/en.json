@@ -1,0 +1,121 @@
+{
+  "Metadata": {
+    "title": "Flow Inc. - AI-Native Solutions for Business Transformation",
+    "titleTemplate": "%s | Flow Inc.",
+    "description": "Leading AI-Native startup providing cutting-edge AI development, training, and consulting services to transform businesses through intelligent automation and optimization."
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "team": "Team",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "AI-Native Solutions for the Future",
+    "heading": "Transform Your Business with ",
+    "headingHighlight": "AI Excellence",
+    "subtitle": "Flow Inc. delivers cutting-edge AI development, comprehensive training programs, and strategic consulting to help businesses harness the power of artificial intelligence for unprecedented growth and innovation.",
+    "pillDev": "AI Development",
+    "pillDx": "Digital Transformation",
+    "pillTraining": "AI Training for Enterprise",
+    "ctaPrimary": "Get Started Today",
+    "ctaSecondary": "Explore Our Services"
+  },
+  "Services": {
+    "badge": "Our Services",
+    "heading": "Comprehensive AI Solutions for Every Business Need",
+    "description": "From development to deployment, training to transformation, we provide end-to-end AI services that drive real business results.",
+    "aiDev": {
+      "title": "AI Development Business",
+      "description": "Cutting-edge AI solutions tailored to your business needs",
+      "feature1": "Generative AI Integration (LLM, Agents, RAG, MCP)",
+      "feature2": "Custom LLM & Fine-tuning",
+      "feature3": "ML/DL Model Development",
+      "badge": "Most Popular"
+    },
+    "dx": {
+      "title": "DX & Consulting Business",
+      "description": "Digital transformation through intelligent automation",
+      "feature1": "Workflow Optimization",
+      "feature2": "AI Tool Implementation",
+      "feature3": "Internal Process Automation",
+      "badge": "Enterprise Ready"
+    },
+    "training": {
+      "title": "AI Training Business",
+      "description": "Comprehensive education programs for AI transformation",
+      "feature1": "Employee Training Programs",
+      "feature2": "Executive AI Strategy Seminars",
+      "feature3": "Hands-on Workshop Sessions",
+      "badge": "Growing Fast"
+    }
+  },
+  "Expertise": {
+    "badge": "Our Expertise",
+    "heading": "Cutting-Edge Technologies We Master",
+    "description": "Our team stays at the forefront of technology, working with the latest tools and frameworks to deliver state-of-the-art AI solutions.",
+    "aiMl": "AI & Machine Learning",
+    "development": "Development",
+    "integration": "Integration & Automation"
+  },
+  "Team": {
+    "badge": "Our Team",
+    "heading": "Meet the Minds Behind the Innovation",
+    "description": "Our diverse team of AI experts, researchers, and business strategists brings together decades of experience from leading tech companies and research institutions.",
+    "hiring": "We're hiring!",
+    "members": {
+      "masa": {
+        "bio": "Full Stack Web Developer & AI Enthusiast. Proficient at integrating Gen AI models into web apps and AI-driven development."
+      },
+      "engineer": {
+        "bio": "Expert in ML/DL, Foundation Models and AI system design. Passionate about building scalable AI solutions."
+      },
+      "consultant": {
+        "bio": "Specializes in AI strategy, business transformation, and digital innovation. Experienced in leading AI projects across industries."
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Get In Touch",
+    "heading": "Ready to Transform Your Business?",
+    "description": "Let's discuss how Flow Inc. can help you harness the power of AI to drive innovation and growth in your organization.",
+    "conversationHeading": "Let's Start a Conversation",
+    "conversationDescription": "Whether you're looking to implement AI solutions, train your team, or transform your business processes, we're here to help.",
+    "emailTitle": "Email Us",
+    "emailDescription": "Send us an email anytime",
+    "formTitle": "Send us a message",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your full name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Your company name",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us about your project and how we can help...",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully! We'll get back to you soon.",
+    "errorMessage": "Failed to send message. Please try again.",
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "emailInvalid": "Please enter a valid email address",
+      "companyMin": "Company name is required",
+      "messageMin": "Message must be at least 10 characters"
+    }
+  },
+  "Footer": {
+    "services": "Services",
+    "company": "Company",
+    "resources": "Resources",
+    "aiDevelopment": "AI Development",
+    "dxConsulting": "DX Consulting",
+    "aiTraining": "AI Training",
+    "customSolutions": "Custom Solutions",
+    "aboutUs": "About Us",
+    "ourTeam": "Our Team",
+    "founderBlog": "Founder's Blog",
+    "support": "Support",
+    "copyright": "© {year} Flow Inc. All rights reserved.",
+    "builtWith": "Built with ❤️ using Next.js and AI"
+  }
+}

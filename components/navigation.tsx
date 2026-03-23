@@ -3,25 +3,26 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { Menu, X, Waves } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
+import { LanguageSwitcher } from '@/components/language-switcher'
 import { cn } from '@/lib/utils'
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/#services' },
-  { name: 'Team', href: '/#team' },
-  // { name: 'Blog', href: '/blog' },
-  // { name: 'IR', href: '/ir/announcement' },
-  { name: 'Contact', href: '/#contact' },
-]
-
 export function Navigation() {
+  const t = useTranslations('Navigation')
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeHref, setActiveHref] = useState('/')
   const pathname = usePathname()
+
+  const navigation = [
+    { name: t('home'), href: '/' },
+    { name: t('services'), href: '/#services' },
+    { name: t('team'), href: '/#team' },
+    { name: t('contact'), href: '/#contact' },
+  ]
 
   useEffect(() => {
     const sectionIds = ['services', 'team', 'contact']
@@ -105,11 +106,13 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
+            <LanguageSwitcher />
             <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             <Button
               variant="ghost"
