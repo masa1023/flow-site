@@ -96,8 +96,8 @@ export function ContactSection() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Let&apos;s discuss how Flow Inc. can help you harness the power of AI to
-            drive innovation and growth in your organization.
+            Let&apos;s discuss how Flow Inc. can help you harness the power of
+            AI to drive innovation and growth in your organization.
           </p>
         </motion.div>
 
@@ -114,8 +114,9 @@ export function ContactSection() {
                 Let&apos;s Start a Conversation
               </h3>
               <p className="text-muted-foreground mb-8">
-                Whether you&apos;re looking to implement AI solutions, train your
-                team, or transform your business processes, we&apos;re here to help.
+                Whether you&apos;re looking to implement AI solutions, train
+                your team, or transform your business processes, we&apos;re here
+                to help.
               </p>
             </div>
 

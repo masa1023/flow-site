@@ -61,8 +61,8 @@ export function TestimonialsSection() {
             What Our Clients Say About Us
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Don&apos;t just take our word for it. Here&apos;s what industry leaders have
-            to say about their experience working with Flow Inc.
+            Don&apos;t just take our word for it. Here&apos;s what industry
+            leaders have to say about their experience working with Flow Inc.
           </p>
         </motion.div>
 
