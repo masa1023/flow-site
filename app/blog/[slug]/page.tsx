@@ -265,15 +265,16 @@ The future of AI is agentic, and by mastering these technologies today, you'll b
 ]
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const post = blogPosts.find((p) => p.id === params.slug)
+  const { slug } = await params
+  const post = blogPosts.find((p) => p.id === slug)
 
   if (!post) {
     return {
@@ -295,7 +296,7 @@ export async function generateMetadata({
   }
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return notFound()
 
   // const post = blogPosts.find((p) => p.id === params.slug)
