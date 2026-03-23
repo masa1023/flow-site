@@ -86,9 +86,7 @@ export function ExpertiseSection() {
                 >
                   <tech.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-lg">
-                  {t(tech.categoryKey)}
-                </h3>
+                <h3 className="font-semibold text-lg">{t(tech.categoryKey)}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">

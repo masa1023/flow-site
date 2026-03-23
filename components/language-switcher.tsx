@@ -34,7 +34,12 @@ export function LanguageSwitcher() {
   }
 
   return (
-    <Button variant="ghost" size="sm" asChild className="text-xs font-medium px-2">
+    <Button
+      variant="ghost"
+      size="sm"
+      asChild
+      className="text-xs font-medium px-2"
+    >
       <a href={href} onClick={handleClick}>
         {locale === 'ja' ? 'EN' : 'JA'}
       </a>
