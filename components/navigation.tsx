@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Waves } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
@@ -21,25 +20,44 @@ const navigation = [
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeHref, setActiveHref] = useState('/')
   const pathname = usePathname()
 
   useEffect(() => {
+    const sectionIds = ['services', 'team', 'contact']
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
+
+      let current = '/'
+      for (const id of sectionIds) {
+        const el = document.getElementById(id)
+        if (el && window.scrollY >= el.offsetTop - 100) {
+          current = `/#${id}`
+        }
+      }
+      setActiveHref(current)
     }
 
     window.addEventListener('scroll', handleScroll)
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const handleNavClick = (href: string) => {
-    if (href.startsWith('#')) {
-      const element = document.querySelector(href)
+    const hash = href.includes('#') ? href.split('#')[1] : null
+    if (hash) {
+      const element = document.getElementById(hash)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
       }
     }
     setIsOpen(false)
+  }
+
+  const isActive = (href: string) => {
+    if (pathname !== '/') return pathname === href
+    return activeHref === href
   }
 
   return (
@@ -71,26 +89,20 @@ export function Navigation() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => {
-                  if (item.href.startsWith('#')) {
+                  if (item.href.includes('#')) {
                     e.preventDefault()
                     handleNavClick(item.href)
                   }
                 }}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-primary relative',
-                  pathname === item.href
-                    ? 'text-primary'
-                    : 'text-muted-foreground'
+                  'text-sm font-medium transition-colors hover:text-primary relative py-1',
+                  'after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:transition-transform after:duration-200 after:origin-center',
+                  isActive(item.href)
+                    ? 'text-primary after:scale-x-100'
+                    : 'text-muted-foreground after:scale-x-0'
                 )}
               >
                 {item.name}
-                {pathname === item.href && (
-                  <motion.div
-                    layoutId="activeTab"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
               </Link>
             ))}
             <ThemeToggle />
@@ -105,70 +117,44 @@ export function Navigation() {
               onClick={() => setIsOpen(!isOpen)}
               className="relative"
             >
-              <AnimatePresence mode="wait">
-                {isOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <X className="h-5 w-5" />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Menu className="h-5 w-5" />
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {isOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden border-t"
-            >
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-lg">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    onClick={(e) => {
-                      if (item.href.startsWith('#')) {
-                        e.preventDefault()
-                        handleNavClick(item.href)
-                      } else {
-                        setIsOpen(false)
-                      }
-                    }}
-                    className={cn(
-                      'block px-3 py-2 text-base font-medium rounded-md transition-colors',
-                      pathname === item.href
-                        ? 'text-primary bg-primary/10'
-                        : 'text-muted-foreground hover:text-primary hover:bg-accent'
-                    )}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {isOpen && (
+          <div className="md:hidden border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-lg">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => {
+                    if (item.href.includes('#')) {
+                      e.preventDefault()
+                      handleNavClick(item.href)
+                    } else {
+                      setIsOpen(false)
+                    }
+                  }}
+                  className={cn(
+                    'block px-3 py-2 text-base font-medium rounded-md transition-colors',
+                    isActive(item.href)
+                      ? 'text-primary bg-primary/10'
+                      : 'text-muted-foreground hover:text-primary hover:bg-accent'
+                  )}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   )
