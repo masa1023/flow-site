@@ -7,16 +7,16 @@ import { useTranslations } from 'next-intl'
 import {
   Code2,
   GraduationCap,
-  Package,
+  Compass,
   Cpu,
   Mic,
-  Brain,
+  Smartphone,
   Bot,
   Wrench,
   Users,
-  Search,
+  Map,
+  GitBranch,
   Building2,
-  Sparkles,
 } from 'lucide-react'
 import {
   Card,
@@ -28,23 +28,23 @@ import {
 import { Badge } from '@/components/ui/badge'
 
 export function ServicesSection() {
-  const t = useTranslations('Services')
+  const t = useTranslations('Capabilities')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const services = [
     {
       icon: Code2,
-      title: t('dev.title'),
-      description: t('dev.description'),
+      title: t('engineering.title'),
+      description: t('engineering.description'),
       features: [
-        { icon: Cpu, text: t('dev.feature1') },
-        { icon: Mic, text: t('dev.feature2') },
-        { icon: Brain, text: t('dev.feature3') },
+        { icon: Cpu, text: t('engineering.feature1') },
+        { icon: Mic, text: t('engineering.feature2') },
+        { icon: Smartphone, text: t('engineering.feature3') },
       ],
       color:
         'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
-      badge: t('dev.badge'),
+      badge: t('engineering.badge'),
     },
     {
       icon: GraduationCap,
@@ -60,16 +60,16 @@ export function ServicesSection() {
       badge: t('training.badge'),
     },
     {
-      icon: Package,
-      title: t('products.title'),
-      description: t('products.description'),
+      icon: Compass,
+      title: t('advisory.title'),
+      description: t('advisory.description'),
       features: [
-        { icon: Search, text: t('products.feature1') },
-        { icon: Building2, text: t('products.feature2') },
-        { icon: Sparkles, text: t('products.feature3') },
+        { icon: Map, text: t('advisory.feature1') },
+        { icon: GitBranch, text: t('advisory.feature2') },
+        { icon: Building2, text: t('advisory.feature3') },
       ],
       color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
-      badge: t('products.badge'),
+      badge: t('advisory.badge'),
     },
   ]
 

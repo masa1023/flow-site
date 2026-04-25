@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { ArrowRight, Code2, GraduationCap, Package } from 'lucide-react'
+import { ArrowRight, Sparkles, Smartphone, GraduationCap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function HeroSection() {
@@ -15,8 +15,8 @@ export function HeroSection() {
     }
   }
 
-  const handleScrollToServices = () => {
-    const element = document.querySelector('#services')
+  const handleScrollToWork = () => {
+    const element = document.querySelector('#work')
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
@@ -25,10 +25,9 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-primary/5">
       {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-2000" />
+      <div className="absolute inset-0 -z-10" aria-hidden="true">
+        <div className="absolute top-1/4 left-1/4 w-[32rem] h-[32rem] bg-primary/10 rounded-full blur-3xl motion-safe:animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[32rem] h-[32rem] bg-emerald-500/10 rounded-full blur-3xl motion-safe:animate-pulse [animation-delay:1500ms]" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -64,16 +63,16 @@ export function HeroSection() {
             className="flex flex-wrap justify-center gap-4 mb-10"
           >
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Code2 className="w-4 h-4 text-yellow-500" />
+              <Sparkles className="w-4 h-4 text-yellow-500" />
               <span className="text-sm font-medium">{t('pillDev')}</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
+              <Smartphone className="w-4 h-4 text-sky-500" />
+              <span className="text-sm font-medium">{t('pillWeb')}</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
               <GraduationCap className="w-4 h-4 text-emerald-500" />
               <span className="text-sm font-medium">{t('pillTraining')}</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Package className="w-4 h-4 text-sky-500" />
-              <span className="text-sm font-medium">{t('pillProducts')}</span>
             </div>
           </motion.div>
 
@@ -95,7 +94,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              onClick={handleScrollToServices}
+              onClick={handleScrollToWork}
               className="group"
             >
               {t('ctaSecondary')}

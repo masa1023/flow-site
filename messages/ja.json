@@ -1,84 +1,145 @@
 {
   "Metadata": {
-    "title": "Flow Inc. - AIで、ビジネスを次のステージへ",
+    "title": "Flow Inc. — AI・プロダクト開発を、ゼロから本番まで",
     "titleTemplate": "%s | Flow Inc.",
-    "description": "AIネイティブなスタートアップとして、AI開発・研修・コンサルティングを通じて、企業のビジネス変革を支援します。"
+    "description": "Flowは、事業会社の社内チームに伴走しながら AIプロダクト・Webアプリ・モバイルアプリをゼロから本番まで開発する少数精鋭の開発チームです。代表・南が直接ハンズオンで関与します。"
   },
   "Navigation": {
     "home": "ホーム",
     "services": "サービス",
-    "team": "チーム",
+    "work": "実績",
+    "founder": "代表",
     "contact": "お問い合わせ"
   },
   "Hero": {
-    "heading": "プロダクトを作り、チームを育て、",
-    "headingHighlight": "自分たちでも使い倒す。",
-    "subtitle": "創業者・事業会社・自分たちのために、AIプロダクトをエンドツーエンドで開発する少数精鋭のグローバルチームです。",
+    "heading": "技術で事業を動かす。",
+    "headingHighlight": "あなたの社内チームの隣で。",
+    "subtitle": "Flowは、事業会社のパートナーとしてAIプロダクト・Webアプリ・モバイルアプリを構想から本番リリースまで開発する少数精鋭の開発チームです。",
     "pillDev": "AI開発",
-    "pillTraining": "研修・コンサル",
-    "pillProducts": "自社プロダクト",
+    "pillWeb": "Web・モバイル開発",
+    "pillTraining": "研修・アドバイザリー",
     "ctaPrimary": "プロジェクトを始める",
-    "ctaSecondary": "サービスを見る"
+    "ctaSecondary": "実績を見る"
   },
-  "Services": {
-    "badge": "What We Do",
+  "Capabilities": {
+    "badge": "Capabilities",
     "heading": "3つの関わり方",
-    "description": "プロダクトを開発してほしい、チームをAIで強くしたい、自社プロダクトを試してみたい — ご相談はどの入り口からでも。",
-    "dev": {
-      "title": "AI開発",
-      "description": "Web・モバイルアプリへの生成AI組み込み、音声エージェント開発、カスタムMLモデル構築まで。スコープと価格が明確な、エンドツーエンドのAIプロダクト開発。",
-      "feature1": "LLM・Agent・RAG・MCP連携",
-      "feature2": "音声AIエージェント",
-      "feature3": "カスタムMLモデル開発",
-      "badge": "Most Active"
+    "description": "多くのご相談はこの3つから始まり、長期の伴走パートナーシップに発展します。",
+    "engineering": {
+      "title": "プロダクト開発",
+      "description": "Web・モバイル・AIアプリケーションを、構想から本番運用まで一気通貫で。生成AI連携や音声エージェントを得意としつつ、AIを使わない通常のWeb・モバイル開発までフルスタックで対応します。",
+      "feature1": "生成AI連携 (LLM・Agent・RAG・MCP)",
+      "feature2": "音声AIエージェント・MLモデル開発",
+      "feature3": "AIを使わないWeb・モバイル開発も",
+      "badge": "Core Practice"
     },
     "training": {
       "title": "AI研修・コンサル",
-      "description": "AIを日々の業務に根付かせる支援。エンジニア向けのClaude Code・AI駆動開発の指導、社内AIツールの導入、経営層向けAI戦略セッションまで。",
+      "description": "AIをチームの日々の業務に根付かせるご支援です。エンジニアにはClaude Code・AI駆動開発の指導、経営層にはフラットなAI戦略セッションを提供します。",
       "feature1": "Claude Code・AIコーディング指導",
       "feature2": "社内AIツール導入 (n8n, Dify, GAS)",
       "feature3": "経営層向けAI戦略セッション",
       "badge": "Hands-on"
     },
-    "products": {
-      "title": "自社プロダクト",
-      "description": "自社でもAIプロダクトを開発・運営。アイデアの検証や、クライアントへ提案する技術を実地で試す場としても活用しています。",
-      "feature1": "AIモデル比較・選定ツール",
-      "feature2": "業界特化型業務SaaS",
-      "feature3": "他にも複数のプロダクトを開発中",
-      "badge": "Built by Us"
+    "advisory": {
+      "title": "技術アドバイザリー",
+      "description": "御社の社内チームの隣に立つ、フラクショナルなプロダクト・技術パートナー。要件定義・アーキテクチャ・技術選定から、DX全体戦略まで。",
+      "feature1": "要件定義・プロダクトロードマップ",
+      "feature2": "アーキテクチャレビュー・技術選定",
+      "feature3": "DX全体戦略の立案",
+      "badge": "Embedded"
     }
   },
-  "Expertise": {
-    "badge": "Our Expertise",
-    "heading": "私たちが使いこなすテクノロジー",
-    "description": "常に最新の技術動向をキャッチアップし、最先端のツールとフレームワークでAIソリューションを提供します。",
-    "aiMl": "AI & Machine Learning",
-    "development": "Development",
-    "integration": "Integration & Automation"
-  },
-  "Team": {
-    "badge": "Our Team",
-    "heading": "少数精鋭のコア、グローバルな専門家ネットワーク",
-    "description": "Flowは少数精鋭のコアチームと、10年以上の信頼関係で結ばれた専門家ネットワークで構成されています。プロジェクトごとに最適なチームをオンデマンドで編成します。",
-    "members": {
-      "masa": {
-        "bio": "エンジニア・PM・取締役として、10年以上にわたりコンシューマー向けプロダクトをゼロから事業として成立する規模まで育ててきた。その実務経験をAIプロダクト開発に持ち込み、課題定義からMVPリリースまで伴走する。"
+  "Work": {
+    "badge": "Selected Work",
+    "heading": "これまでに開発したプロダクト",
+    "description": "直近のご支援案件を一部ご紹介します。すべて本番運用中、もしくは継続開発中のプロダクトです。",
+    "items": {
+      "voice": {
+        "industry": "EdTech・英会話学習",
+        "title": "AI と音声で話せる 英会話学習サービス",
+        "description": "日本人英語学習者向けの AI 英会話プロダクト。ElevenLabs の会話 AI とリアルタイムに音声で対話しながら学べる体験を、レッスン構成・進捗管理・課金フローまでフルスタックで構築。",
+        "stack": "Next.js · ElevenLabs ConvAI · Supabase",
+        "status": "本番運用中"
       },
-      "network": {
-        "role": "オンデマンド専門家ネットワーク",
-        "bio": "プロジェクトごとに招集する専門家ネットワーク。シニアML/AIエンジニア、アジアを拠点とするネイティブアプリ開発者、欧州フィンテック出身のフルスタックエンジニア、経験豊富なプロダクトデザイナーなど、10年以上の信頼関係で結ばれたメンバーで構成しています。"
+      "data": {
+        "industry": "小売・データ分析",
+        "title": "AI POS データ分析プラットフォーム",
+        "description": "POSデータを自然言語で深掘りできる分析SaaS。BigQuery 上の売上データに対し、対話型 SQL Agent が ADK 上で動的にクエリを組み立て、Vega-Lite チャートでインサイトを返します。",
+        "stack": "FastAPI · BigQuery · ADK Agent · React",
+        "status": "継続開発中"
+      },
+      "video": {
+        "industry": "メディア・動画生成",
+        "title": "AI アバター動画 生成プラットフォーム",
+        "description": "HeyGen のアバター動画生成と ElevenLabs の音声合成を連携し、Q&A シナリオから対話分岐型の AI 動画を自動生成するパイプライン。生成された動画はサイトに 1 行で埋め込めるウィジェットとして配信し、視聴ログとコンバージョンも収集します。",
+        "stack": "HeyGen · ElevenLabs · Supabase · Cloudflare R2",
+        "status": "継続開発中"
+      },
+      "edu": {
+        "industry": "EdTech・留学",
+        "title": "留学情報メディアサイト",
+        "description": "留学情報メディアのコンテンツ・リード獲得フローを、複数地域 (国内・マルタ等) 展開対応のカスタムWordPressテーマで構築。",
+        "stack": "WordPress · カスタムテーマ",
+        "status": "本番運用中"
+      },
+      "ecom": {
+        "industry": "産業・リサイクル",
+        "title": "コーポレート・EC統合サイト",
+        "description": "B2Bサービス企業のコーポレートサイトと見積もり・問い合わせフローを、SEO・パフォーマンス最適化込みで構築。",
+        "stack": "Next.js · パフォーマンス最適化",
+        "status": "本番運用中"
+      }
+    }
+  },
+  "Founder": {
+    "badge": "The Founder",
+    "heading": "AI もそれ以外も、フルスタックに",
+    "description": "少数精鋭のチームで、AI 駆動開発と通常の Web・モバイル開発を同じ密度でカバーします。スコープ設計から本番運用まで一気通貫で関わります。",
+    "name": "南 政暢",
+    "alias": "Masa",
+    "role": "代表取締役",
+    "bio": "エンジニア・PM・取締役として、10年以上にわたりコンシューマー向けプロダクトを構想からスケールまで作ってきた経験を持つ。その実務経験をAI・プロダクト開発に活かし、課題定義からアーキテクチャ設計、リリースまで一気通貫で伴走する。",
+    "principlesTitle": "私たちの関わり方",
+    "principle1": "案件の中核設計と技術判断には、代表もしくは中核メンバーが直接関与します。",
+    "principle2": "実装は、信頼できるエンジニア・デザイナー・PM と案件ごとにチームを編成します。",
+    "principle3": "プロトタイプ止まりではなく、本番運用に耐える品質で形にします。",
+    "principle4": "AI を含めた技術選定は、事業の制約と将来性に合わせて柔軟に行います。",
+    "linksLabel": "Connect"
+  },
+  "Stack": {
+    "badge": "Our Stack",
+    "heading": "私たちが日々使う技術",
+    "description": "プロトタイプから本番運用まで、実際にプロジェクトを動かすために使っているモデル・基盤・ツール群です。",
+    "aiMl": "AI・機械学習",
+    "development": "エンジニアリング",
+    "integration": "連携・自動化"
+  },
+  "Products": {
+    "badge": "Own Products",
+    "heading": "自分たちでも、AIで動くプロダクトを作る",
+    "description": "社内で開発・運用しているプロダクト群です。実装スキルを磨き、クライアントへ提案する技術を実地で検証する場でもあります。",
+    "items": {
+      "compare": {
+        "category": "AIツール",
+        "title": "AIモデル比較・選定ツール",
+        "description": "生成AIモデルを品質・レイテンシ・コストの3軸で並列比較。ベンダー選定や提案時の判断材料として社内利用しています。"
+      },
+      "ops": {
+        "category": "業界特化型SaaS",
+        "title": "業界特化型業務SaaS",
+        "description": "特定業界の運営チーム向けに開発した業務基盤。すでに本番顧客で稼働中です。"
       }
     }
   },
   "Contact": {
     "badge": "Get In Touch",
-    "heading": "AIでビジネスを変革しませんか？",
-    "description": "Flow Inc.がAIの力を活用して、御社のイノベーションと成長をどのように支援できるか、ぜひご相談ください。",
-    "conversationHeading": "まずはお気軽にご相談ください",
-    "conversationDescription": "AIソリューションの導入、チームの研修、業務プロセスの変革など、どんなご相談にもお応えします。",
-    "emailTitle": "Email Us",
-    "emailDescription": "いつでもお気軽にメールでご連絡ください",
+    "heading": "プロジェクトについて、お聞かせください。",
+    "description": "作りたいプロダクト、育てたいチーム、解きたい課題 — まずはお気軽にどうぞ。すべてのメッセージに目を通し、1営業日以内にご返信します。",
+    "conversationHeading": "まずは30分のオンラインMTGから",
+    "conversationDescription": "最初はお話を伺うだけ。その上で、具体的な次の一歩をご提案します。営業資料も売り込みもありません。",
+    "emailTitle": "Email",
+    "emailDescription": "1営業日以内にご返信します",
     "formTitle": "メッセージを送る",
     "nameLabel": "お名前",
     "namePlaceholder": "お名前を入力",
@@ -87,11 +148,11 @@
     "companyLabel": "会社名",
     "companyPlaceholder": "会社名を入力",
     "messageLabel": "メッセージ",
-    "messagePlaceholder": "プロジェクトの内容やご相談事項をお聞かせください...",
-    "submit": "Send Message",
+    "messagePlaceholder": "作りたいもの、育てたいチーム、解きたい課題などをお聞かせください",
+    "submit": "送信",
     "sending": "送信中...",
-    "successMessage": "メッセージを送信しました。折り返しご連絡いたします。",
-    "errorMessage": "送信に失敗しました。もう一度お試しください。",
+    "successMessage": "メッセージを送信しました。Masaから折り返しご連絡します。",
+    "errorMessage": "送信に失敗しました。もう一度お試しいただくか、hello@flow-inc.ai まで直接ご連絡ください。",
     "validation": {
       "nameMin": "お名前は2文字以上で入力してください",
       "emailInvalid": "有効なメールアドレスを入力してください",
@@ -107,8 +168,7 @@
     "dxConsulting": "DXコンサルティング",
     "aiTraining": "AI研修",
     "customSolutions": "カスタムソリューション",
-    "aboutUs": "会社概要",
-    "ourTeam": "チーム",
+    "ourTeam": "代表",
     "founderBlog": "ファウンダーブログ",
     "support": "サポート",
     "securityPolicy": "情報セキュリティ基本方針",
