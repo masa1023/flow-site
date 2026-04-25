@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import {
   GraduationCap,
   Cpu,
@@ -22,53 +23,51 @@ import {
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 
-const services = [
-  {
-    icon: Zap,
-    title: 'AI Development Business',
-    description: 'Cutting-edge AI solutions tailored to your business needs',
-    features: [
-      { icon: Cpu, text: 'Generative AI Integration (LLM, Agents, RAG, MCP)' },
-      { icon: Brain, text: 'Custom LLM & Fine-tuning' },
-      {
-        icon: Settings,
-        text: 'ML/DL Model Development',
-      },
-    ],
-    color:
-      'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
-    badge: 'Most Popular',
-  },
-  {
-    icon: Settings,
-    title: 'DX & Consulting Business',
-    description: 'Digital transformation through intelligent automation',
-    features: [
-      { icon: Workflow, text: 'Workflow Optimization' },
-      { icon: Zap, text: 'AI Tool Implementation' },
-      { icon: BarChart3, text: 'Internal Process Automation' },
-    ],
-    color:
-      'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
-    badge: 'Enterprise Ready',
-  },
-  {
-    icon: GraduationCap,
-    title: 'AI Training Business',
-    description: 'Comprehensive education programs for AI transformation',
-    features: [
-      { icon: GraduationCap, text: 'Employee Training Programs' },
-      { icon: BarChart3, text: 'Executive AI Strategy Seminars' },
-      { icon: Users, text: 'Hands-on Workshop Sessions' },
-    ],
-    color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
-    badge: 'Growing Fast',
-  },
-]
-
 export function ServicesSection() {
+  const t = useTranslations('Services')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+
+  const services = [
+    {
+      icon: Zap,
+      title: t('aiDev.title'),
+      description: t('aiDev.description'),
+      features: [
+        { icon: Cpu, text: t('aiDev.feature1') },
+        { icon: Brain, text: t('aiDev.feature2') },
+        { icon: Settings, text: t('aiDev.feature3') },
+      ],
+      color:
+        'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
+      badge: t('aiDev.badge'),
+    },
+    {
+      icon: Settings,
+      title: t('dx.title'),
+      description: t('dx.description'),
+      features: [
+        { icon: Workflow, text: t('dx.feature1') },
+        { icon: Zap, text: t('dx.feature2') },
+        { icon: BarChart3, text: t('dx.feature3') },
+      ],
+      color:
+        'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
+      badge: t('dx.badge'),
+    },
+    {
+      icon: GraduationCap,
+      title: t('training.title'),
+      description: t('training.description'),
+      features: [
+        { icon: GraduationCap, text: t('training.feature1') },
+        { icon: BarChart3, text: t('training.feature2') },
+        { icon: Users, text: t('training.feature3') },
+      ],
+      color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
+      badge: t('training.badge'),
+    },
+  ]
 
   return (
     <section id="services" ref={ref} className="py-20">
@@ -80,14 +79,13 @@ export function ServicesSection() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4">
-            Our Services
+            {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Comprehensive AI Solutions for Every Business Need
+            {t('heading')}
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            From development to deployment, training to transformation, we
-            provide end-to-end AI services that drive real business results.
+            {t('description')}
           </p>
         </motion.div>
 

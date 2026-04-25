@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import {
   ArrowRight,
   Sparkles,
@@ -12,6 +13,8 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
 export function HeroSection() {
+  const t = useTranslations('Hero')
+
   const handleScrollToContact = () => {
     const element = document.querySelector('#contact')
     if (element) {
@@ -46,7 +49,7 @@ export function HeroSection() {
           >
             <Badge variant="outline" className="px-4 py-2 text-sm">
               <Sparkles className="w-4 h-4 mr-2" />
-              AI-Native Solutions for the Future
+              {t('badge')}
             </Badge>
           </motion.div>
 
@@ -57,9 +60,9 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent leading-tight"
           >
-            Transform Your Business with{' '}
+            {t('heading')}
             <span className="bg-gradient-to-r from-primary to-sky-500 bg-clip-text text-transparent">
-              AI Excellence
+              {t('headingHighlight')}
             </span>
           </motion.h1>
 
@@ -70,10 +73,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            Flow Inc. delivers cutting-edge AI development, comprehensive
-            training programs, and strategic consulting to help businesses
-            harness the power of artificial intelligence for unprecedented
-            growth and innovation.
+            {t('subtitle')}
           </motion.p>
 
           {/* Feature Pills */}
@@ -85,19 +85,15 @@ export function HeroSection() {
           >
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
               <Zap className="w-4 h-4 text-primary text-yellow-500" />
-              <span className="text-sm font-medium">AI Development</span>
+              <span className="text-sm font-medium">{t('pillDev')}</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
               <Settings className="w-4 h-4 text-emerald-500" />
-              <span className="text-sm font-medium">
-                Digital Transformation
-              </span>
+              <span className="text-sm font-medium">{t('pillDx')}</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
               <GraduationCap className="w-4 h-4 text-sky-500" />
-              <span className="text-sm font-medium">
-                AI Training for Enterprise
-              </span>
+              <span className="text-sm font-medium">{t('pillTraining')}</span>
             </div>
           </motion.div>
 
@@ -113,7 +109,7 @@ export function HeroSection() {
               onClick={handleScrollToContact}
               className="group relative overflow-hidden"
             >
-              Get Started Today
+              {t('ctaPrimary')}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
@@ -122,40 +118,9 @@ export function HeroSection() {
               onClick={handleScrollToServices}
               className="group"
             >
-              Explore Our Services
+              {t('ctaSecondary')}
             </Button>
           </motion.div>
-
-          {/* Stats */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-16 border-t border-border/40"
-          >
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">
-                Projects Delivered
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-500 mb-2">
-                98%
-              </div>
-              <div className="text-sm text-muted-foreground">
-                Client Satisfaction
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-500 mb-2">
-                24/7
-              </div>
-              <div className="text-sm text-muted-foreground">
-                Support Available
-              </div>
-            </div>
-          </motion.div> */}
         </div>
       </div>
     </section>

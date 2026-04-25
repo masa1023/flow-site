@@ -3,12 +3,13 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { Code, Cpu, Settings } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 
 const technologies = [
   {
-    category: 'AI & Machine Learning',
+    categoryKey: 'aiMl' as const,
     icon: Cpu,
     items: [
       'OpenAI GPT',
@@ -22,7 +23,7 @@ const technologies = [
     color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
   },
   {
-    category: 'Development',
+    categoryKey: 'development' as const,
     icon: Code,
     items: [
       'Python',
@@ -37,7 +38,7 @@ const technologies = [
       'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
   },
   {
-    category: 'Integration & Automation',
+    categoryKey: 'integration' as const,
     icon: Settings,
     items: ['Dify', 'n8n', 'Zapier', 'GAS', 'Webhooks'],
     color:
@@ -46,6 +47,7 @@ const technologies = [
 ]
 
 export function ExpertiseSection() {
+  const t = useTranslations('Expertise')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
@@ -59,15 +61,13 @@ export function ExpertiseSection() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4">
-            Our Expertise
+            {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Cutting-Edge Technologies We Master
+            {t('heading')}
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Our team stays at the forefront of technology, working with the
-            latest tools and frameworks to deliver state-of-the-art AI
-            solutions.
+            {t('description')}
           </p>
         </motion.div>
 
@@ -86,7 +86,7 @@ export function ExpertiseSection() {
                 >
                   <tech.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-lg">{tech.category}</h3>
+                <h3 className="font-semibold text-lg">{t(tech.categoryKey)}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">

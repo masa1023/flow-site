@@ -6,6 +6,7 @@ import { useRef } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
+import { useTranslations } from 'next-intl'
 import { Mail, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -15,39 +16,24 @@ import { Badge } from '@/components/ui/badge'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
 
-const contactSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Please enter a valid email address'),
-  company: z.string().min(2, 'Company name is required'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-})
-
-type ContactForm = z.infer<typeof contactSchema>
-
-const contactInfo = [
-  {
-    icon: Mail,
-    title: 'Email Us',
-    content: 'hello@flow-inc.ai',
-    description: 'Send us an email anytime',
-  },
-  // {
-  //   icon: Phone,
-  //   title: 'Call Us',
-  //   content: '+1 (555) 123-4567',
-  //   description: 'Mon-Fri from 8am to 6pm PST',
-  // },
-  // {
-  //   icon: MapPin,
-  //   title: 'Visit Us',
-  //   content: 'San Francisco, CA',
-  //   description: 'Come say hello at our HQ',
-  // },
-]
+type ContactForm = {
+  name: string
+  email: string
+  company: string
+  message: string
+}
 
 export function ContactSection() {
+  const t = useTranslations('Contact')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+
+  const contactSchema = z.object({
+    name: z.string().min(2, t('validation.nameMin')),
+    email: z.string().email(t('validation.emailInvalid')),
+    company: z.string().min(2, t('validation.companyMin')),
+    message: z.string().min(10, t('validation.messageMin')),
+  })
 
   const {
     register,
@@ -72,11 +58,11 @@ export function ContactSection() {
         throw new Error('Failed to send message')
       }
 
-      toast.success("Message sent successfully! We'll get back to you soon.")
+      toast.success(t('successMessage'))
       reset()
     } catch (error) {
       console.error('Error sending message:', error)
-      toast.error('Failed to send message. Please try again.')
+      toast.error(t('errorMessage'))
     }
   }
 
@@ -90,14 +76,13 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <Badge variant="outline" className="mb-4">
-            Get In Touch
+            {t('badge')}
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Business?
+            {t('heading')}
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
-            Let&apos;s discuss how Flow Inc. can help you harness the power of
-            AI to drive innovation and growth in your organization.
+            {t('description')}
           </p>
         </motion.div>
 
@@ -111,42 +96,37 @@ export function ContactSection() {
           >
             <div>
               <h3 className="text-2xl font-bold mb-4">
-                Let&apos;s Start a Conversation
+                {t('conversationHeading')}
               </h3>
               <p className="text-muted-foreground mb-8">
-                Whether you&apos;re looking to implement AI solutions, train
-                your team, or transform your business processes, we&apos;re here
-                to help.
+                {t('conversationDescription')}
               </p>
             </div>
 
             <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={
-                    isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                  }
-                  transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <info.icon className="w-6 h-6 text-primary" />
-                    </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                }
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex items-start space-x-4"
+              >
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">{info.title}</h4>
-                    <p className="text-primary font-medium mb-1">
-                      {info.content}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {info.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">{t('emailTitle')}</h4>
+                  <p className="text-primary font-medium mb-1">
+                    hello@flow-inc.ai
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {t('emailDescription')}
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 
@@ -158,17 +138,17 @@ export function ContactSection() {
           >
             <Card>
               <CardHeader>
-                <CardTitle>Send us a message</CardTitle>
+                <CardTitle>{t('formTitle')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="name">{t('nameLabel')}</Label>
                       <Input
                         id="name"
                         {...register('name')}
-                        placeholder="Your full name"
+                        placeholder={t('namePlaceholder')}
                         className={errors.name ? 'border-destructive' : ''}
                       />
                       {errors.name && (
@@ -178,12 +158,12 @@ export function ContactSection() {
                       )}
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{t('emailLabel')}</Label>
                       <Input
                         id="email"
                         type="email"
                         {...register('email')}
-                        placeholder="your@email.com"
+                        placeholder={t('emailPlaceholder')}
                         className={errors.email ? 'border-destructive' : ''}
                       />
                       {errors.email && (
@@ -195,11 +175,11 @@ export function ContactSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
+                    <Label htmlFor="company">{t('companyLabel')}</Label>
                     <Input
                       id="company"
                       {...register('company')}
-                      placeholder="Your company name"
+                      placeholder={t('companyPlaceholder')}
                       className={errors.company ? 'border-destructive' : ''}
                     />
                     {errors.company && (
@@ -210,11 +190,11 @@ export function ContactSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t('messageLabel')}</Label>
                     <Textarea
                       id="message"
                       {...register('message')}
-                      placeholder="Tell us about your project and how we can help..."
+                      placeholder={t('messagePlaceholder')}
                       rows={5}
                       className={errors.message ? 'border-destructive' : ''}
                     />
@@ -231,10 +211,10 @@ export function ContactSection() {
                     className="w-full"
                   >
                     {isSubmitting ? (
-                      'Sending...'
+                      t('sending')
                     ) : (
                       <>
-                        Send Message
+                        {t('submit')}
                         <Send className="w-4 h-4 ml-2" />
                       </>
                     )}

@@ -1,27 +1,26 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { Link, usePathname } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import { Menu, X, Waves } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { cn } from '@/lib/utils'
 
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/#services' },
-  { name: 'Team', href: '/#team' },
-  // { name: 'Blog', href: '/blog' },
-  // { name: 'IR', href: '/ir/announcement' },
-  { name: 'Contact', href: '/#contact' },
-]
-
 export function Navigation() {
+  const t = useTranslations('Navigation')
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeHref, setActiveHref] = useState('/')
   const pathname = usePathname()
+
+  const navigation = [
+    { name: t('home'), href: '/' },
+    { name: t('services'), href: '/#services' },
+    { name: t('team'), href: '/#team' },
+    { name: t('contact'), href: '/#contact' },
+  ]
 
   useEffect(() => {
     const sectionIds = ['services', 'team', 'contact']
