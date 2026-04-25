@@ -115,6 +115,50 @@
     "ourTeam": "Our Team",
     "founderBlog": "Founder's Blog",
     "support": "Support",
+    "securityPolicy": "Information Security Policy",
+    "address": "8F Wind Ebisu Building, 2-4-8 Ebisu-nishi, Shibuya-ku, Tokyo 150-0021, Japan",
     "copyright": "© {year} Flow Inc. All rights reserved."
+  },
+  "SecurityPolicy": {
+    "title": "Information Security Policy",
+    "intro": "Flow Inc. (hereinafter referred to as \"the Company\") establishes and implements the following Information Security Policy (hereinafter referred to as \"this Policy\") to protect its information assets from all threats and to meet the trust and expectations of its customers and all related parties.",
+    "section1": {
+      "title": "Purpose",
+      "body": "The purpose of this Policy is to maintain the confidentiality, integrity, and availability of the information assets handled in the Company's business activities, and to prevent information security incidents."
+    },
+    "section2": {
+      "title": "Scope",
+      "body": "This Policy applies to all directors and employees of the Company, all related parties including subcontractors engaged in the Company's business, and all information assets handled by the Company."
+    },
+    "section3": {
+      "title": "Basic Commitments",
+      "body": "The Company will implement the following commitments to ensure information security.",
+      "items": [
+        "Comply with laws, governmental guidelines, and other standards related to information security.",
+        "Implement necessary safety management measures to appropriately protect information assets from risks such as unauthorized access, loss, destruction, falsification, and leakage.",
+        "Regularly review and evaluate the implementation status of information security measures, and continuously improve them.",
+        "Conduct education and awareness activities related to information security to raise the information security awareness of directors and employees.",
+        "In the event of an information security incident, promptly investigate the cause, minimize damage, and work to prevent recurrence."
+      ]
+    },
+    "section4": {
+      "title": "Implementation Structure",
+      "body": "The Representative Director serves as the Information Security Manager and is responsible for the appropriate management of information assets and the implementation of this Policy."
+    },
+    "section5": {
+      "title": "Obligations of Employees",
+      "body": "All directors and employees shall comply with this Policy and related regulations and procedures, and endeavor to handle information assets appropriately."
+    },
+    "section6": {
+      "title": "Management of Subcontractors",
+      "body": "When outsourcing business operations, the Company shall verify the information security level of subcontractors and, as necessary, clarify information security obligations through contracts."
+    },
+    "section7": {
+      "title": "Continuous Improvement",
+      "body": "The Company shall periodically review and continuously improve this Policy in response to changes in the information security environment, business content, and information security risks."
+    },
+    "enactedOn": "Enacted on: April 23, 2026",
+    "company": "Flow Inc.",
+    "representative": "Representative Director: Masanobu Minami"
   }
 }

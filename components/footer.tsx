@@ -17,6 +17,7 @@ export async function Footer() {
     [t('company')]: [
       { name: t('aboutUs'), href: '#about' },
       { name: t('ourTeam'), href: '#team' },
+      { name: t('securityPolicy'), href: '/security-policy' },
     ],
     [t('resources')]: [
       { name: t('founderBlog'), href: 'https://masa373.work/' },
@@ -39,12 +40,12 @@ export async function Footer() {
               </Link>
 
               <div className="space-y-2 mb-6">
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <MapPin className="h-4 w-4" />
-                  <span>Tokyo, Japan</span>
+                <div className="flex items-start space-x-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                  <span>{t('address')}</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                  <Mail className="h-4 w-4" />
+                  <Mail className="h-4 w-4 shrink-0" />
                   <span>hello@flow-inc.ai</span>
                 </div>
               </div>
