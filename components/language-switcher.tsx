@@ -2,7 +2,6 @@
 
 import { useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
-import { useRouter } from 'next/navigation'
 import { Globe } from 'lucide-react'
 import { routing } from '@/i18n/routing'
 import {
@@ -21,7 +20,6 @@ const LOCALE_LABELS: Record<string, string> = {
 export function LanguageSwitcher() {
   const locale = useLocale()
   const pathname = usePathname()
-  const router = useRouter()
 
   const handleChange = (nextLocale: string) => {
     if (nextLocale === locale) return
@@ -44,7 +42,7 @@ export function LanguageSwitcher() {
         : `/${nextLocale}${basePath}`
 
     document.cookie = `NEXT_LOCALE=${nextLocale};path=/;max-age=31536000;SameSite=Lax`
-    router.push(href)
+    window.location.href = href
   }
 
   return (
