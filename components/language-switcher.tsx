@@ -3,6 +3,7 @@
 import { useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+import { Globe } from 'lucide-react'
 import { routing } from '@/i18n/routing'
 import {
   Select,
@@ -48,12 +49,16 @@ export function LanguageSwitcher() {
 
   return (
     <Select value={locale} onValueChange={handleChange}>
-      <SelectTrigger className="h-8 w-auto gap-1.5 px-2.5 text-xs font-medium">
+      <SelectTrigger
+        aria-label="Change language"
+        className="h-9 w-auto gap-2 px-3 text-sm font-medium"
+      >
+        <Globe className="h-4 w-4 text-muted-foreground" />
         <SelectValue />
       </SelectTrigger>
       <SelectContent align="end">
         {routing.locales.map((loc) => (
-          <SelectItem key={loc} value={loc} className="text-xs">
+          <SelectItem key={loc} value={loc} className="text-sm">
             {LOCALE_LABELS[loc] ?? loc.toUpperCase()}
           </SelectItem>
         ))}
