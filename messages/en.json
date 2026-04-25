@@ -107,7 +107,6 @@
     "services": "Services",
     "company": "Company",
     "resources": "Resources",
-    "legal": "Legal",
     "aiDevelopment": "AI Development",
     "dxConsulting": "DX Consulting",
     "aiTraining": "AI Training",
@@ -117,6 +116,7 @@
     "founderBlog": "Founder's Blog",
     "support": "Support",
     "securityPolicy": "Information Security Policy",
+    "address": "8F Wind Ebisu Building, 2-4-8 Ebisu-nishi, Shibuya-ku, Tokyo 150-0021, Japan",
     "copyright": "© {year} Flow Inc. All rights reserved."
   },
   "SecurityPolicy": {
