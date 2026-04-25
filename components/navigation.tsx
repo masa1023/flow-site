@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl'
 import { Menu, X, Waves } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { LanguageSwitcher } from '@/components/language-switcher'
 import { cn } from '@/lib/utils'
 
 export function Navigation() {
@@ -105,13 +104,11 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
-            <LanguageSwitcher />
             <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <LanguageSwitcher />
             <ThemeToggle />
             <Button
               variant="ghost"

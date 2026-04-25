@@ -115,7 +115,6 @@
     "ourTeam": "Our Team",
     "founderBlog": "Founder's Blog",
     "support": "Support",
-    "copyright": "© {year} Flow Inc. All rights reserved.",
-    "builtWith": "Built with ❤️ using Next.js and AI"
+    "copyright": "© {year} Flow Inc. All rights reserved."
   }
 }

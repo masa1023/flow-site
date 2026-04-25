@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { Waves, Mail, MapPin } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
+import { LanguageSwitcher } from '@/components/language-switcher'
 
 export async function Footer() {
   const t = await getTranslations('Footer')
@@ -84,9 +85,9 @@ export async function Footer() {
           <p className="text-sm text-muted-foreground">
             {t('copyright', { year: new Date().getFullYear() })}
           </p>
-          <p className="text-sm text-muted-foreground mt-2 sm:mt-0">
-            {t('builtWith')}
-          </p>
+          <div className="mt-2 sm:mt-0">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </footer>
