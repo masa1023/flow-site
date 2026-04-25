@@ -12,9 +12,9 @@
     "contact": "Contact"
   },
   "Hero": {
-    "heading": "Technology that moves your business —",
-    "headingHighlight": "shipped alongside your team.",
-    "subtitle": "Flow is a small global engineering team. We partner with operating companies to ship AI products, web apps, and mobile apps from concept to production — led personally by our founder.",
+    "heading": "AI that drives the business.",
+    "headingHighlight": "Built by an AI-native team.",
+    "subtitle": "Flow is an AI-native team that runs its own work on AI. Through product engineering, AI training, and technical advisory, we turn AI into a real business driver.",
     "pillDev": "AI Development",
     "pillWeb": "Web & Mobile",
     "pillTraining": "Training & Advisory",
@@ -94,8 +94,8 @@
   },
   "Founder": {
     "badge": "The Founder",
-    "heading": "Full-stack across AI and the rest",
-    "description": "A small, senior team that ships AI-driven products and traditional web / mobile work with the same craft — end-to-end from scoping through production operation.",
+    "heading": "Founder at the core, specialist team around.",
+    "description": "On every engagement, Masa is hands-on with the central design and key technical decisions. Implementation is composed per-project from a curated group of specialists.",
     "name": "Masanobu Minami",
     "alias": "Masa",
     "role": "CEO & Founder",

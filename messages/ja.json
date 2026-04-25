@@ -12,9 +12,9 @@
     "contact": "お問い合わせ"
   },
   "Hero": {
-    "heading": "技術で事業を動かす。",
-    "headingHighlight": "あなたの社内チームの隣で。",
-    "subtitle": "Flowは、事業会社のパートナーとしてAIプロダクト・Webアプリ・モバイルアプリを構想から本番リリースまで開発する少数精鋭の開発チームです。",
+    "heading": "AI that drives the business.",
+    "headingHighlight": "Built by an AI-native team.",
+    "subtitle": "Flowは、自社の業務をAIで運用するAIネイティブな少数精鋭チーム。プロダクト開発・AI研修・技術アドバイザリーを通じて、AIを御社の事業ドライバーへと変えます。",
     "pillDev": "AI開発",
     "pillWeb": "Web・モバイル開発",
     "pillTraining": "研修・アドバイザリー",
@@ -94,8 +94,8 @@
   },
   "Founder": {
     "badge": "The Founder",
-    "heading": "AI もそれ以外も、フルスタックに",
-    "description": "少数精鋭のチームで、AI 駆動開発と通常の Web・モバイル開発を同じ密度でカバーします。スコープ設計から本番運用まで一気通貫で関わります。",
+    "heading": "代表が中心に立ち、専門家チームで動く。",
+    "description": "Flowでは代表・南がプロジェクトの中核設計と技術判断に直接関わります。実装は厳選した専門家のなかから、案件ごとに最適なチームを編成します。",
     "name": "南 政暢",
     "alias": "Masa",
     "role": "代表取締役",
