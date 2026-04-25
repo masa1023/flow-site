@@ -21,7 +21,11 @@ export default async function SecurityPolicyPage({ params }: Props) {
   const sections = [
     { title: t('section1.title'), body: t('section1.body') },
     { title: t('section2.title'), body: t('section2.body') },
-    { title: t('section3.title'), body: t('section3.body'), items: t.raw('section3.items') as string[] },
+    {
+      title: t('section3.title'),
+      body: t('section3.body'),
+      items: t.raw('section3.items') as string[],
+    },
     { title: t('section4.title'), body: t('section4.body') },
     { title: t('section5.title'), body: t('section5.body') },
     { title: t('section6.title'), body: t('section6.body') },
@@ -32,7 +36,9 @@ export default async function SecurityPolicyPage({ params }: Props) {
     <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">{t('title')}</h1>
-        <p className="text-muted-foreground leading-relaxed mb-10">{t('intro')}</p>
+        <p className="text-muted-foreground leading-relaxed mb-10">
+          {t('intro')}
+        </p>
 
         <div className="space-y-8">
           {sections.map((section, i) => (
