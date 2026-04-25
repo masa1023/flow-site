@@ -2,47 +2,67 @@
 
 import { useLocale } from 'next-intl'
 import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
+import { Globe } from 'lucide-react'
 import { routing } from '@/i18n/routing'
-import { Button } from '@/components/ui/button'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+
+const LOCALE_LABELS: Record<string, string> = {
+  ja: '日本語',
+  en: 'English',
+}
 
 export function LanguageSwitcher() {
   const locale = useLocale()
   const pathname = usePathname()
-  const nextLocale = locale === 'ja' ? 'en' : 'ja'
+  const router = useRouter()
 
-  // Strip current locale prefix from pathname
-  let basePath = pathname
-  for (const loc of routing.locales) {
-    if (basePath.startsWith(`/${loc}/`)) {
-      basePath = basePath.slice(loc.length + 1)
-      break
+  const handleChange = (nextLocale: string) => {
+    if (nextLocale === locale) return
+
+    let basePath = pathname
+    for (const loc of routing.locales) {
+      if (basePath.startsWith(`/${loc}/`)) {
+        basePath = basePath.slice(loc.length + 1)
+        break
+      }
+      if (basePath === `/${loc}`) {
+        basePath = '/'
+        break
+      }
     }
-    if (basePath === `/${loc}`) {
-      basePath = '/'
-      break
-    }
-  }
 
-  // Build target path
-  const href =
-    nextLocale === routing.defaultLocale
-      ? basePath
-      : `/${nextLocale}${basePath}`
+    const href =
+      nextLocale === routing.defaultLocale
+        ? basePath
+        : `/${nextLocale}${basePath}`
 
-  const handleClick = () => {
     document.cookie = `NEXT_LOCALE=${nextLocale};path=/;max-age=31536000;SameSite=Lax`
+    router.push(href)
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      asChild
-      className="text-xs font-medium px-2"
-    >
-      <a href={href} onClick={handleClick}>
-        {locale === 'ja' ? 'EN' : 'JA'}
-      </a>
-    </Button>
+    <Select value={locale} onValueChange={handleChange}>
+      <SelectTrigger
+        aria-label="Change language"
+        className="h-9 w-auto gap-2 px-3 text-sm font-medium"
+      >
+        <Globe className="h-4 w-4 text-muted-foreground" />
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent align="end">
+        {routing.locales.map((loc) => (
+          <SelectItem key={loc} value={loc} className="text-sm">
+            {LOCALE_LABELS[loc] ?? loc.toUpperCase()}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   )
 }

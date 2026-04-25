@@ -117,8 +117,7 @@
     "founderBlog": "Founder's Blog",
     "support": "Support",
     "securityPolicy": "情報セキュリティ基本方針",
-    "copyright": "© {year} Flow Inc. All rights reserved.",
-    "builtWith": "Built with ❤️ using Next.js and AI"
+    "copyright": "© {year} Flow Inc. All rights reserved."
   },
   "SecurityPolicy": {
     "title": "情報セキュリティ基本方針",

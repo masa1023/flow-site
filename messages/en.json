@@ -117,8 +117,7 @@
     "founderBlog": "Founder's Blog",
     "support": "Support",
     "securityPolicy": "Information Security Policy",
-    "copyright": "© {year} Flow Inc. All rights reserved.",
-    "builtWith": "Built with ❤️ using Next.js and AI"
+    "copyright": "© {year} Flow Inc. All rights reserved."
   },
   "SecurityPolicy": {
     "title": "Information Security Policy",

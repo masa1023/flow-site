@@ -2,22 +2,13 @@
 
 A modern, responsive corporate website built for Flow Inc., an AI-Native startup specializing in AI development, training, and consulting services.
 
-## 🚀 Project Overview
-
-Flow Inc. is a cutting-edge AI-Native startup that provides comprehensive AI solutions including:
-
-- **AI Development Business**: System development specializing in generative AI (Agents, RAG, MCP, LLM integration)
-- **AI Training Business**: Training programs and executive seminars covering AI fundamentals through advanced topics
-- **DX & Consulting Business**: Workflow optimization, AI tool implementation, and internal automation
-
 ## ✨ Features
 
 ### Core Pages
 
 - **Homepage**: Hero section, services, expertise, team, testimonials, and contact form
-- **Blog System**: Dynamic blog with Markdoc integration and syntax highlighting
-- **Blog Detail Pages**: Individual post pages with author information and social sharing
 - **IR Announcements**: Investor relations page with financial reports and corporate updates
+- **Internationalization**: Japanese (default) and English locales powered by next-intl
 
 ### Design & UX
 
@@ -25,23 +16,22 @@ Flow Inc. is a cutting-edge AI-Native startup that provides comprehensive AI sol
 - **Dark/Light Mode**: Seamless theme switching with system preference detection
 - **Modern Animations**: Smooth transitions and hover effects using Framer Motion
 - **Accessibility**: WCAG compliant with semantic HTML and proper ARIA labels
-- **Performance Optimized**: Lazy loading, optimized images, and efficient bundle sizes
+- **Performance Optimized**: Code splitting, link prefetching, and efficient bundle sizes
 
 ### Technical Features
 
-- **SEO Optimized**: Meta tags, Open Graph, structured data, and XML sitemaps
+- **SEO Optimized**: Meta tags and Open Graph
 - **Type Safety**: Full TypeScript implementation with strict type checking
 - **Form Validation**: Robust form handling with react-hook-form and Zod validation
 - **Component Architecture**: Modular, reusable components with shadcn/ui
-- **Syntax Highlighting**: Code blocks with Shiki for technical blog posts
 
 ## 🛠 Tech Stack
 
 ### Framework & Language
 
-- **Next.js 13**: React framework with App Router and Server Components
+- **Next.js 16**: React framework with App Router and Server Components
 - **TypeScript**: Full type safety and better developer experience
-- **React 18**: Latest React features including concurrent rendering
+- **React 19**: Latest React features including concurrent rendering
 
 ### Styling & UI
 
@@ -52,30 +42,20 @@ Flow Inc. is a cutting-edge AI-Native startup that provides comprehensive AI sol
 
 ### Content & Data
 
-- **Markdoc**: Powerful, flexible, Markdown-based authoring framework
-- **Shiki**: Syntax highlighter with VS Code themes
 - **React Hook Form**: Performant forms with easy validation
 - **Zod**: TypeScript-first schema validation
+- **next-intl**: Type-safe i18n with locale-aware routing
 
-### Development & Testing
+### Development
 
 - **ESLint**: Code linting and style enforcement
-- **Prettier**: Code formatting (ready to configure)
-- **Vitest**: Fast unit testing framework
-- **React Testing Library**: Simple and complete testing utilities
-
-### Deployment & Performance
-
-- **Cloudflare Pages**: Fast, secure, and reliable hosting
-- **Static Export**: Optimized static site generation
-- **Image Optimization**: Next.js Image component for performance
-- **Bundle Analysis**: Webpack bundle analyzer for optimization
+- **Prettier**: Code formatting
 
 ## 📦 Installation
 
 ### Prerequisites
 
-- Node.js 18+ and pnpm (recommended package manager)
+- Node.js 20+ and pnpm (recommended package manager)
 - Git for version control
 
 ### Setup Steps
@@ -123,47 +103,50 @@ pnpm build
 # Start production server
 pnpm start
 
-# Run linter
+# Run linter (auto-fix)
 pnpm lint
 
-# Run tests
-pnpm test
+# Run linter (check only)
+pnpm lint:check
 
-# Run tests with UI
-pnpm test:ui
+# Format files
+pnpm format
+
+# Check formatting
+pnpm format:check
+
+# Type check
+pnpm type-check
 ```
 
 ### Project Structure
 
 ```
 ├── app/                    # Next.js App Router pages
-│   ├── blog/              # Blog pages and dynamic routes
-│   ├── ir/                # Investor relations pages
+│   ├── [locale]/          # Locale-scoped routes (ja, en)
+│   │   ├── ir/           # Investor relations pages
+│   │   ├── layout.tsx    # Locale layout
+│   │   └── page.tsx      # Homepage
+│   ├── api/               # API route handlers
 │   ├── globals.css        # Global styles and CSS variables
-│   ├── layout.tsx         # Root layout with navigation
-│   └── page.tsx           # Homepage
+│   └── favicon.ico
 ├── components/            # Reusable React components
 │   ├── sections/          # Page sections (hero, services, etc.)
 │   ├── ui/                # shadcn/ui components
 │   ├── navigation.tsx     # Site navigation component
-│   └── footer.tsx         # Site footer component
+│   ├── footer.tsx         # Site footer component
+│   └── language-switcher.tsx  # Locale switcher
+├── i18n/                  # next-intl configuration (routing, navigation)
+├── messages/              # Locale message catalogs (ja.json, en.json)
 ├── lib/                   # Utility functions and configurations
 │   └── utils.ts           # Shared utility functions
 ├── public/                # Static assets (images, icons, etc.)
+├── proxy.ts               # next-intl request proxy (locale negotiation)
+├── next.config.ts         # Next.js configuration
 └── README.md              # Project documentation
 ```
 
-### Content Management
-
-#### Blog Posts
-
-Blog posts are currently managed as TypeScript objects in the blog pages. For production, consider integrating with:
-
-- **Contentful**: Headless CMS with rich content modeling
-- **Sanity**: Real-time collaborative editing
-- **Markdown files**: Git-based content workflow
-
-#### Customization
+### Customization
 
 1. **Branding**: Update colors, fonts, and logo in `tailwind.config.ts`
 2. **Content**: Modify text content in component files
@@ -172,37 +155,17 @@ Blog posts are currently managed as TypeScript objects in the blog pages. For pr
 
 ### Deployment
 
-#### Cloudflare Pages (Recommended)
+The app uses Next.js server-side features (next-intl request proxy, dynamic locale routing), so static export is not supported. Deploy to a platform that runs the Next.js Node.js server.
 
-1. Connect your repository to Cloudflare Pages
-2. Set build command: `pnpm build`
-3. Set output directory: `out`
-4. Configure environment variables
-5. Deploy automatically on git push
-
-#### Alternative Platforms
-
-- **Vercel**: Seamless Next.js deployment
-- **Netlify**: Static site hosting with form handling
-- **AWS S3 + CloudFront**: Custom hosting solution
+- **Vercel** (recommended): Seamless Next.js deployment
+- **Cloudflare Workers / Pages with `@opennextjs/cloudflare`**
+- **Self-hosted Node.js**: `pnpm build && pnpm start`
 
 ## 🔧 Configuration
 
 ### Environment Variables
 
-Create `.env.local` for local development:
-
-```bash
-# Site Configuration
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
-NEXT_PUBLIC_SITE_NAME="Flow Inc."
-
-# Analytics (optional)
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-
-# Contact Form (optional)
-NEXT_PUBLIC_FORM_ENDPOINT=your-form-endpoint
-```
+Create `.env.local` for local development. See `.env.example` for the current set of variables (e.g., Mailgun credentials for the contact form API route).
 
 ### Customization Options
 
@@ -221,66 +184,25 @@ Modify the color palette in `app/globals.css`:
 
 #### Typography
 
-Update font configuration in `app/layout.tsx`:
-
-```typescript
-import { Inter, Poppins } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-})
-```
+Update font configuration in `app/[locale]/layout.tsx`. The current setup uses Inter from `next/font/google`; add or replace fonts there as needed.
 
 ## 📊 Performance & SEO
 
 ### Performance Features
 
-- **Static Generation**: Pre-rendered pages for faster loading
-- **Image Optimization**: Automatic WebP conversion and lazy loading
 - **Code Splitting**: Automatic bundle splitting by Next.js
 - **Prefetching**: Link prefetching for instant navigation
+
+> Note: `images.unoptimized` is enabled in `next.config.ts`, so Next.js image optimization is currently bypassed.
 
 ### SEO Implementation
 
 - **Meta Tags**: Comprehensive meta tag management
 - **Open Graph**: Social media preview optimization
-- **Structured Data**: JSON-LD for rich search results
-- **XML Sitemap**: Automatic sitemap generation
-- **Robots.txt**: Search engine crawling instructions
 
-### Analytics Integration
+### Analytics
 
-Ready for analytics platforms:
-
-- **Google Analytics 4**: User behavior tracking
-- **Hotjar**: User session recordings
-- **Mixpanel**: Event tracking and conversion analysis
-
-## 🧪 Testing
-
-### Testing Strategy
-
-- **Unit Tests**: Component logic and utility functions
-- **Integration Tests**: Component interaction and data flow
-- **E2E Tests**: Full user journey testing (can be added with Playwright)
-
-### Running Tests
-
-```bash
-# Run all tests
-pnpm test
-
-# Run tests in watch mode
-pnpm test --watch
-
-# Run tests with coverage
-pnpm test --coverage
-
-# Run tests with UI
-pnpm test:ui
-```
+- **Vercel Analytics**: First-party page view and visitor tracking via `@vercel/analytics`
 
 ## 🤝 Contributing
 
@@ -297,22 +219,7 @@ pnpm test:ui
 - Follow TypeScript and React best practices
 - Use meaningful component and variable names
 - Add proper TypeScript types for all functions and components
-- Write tests for new features and bug fixes
 
 ## 📄 License
 
 This project is proprietary software owned by Flow Inc. All rights reserved.
-
-## 📞 Support
-
-For technical support or questions about the website:
-
-- **Email**: tech@flow-inc.ai
-- **Documentation**: [Internal Wiki](link-to-internal-docs)
-- **Issues**: Use GitHub Issues for bug reports and feature requests
-
----
-
-**Built with ❤️ by the Flow Inc. Team**
-
-_Leveraging the power of AI to create exceptional web experiences._

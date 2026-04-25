@@ -34,3 +34,6 @@ coverage
 
 # Generated files
 public/*.xml
+
+# Configurations
+.serena
