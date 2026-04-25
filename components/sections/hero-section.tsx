@@ -2,15 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import {
-  ArrowRight,
-  Sparkles,
-  Zap,
-  GraduationCap,
-  Settings,
-} from 'lucide-react'
+import { ArrowRight, Code2, GraduationCap, Package } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 
 export function HeroSection() {
   const t = useTranslations('Hero')
@@ -40,19 +33,6 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center max-w-5xl mx-auto">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
-            <Badge variant="outline" className="px-4 py-2 text-sm">
-              <Sparkles className="w-4 h-4 mr-2" />
-              {t('badge')}
-            </Badge>
-          </motion.div>
-
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -84,16 +64,16 @@ export function HeroSection() {
             className="flex flex-wrap justify-center gap-4 mb-10"
           >
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Zap className="w-4 h-4 text-primary text-yellow-500" />
+              <Code2 className="w-4 h-4 text-yellow-500" />
               <span className="text-sm font-medium">{t('pillDev')}</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <Settings className="w-4 h-4 text-emerald-500" />
-              <span className="text-sm font-medium">{t('pillDx')}</span>
+              <GraduationCap className="w-4 h-4 text-emerald-500" />
+              <span className="text-sm font-medium">{t('pillTraining')}</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-card border rounded-full">
-              <GraduationCap className="w-4 h-4 text-sky-500" />
-              <span className="text-sm font-medium">{t('pillTraining')}</span>
+              <Package className="w-4 h-4 text-sky-500" />
+              <span className="text-sm font-medium">{t('pillProducts')}</span>
             </div>
           </motion.div>
 

@@ -11,43 +11,42 @@
     "contact": "お問い合わせ"
   },
   "Hero": {
-    "badge": "AI-Native Solutions for the Future",
-    "heading": "AIの力で、ビジネスを",
-    "headingHighlight": "次のステージへ",
-    "subtitle": "Flow Inc.は、最先端のAI開発、実践的な研修プログラム、戦略コンサルティングを通じて、企業のAI活用を総合的にサポートします。",
-    "pillDev": "AI Development",
-    "pillDx": "Digital Transformation",
-    "pillTraining": "AI Training for Enterprise",
-    "ctaPrimary": "Get Started Today",
-    "ctaSecondary": "Explore Our Services"
+    "heading": "プロダクトを作り、チームを育て、",
+    "headingHighlight": "自分たちでも使い倒す。",
+    "subtitle": "創業者・事業会社・自分たちのために、AIプロダクトをエンドツーエンドで開発する少数精鋭のグローバルチームです。",
+    "pillDev": "AI開発",
+    "pillTraining": "研修・コンサル",
+    "pillProducts": "自社プロダクト",
+    "ctaPrimary": "プロジェクトを始める",
+    "ctaSecondary": "サービスを見る"
   },
   "Services": {
-    "badge": "Our Services",
-    "heading": "あらゆるビジネスニーズに応えるAIソリューション",
-    "description": "開発からデプロイ、研修からDX推進まで、実際のビジネス成果につながるAIサービスをワンストップで提供します。",
-    "aiDev": {
-      "title": "AI Development Business",
-      "description": "御社のビジネスに最適化されたAIソリューションを開発",
-      "feature1": "Generative AI Integration (LLM, Agents, RAG, MCP)",
-      "feature2": "Custom LLM & Fine-tuning",
-      "feature3": "ML/DL Model Development",
-      "badge": "Most Popular"
-    },
-    "dx": {
-      "title": "DX & Consulting Business",
-      "description": "AIを活用した業務効率化と組織のデジタル変革を推進",
-      "feature1": "Workflow Optimization",
-      "feature2": "AI Tool Implementation",
-      "feature3": "Internal Process Automation",
-      "badge": "Enterprise Ready"
+    "badge": "What We Do",
+    "heading": "3つの関わり方",
+    "description": "プロダクトを開発してほしい、チームをAIで強くしたい、自社プロダクトを試してみたい — ご相談はどの入り口からでも。",
+    "dev": {
+      "title": "AI開発",
+      "description": "Web・モバイルアプリへの生成AI組み込み、音声エージェント開発、カスタムMLモデル構築まで。スコープと価格が明確な、エンドツーエンドのAIプロダクト開発。",
+      "feature1": "LLM・Agent・RAG・MCP連携",
+      "feature2": "音声AIエージェント",
+      "feature3": "カスタムMLモデル開発",
+      "badge": "Most Active"
     },
     "training": {
-      "title": "AI Training Business",
-      "description": "AI活用人材の育成を支援する研修プログラム",
-      "feature1": "Employee Training Programs",
-      "feature2": "Executive AI Strategy Seminars",
-      "feature3": "Hands-on Workshop Sessions",
-      "badge": "Growing Fast"
+      "title": "AI研修・コンサル",
+      "description": "AIを日々の業務に根付かせる支援。エンジニア向けのClaude Code・AI駆動開発の指導、社内AIツールの導入、経営層向けAI戦略セッションまで。",
+      "feature1": "Claude Code・AIコーディング指導",
+      "feature2": "社内AIツール導入 (n8n, Dify, GAS)",
+      "feature3": "経営層向けAI戦略セッション",
+      "badge": "Hands-on"
+    },
+    "products": {
+      "title": "自社プロダクト",
+      "description": "自社でもAIプロダクトを開発・運営。アイデアの検証や、クライアントへ提案する技術を実地で試す場としても活用しています。",
+      "feature1": "AIモデル比較・選定ツール",
+      "feature2": "業界特化型業務SaaS",
+      "feature3": "他にも複数のプロダクトを開発中",
+      "badge": "Built by Us"
     }
   },
   "Expertise": {
@@ -60,18 +59,15 @@
   },
   "Team": {
     "badge": "Our Team",
-    "heading": "イノベーションを生み出すチーム",
-    "description": "AI分野の専門家、リサーチャー、ビジネスストラテジストが集結。大手テック企業や研究機関での豊富な経験を活かし、最高のソリューションを提供します。",
-    "hiring": "We're hiring!",
+    "heading": "少数精鋭のコア、グローバルな専門家ネットワーク",
+    "description": "Flowは少数精鋭のコアチームと、10年以上の信頼関係で結ばれた専門家ネットワークで構成されています。プロジェクトごとに最適なチームをオンデマンドで編成します。",
     "members": {
       "masa": {
-        "bio": "フルスタックWebエンジニア & AI推進リーダー。生成AIモデルのWebアプリ統合やAI駆動開発を得意とする。"
+        "bio": "エンジニア・PM・取締役として、10年以上にわたりコンシューマー向けプロダクトをゼロから事業として成立する規模まで育ててきた。その実務経験をAIプロダクト開発に持ち込み、課題定義からMVPリリースまで伴走する。"
       },
-      "engineer": {
-        "bio": "ML/DL、基盤モデル、AIシステム設計のエキスパート。スケーラブルなAIソリューションの構築に情熱を注ぐ。"
-      },
-      "consultant": {
-        "bio": "AI戦略、ビジネス変革、デジタルイノベーションを専門とし、幅広い業界でAIプロジェクトの推進実績を持つ。"
+      "network": {
+        "role": "オンデマンド専門家ネットワーク",
+        "bio": "プロジェクトごとに招集する専門家ネットワーク。シニアML/AIエンジニア、アジアを拠点とするネイティブアプリ開発者、欧州フィンテック出身のフルスタックエンジニア、経験豊富なプロダクトデザイナーなど、10年以上の信頼関係で結ばれたメンバーで構成しています。"
       }
     }
   },

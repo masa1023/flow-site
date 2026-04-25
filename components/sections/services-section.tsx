@@ -5,14 +5,18 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import {
+  Code2,
   GraduationCap,
+  Package,
   Cpu,
+  Mic,
   Brain,
-  Workflow,
+  Bot,
+  Wrench,
   Users,
-  BarChart3,
-  Zap,
-  Settings,
+  Search,
+  Building2,
+  Sparkles,
 } from 'lucide-react'
 import {
   Card,
@@ -30,42 +34,42 @@ export function ServicesSection() {
 
   const services = [
     {
-      icon: Zap,
-      title: t('aiDev.title'),
-      description: t('aiDev.description'),
+      icon: Code2,
+      title: t('dev.title'),
+      description: t('dev.description'),
       features: [
-        { icon: Cpu, text: t('aiDev.feature1') },
-        { icon: Brain, text: t('aiDev.feature2') },
-        { icon: Settings, text: t('aiDev.feature3') },
+        { icon: Cpu, text: t('dev.feature1') },
+        { icon: Mic, text: t('dev.feature2') },
+        { icon: Brain, text: t('dev.feature3') },
       ],
       color:
         'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
-      badge: t('aiDev.badge'),
-    },
-    {
-      icon: Settings,
-      title: t('dx.title'),
-      description: t('dx.description'),
-      features: [
-        { icon: Workflow, text: t('dx.feature1') },
-        { icon: Zap, text: t('dx.feature2') },
-        { icon: BarChart3, text: t('dx.feature3') },
-      ],
-      color:
-        'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
-      badge: t('dx.badge'),
+      badge: t('dev.badge'),
     },
     {
       icon: GraduationCap,
       title: t('training.title'),
       description: t('training.description'),
       features: [
-        { icon: GraduationCap, text: t('training.feature1') },
-        { icon: BarChart3, text: t('training.feature2') },
+        { icon: Bot, text: t('training.feature1') },
+        { icon: Wrench, text: t('training.feature2') },
         { icon: Users, text: t('training.feature3') },
       ],
-      color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
+      color:
+        'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
       badge: t('training.badge'),
+    },
+    {
+      icon: Package,
+      title: t('products.title'),
+      description: t('products.description'),
+      features: [
+        { icon: Search, text: t('products.feature1') },
+        { icon: Building2, text: t('products.feature2') },
+        { icon: Sparkles, text: t('products.feature3') },
+      ],
+      color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
+      badge: t('products.badge'),
     },
   ]
 

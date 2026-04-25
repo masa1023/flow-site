@@ -10,6 +10,7 @@ import {
   faLinkedin,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons'
+import { Globe } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -43,26 +44,11 @@ export function TeamSection() {
       ],
     },
     {
-      name: t('hiring'),
-      role: 'Senior AI Engineer',
-      bio: t('members.engineer.bio'),
-      avatar:
-        'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-      skills: [
-        'LLM Development',
-        'Model Tuning',
-        'System Architecture',
-        'DevOps',
-      ],
-      social: [],
-    },
-    {
-      name: t('hiring'),
-      role: 'Senior AI Consultant',
-      bio: t('members.consultant.bio'),
-      avatar:
-        'https://images.pexels.com/photos/3778958/pexels-photo-3778958.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop',
-      skills: ['AI Consulting', 'Business Strategy', 'Change Management'],
+      name: 'Global Engineering Network',
+      role: t('members.network.role'),
+      bio: t('members.network.bio'),
+      avatar: null,
+      skills: ['ML / AI', 'iOS / Android', 'Full Stack', 'Infrastructure', 'TDD', 'Design'],
       social: [],
     },
   ]
@@ -87,7 +73,7 @@ export function TeamSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -98,15 +84,21 @@ export function TeamSection() {
               <Card className="h-full hover:shadow-lg transition-all duration-300 group">
                 <CardContent className="p-6 text-center">
                   <div className="relative mb-4">
-                    <Avatar className="w-24 h-24 mx-auto mb-4 group-hover:scale-105 transition-transform">
-                      <AvatarImage src={member.avatar} alt={member.name} />
-                      <AvatarFallback className="text-lg">
-                        {member.name
-                          .split(' ')
-                          .map((n) => n[0])
-                          .join('')}
-                      </AvatarFallback>
-                    </Avatar>
+                    {member.avatar ? (
+                      <Avatar className="w-24 h-24 mx-auto mb-4 group-hover:scale-105 transition-transform">
+                        <AvatarImage src={member.avatar} alt={member.name} />
+                        <AvatarFallback className="text-lg">
+                          {member.name
+                            .split(' ')
+                            .map((n) => n[0])
+                            .join('')}
+                        </AvatarFallback>
+                      </Avatar>
+                    ) : (
+                      <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <Globe className="h-10 w-10" />
+                      </div>
+                    )}
                   </div>
 
                   <h3 className="font-bold text-lg mb-1">{member.name}</h3>

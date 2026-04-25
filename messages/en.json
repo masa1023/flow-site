@@ -11,43 +11,42 @@
     "contact": "Contact"
   },
   "Hero": {
-    "badge": "AI-Native Solutions for the Future",
-    "heading": "Transform Your Business with ",
-    "headingHighlight": "AI Excellence",
-    "subtitle": "Flow Inc. delivers cutting-edge AI development, comprehensive training programs, and strategic consulting to help businesses harness the power of artificial intelligence for unprecedented growth and innovation.",
+    "heading": "Build AI products,",
+    "headingHighlight": "train teams, ship our own tools.",
+    "subtitle": "Flow Inc. is a small global team that builds AI products end-to-end — for founders, enterprises, and ourselves.",
     "pillDev": "AI Development",
-    "pillDx": "Digital Transformation",
-    "pillTraining": "AI Training for Enterprise",
-    "ctaPrimary": "Get Started Today",
-    "ctaSecondary": "Explore Our Services"
+    "pillTraining": "Training & Consulting",
+    "pillProducts": "Own Products",
+    "ctaPrimary": "Start a Project",
+    "ctaSecondary": "Explore Our Work"
   },
   "Services": {
-    "badge": "Our Services",
-    "heading": "Comprehensive AI Solutions for Every Business Need",
-    "description": "From development to deployment, training to transformation, we provide end-to-end AI services that drive real business results.",
-    "aiDev": {
-      "title": "AI Development Business",
-      "description": "Cutting-edge AI solutions tailored to your business needs",
-      "feature1": "Generative AI Integration (LLM, Agents, RAG, MCP)",
-      "feature2": "Custom LLM & Fine-tuning",
-      "feature3": "ML/DL Model Development",
-      "badge": "Most Popular"
-    },
-    "dx": {
-      "title": "DX & Consulting Business",
-      "description": "Digital transformation through intelligent automation",
-      "feature1": "Workflow Optimization",
-      "feature2": "AI Tool Implementation",
-      "feature3": "Internal Process Automation",
-      "badge": "Enterprise Ready"
+    "badge": "What We Do",
+    "heading": "Three ways we work with you",
+    "description": "Whether you need a product built, a team trained, or want to use what we've built ourselves — there's a clear way in.",
+    "dev": {
+      "title": "AI Development",
+      "description": "End-to-end AI product development. We integrate generative AI into web and mobile apps, build voice agents, and ship custom ML models — with predictable scope and pricing.",
+      "feature1": "LLM / Agent / RAG / MCP integration",
+      "feature2": "Voice AI agents",
+      "feature3": "Custom ML model development",
+      "badge": "Most Active"
     },
     "training": {
-      "title": "AI Training Business",
-      "description": "Comprehensive education programs for AI transformation",
-      "feature1": "Employee Training Programs",
-      "feature2": "Executive AI Strategy Seminars",
-      "feature3": "Hands-on Workshop Sessions",
-      "badge": "Growing Fast"
+      "title": "AI Training & Consulting",
+      "description": "Help your team adopt AI in their daily work. We coach engineers on Claude Code and AI-driven coding, implement internal AI tools, and run executive sessions on AI strategy.",
+      "feature1": "Claude Code & AI coding coaching",
+      "feature2": "Internal AI tooling (n8n, Dify, GAS)",
+      "feature3": "Executive AI strategy sessions",
+      "badge": "Hands-on"
+    },
+    "products": {
+      "title": "Own Products",
+      "description": "We build and operate our own AI products. They're how we stay sharp, validate ideas, and pressure-test what we recommend to clients.",
+      "feature1": "AI model comparison & selection tooling",
+      "feature2": "Industry-specific operations SaaS",
+      "feature3": "More in development",
+      "badge": "Built by Us"
     }
   },
   "Expertise": {
@@ -60,18 +59,15 @@
   },
   "Team": {
     "badge": "Our Team",
-    "heading": "Meet the Minds Behind the Innovation",
-    "description": "Our diverse team of AI experts, researchers, and business strategists brings together decades of experience from leading tech companies and research institutions.",
-    "hiring": "We're hiring!",
+    "heading": "A small core, a global network",
+    "description": "Flow operates as a tight founding team plus a curated network of specialists we've worked with for 10+ years. We assemble the right team per project, on-demand.",
     "members": {
       "masa": {
-        "bio": "Full Stack Web Developer & AI Enthusiast. Proficient at integrating Gen AI models into web apps and AI-driven development."
+        "bio": "10+ years building consumer products end-to-end as engineer, PM, and board director at a growth-stage startup. Brings that operating experience to AI product development — from problem framing to shipped MVP."
       },
-      "engineer": {
-        "bio": "Expert in ML/DL, Foundation Models and AI system design. Passionate about building scalable AI solutions."
-      },
-      "consultant": {
-        "bio": "Specializes in AI strategy, business transformation, and digital innovation. Experienced in leading AI projects across industries."
+      "network": {
+        "role": "On-Demand Specialists",
+        "bio": "Specialists assembled per project — senior ML/AI engineers, native mobile experts across Asia, full-stack engineers from European fintech, and seasoned product designers, all trusted collaborators of 10+ years."
       }
     }
   },
