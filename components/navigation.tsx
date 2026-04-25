@@ -18,12 +18,13 @@ export function Navigation() {
   const navigation = [
     { name: t('home'), href: '/' },
     { name: t('services'), href: '/#services' },
-    { name: t('team'), href: '/#team' },
+    { name: t('work'), href: '/#work' },
+    { name: t('founder'), href: '/#founder' },
     { name: t('contact'), href: '/#contact' },
   ]
 
   useEffect(() => {
-    const sectionIds = ['services', 'team', 'contact']
+    const sectionIds = ['services', 'work', 'founder', 'contact']
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)

@@ -1,89 +1,146 @@
 {
   "Metadata": {
-    "title": "Flow Inc. - AI-Native Solutions for Business Transformation",
+    "title": "Flow Inc. — AI & Product Engineering, Built End to End",
     "titleTemplate": "%s | Flow Inc.",
-    "description": "Leading AI-Native startup providing cutting-edge AI development, training, and consulting services to transform businesses through intelligent automation and optimization."
+    "description": "Flow is a small global engineering team that ships AI products, web apps, and mobile apps end-to-end. We partner with operating companies as an embedded technical team led by founder Masanobu Minami."
   },
   "Navigation": {
     "home": "Home",
-    "services": "Services",
-    "team": "Team",
+    "services": "Capabilities",
+    "work": "Work",
+    "founder": "Founder",
     "contact": "Contact"
   },
   "Hero": {
-    "badge": "AI-Native Solutions for the Future",
-    "heading": "Transform Your Business with ",
-    "headingHighlight": "AI Excellence",
-    "subtitle": "Flow Inc. delivers cutting-edge AI development, comprehensive training programs, and strategic consulting to help businesses harness the power of artificial intelligence for unprecedented growth and innovation.",
+    "heading": "AI that drives the business.",
+    "headingHighlight": "Built by an AI-native team.",
+    "subtitle": "Flow is an AI-native team that runs its own work on AI. Through product engineering, AI training, and technical advisory, we turn AI into a real business driver.",
     "pillDev": "AI Development",
-    "pillDx": "Digital Transformation",
-    "pillTraining": "AI Training for Enterprise",
-    "ctaPrimary": "Get Started Today",
-    "ctaSecondary": "Explore Our Services"
+    "pillWeb": "Web & Mobile",
+    "pillTraining": "Training & Advisory",
+    "ctaPrimary": "Start a Project",
+    "ctaSecondary": "See Selected Work"
   },
-  "Services": {
-    "badge": "Our Services",
-    "heading": "Comprehensive AI Solutions for Every Business Need",
-    "description": "From development to deployment, training to transformation, we provide end-to-end AI services that drive real business results.",
-    "aiDev": {
-      "title": "AI Development Business",
-      "description": "Cutting-edge AI solutions tailored to your business needs",
-      "feature1": "Generative AI Integration (LLM, Agents, RAG, MCP)",
-      "feature2": "Custom LLM & Fine-tuning",
-      "feature3": "ML/DL Model Development",
-      "badge": "Most Popular"
-    },
-    "dx": {
-      "title": "DX & Consulting Business",
-      "description": "Digital transformation through intelligent automation",
-      "feature1": "Workflow Optimization",
-      "feature2": "AI Tool Implementation",
-      "feature3": "Internal Process Automation",
-      "badge": "Enterprise Ready"
+  "Capabilities": {
+    "badge": "Capabilities",
+    "heading": "Three ways to bring us in",
+    "description": "Most engagements start with one of these. Many evolve into long-term embedded partnerships.",
+    "engineering": {
+      "title": "Product Engineering",
+      "description": "Web, mobile, and AI applications, built and shipped end-to-end. Our specialty is generative AI integration and voice agents, but we deliver the full stack — with or without AI.",
+      "feature1": "Generative AI integration (LLM, Agent, RAG, MCP)",
+      "feature2": "Voice AI agents and ML model development",
+      "feature3": "Web and mobile apps — with or without AI",
+      "badge": "Core Practice"
     },
     "training": {
-      "title": "AI Training Business",
-      "description": "Comprehensive education programs for AI transformation",
-      "feature1": "Employee Training Programs",
-      "feature2": "Executive AI Strategy Seminars",
-      "feature3": "Hands-on Workshop Sessions",
-      "badge": "Growing Fast"
+      "title": "AI Training & Consulting",
+      "description": "Help your team adopt AI in their daily work. Engineering teams are coached on Claude Code and AI-driven development; leadership gets clear-eyed sessions on AI strategy.",
+      "feature1": "Claude Code & AI coding coaching",
+      "feature2": "Internal AI tooling rollout (n8n, Dify, GAS)",
+      "feature3": "Executive AI strategy sessions",
+      "badge": "Hands-on"
+    },
+    "advisory": {
+      "title": "Technical Advisory",
+      "description": "Sit alongside your team as a fractional product/tech partner. From requirements and architecture to vendor decisions and digital transformation strategy.",
+      "feature1": "Requirements definition & product roadmap",
+      "feature2": "Architecture review & technology selection",
+      "feature3": "Digital transformation strategy",
+      "badge": "Embedded"
     }
   },
-  "Expertise": {
-    "badge": "Our Expertise",
-    "heading": "Cutting-Edge Technologies We Master",
-    "description": "Our team stays at the forefront of technology, working with the latest tools and frameworks to deliver state-of-the-art AI solutions.",
+  "Work": {
+    "badge": "Selected Work",
+    "heading": "What we've shipped",
+    "description": "A selection of recent engagements, anonymized. All are live in production or active development.",
+    "items": {
+      "voice": {
+        "industry": "EdTech · English Learning",
+        "title": "AI English Conversation App",
+        "description": "Conversational English-learning product for Japanese learners — practice speaking in real time with AI partners powered by ElevenLabs ConvAI. Lessons, progress tracking, and billing built end-to-end.",
+        "stack": "Next.js · ElevenLabs ConvAI · Supabase",
+        "status": "Live in production"
+      },
+      "data": {
+        "industry": "Retail · Data Analytics",
+        "title": "AI POS Analytics Platform",
+        "description": "Analytics SaaS that lets retail teams interrogate POS data in natural language. An interactive SQL agent built on Google ADK composes BigQuery queries on the fly and surfaces insights as Vega-Lite charts.",
+        "stack": "FastAPI · BigQuery · ADK Agent · React",
+        "status": "Active engagement"
+      },
+      "video": {
+        "industry": "Media · Video Generation",
+        "title": "AI Avatar Video Generation Platform",
+        "description": "Pipeline that pairs HeyGen avatar generation with ElevenLabs TTS to produce branching AI dialogue videos from Q&A scripts. Generated flows ship as drop-in widgets — any site embeds with a single tag — with view analytics and conversion tracking baked in.",
+        "stack": "HeyGen · ElevenLabs · Supabase · Cloudflare R2",
+        "status": "Active engagement"
+      },
+      "edu": {
+        "industry": "EdTech · Study Abroad",
+        "title": "Study-abroad Media Platform",
+        "description": "Content platform and lead workflow for an international education brand, delivered as a custom WordPress theme spanning multiple regional properties (Japan, Malta, etc.).",
+        "stack": "WordPress · Custom theme",
+        "status": "Live in production"
+      },
+      "ecom": {
+        "industry": "Industrial · Recycling",
+        "title": "Corporate & E-commerce Site",
+        "description": "Full corporate website and inquiry/quote workflow for a B2B service company, with SEO-tuned performance.",
+        "stack": "Next.js · Performance-tuned",
+        "status": "Live in production"
+      }
+    }
+  },
+  "Founder": {
+    "badge": "The Founder",
+    "heading": "Founder at the core, specialist team around.",
+    "description": "On every engagement, Masa is hands-on with the central design and key technical decisions. Implementation is composed per-project from a curated group of specialists.",
+    "name": "Masanobu Minami",
+    "alias": "Masa",
+    "role": "CEO & Founder",
+    "bio": "Over a decade building consumer products end-to-end as engineer, PM, and board director at a growth-stage startup. Brings that operating experience to AI and product development — from problem framing through architecture, all the way to a shipped product.",
+    "principlesTitle": "How we work",
+    "principle1": "Hands-on at the core — Masa or a senior member is directly involved in the central design and key technical decisions on every engagement.",
+    "principle2": "Small by design — implementation is composed per-project from a trusted network of engineers, designers, and PMs.",
+    "principle3": "Production-grade by default — we ship for real operation, not for a PoC graveyard.",
+    "principle4": "Tech choices fit the business — including AI, technology is selected for the constraints and trajectory of the company we're working with.",
+    "linksLabel": "Connect"
+  },
+  "Stack": {
+    "badge": "Our Stack",
+    "heading": "The technology we ship with",
+    "description": "Models, infrastructure, and tooling we use day-to-day to take projects from prototype to production.",
     "aiMl": "AI & Machine Learning",
-    "development": "Development",
+    "development": "Engineering",
     "integration": "Integration & Automation"
   },
-  "Team": {
-    "badge": "Our Team",
-    "heading": "Meet the Minds Behind the Innovation",
-    "description": "Our diverse team of AI experts, researchers, and business strategists brings together decades of experience from leading tech companies and research institutions.",
-    "hiring": "We're hiring!",
-    "members": {
-      "masa": {
-        "bio": "Full Stack Web Developer & AI Enthusiast. Proficient at integrating Gen AI models into web apps and AI-driven development."
+  "Products": {
+    "badge": "Own Products",
+    "heading": "We use what we ship",
+    "description": "Internal products we build and operate ourselves. They keep our practice sharp and pressure-test the recommendations we give clients.",
+    "items": {
+      "compare": {
+        "category": "AI Tooling",
+        "title": "AI Model Comparison & Selection",
+        "description": "Side-by-side evaluation of generative models across quality, latency, and cost — used internally for vendor decisions."
       },
-      "engineer": {
-        "bio": "Expert in ML/DL, Foundation Models and AI system design. Passionate about building scalable AI solutions."
-      },
-      "consultant": {
-        "bio": "Specializes in AI strategy, business transformation, and digital innovation. Experienced in leading AI projects across industries."
+      "ops": {
+        "category": "Vertical SaaS",
+        "title": "Operations SaaS",
+        "description": "An internal-tooling-grade platform for operating teams in a specific industry, currently in deployment with live customers."
       }
     }
   },
   "Contact": {
     "badge": "Get In Touch",
-    "heading": "Ready to Transform Your Business?",
-    "description": "Let's discuss how Flow Inc. can help you harness the power of AI to drive innovation and growth in your organization.",
-    "conversationHeading": "Let's Start a Conversation",
-    "conversationDescription": "Whether you're looking to implement AI solutions, train your team, or transform your business processes, we're here to help.",
-    "emailTitle": "Email Us",
-    "emailDescription": "Send us an email anytime",
-    "formTitle": "Send us a message",
+    "heading": "Let's talk about your project.",
+    "description": "Tell us what you're trying to ship, train, or solve. Masa reads every message and replies within one business day.",
+    "conversationHeading": "Start with a 30-minute call",
+    "conversationDescription": "We listen first, then sketch concrete next steps. No pitch decks, no pressure.",
+    "emailTitle": "Email",
+    "emailDescription": "Reply within one business day",
+    "formTitle": "Send a message",
     "nameLabel": "Name",
     "namePlaceholder": "Your full name",
     "emailLabel": "Email",
@@ -91,11 +148,11 @@
     "companyLabel": "Company",
     "companyPlaceholder": "Your company name",
     "messageLabel": "Message",
-    "messagePlaceholder": "Tell us about your project and how we can help...",
+    "messagePlaceholder": "What are you trying to build, train, or figure out?",
     "submit": "Send Message",
     "sending": "Sending...",
-    "successMessage": "Message sent successfully! We'll get back to you soon.",
-    "errorMessage": "Failed to send message. Please try again.",
+    "successMessage": "Thanks — your message is on its way. You'll hear from Masa shortly.",
+    "errorMessage": "Sending failed. Please try again or email hello@flow-inc.ai directly.",
     "validation": {
       "nameMin": "Name must be at least 2 characters",
       "emailInvalid": "Please enter a valid email address",
@@ -111,8 +168,7 @@
     "dxConsulting": "DX Consulting",
     "aiTraining": "AI Training",
     "customSolutions": "Custom Solutions",
-    "aboutUs": "About Us",
-    "ourTeam": "Our Team",
+    "ourTeam": "Founder",
     "founderBlog": "Founder's Blog",
     "support": "Support",
     "securityPolicy": "Information Security Policy",

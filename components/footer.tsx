@@ -15,8 +15,7 @@ export async function Footer() {
       { name: t('customSolutions'), href: '#contact' },
     ],
     [t('company')]: [
-      { name: t('aboutUs'), href: '#about' },
-      { name: t('ourTeam'), href: '#team' },
+      { name: t('ourTeam'), href: '#founder' },
       { name: t('securityPolicy'), href: '/security-policy' },
     ],
     [t('resources')]: [

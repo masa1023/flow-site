@@ -47,12 +47,12 @@ const technologies = [
 ]
 
 export function ExpertiseSection() {
-  const t = useTranslations('Expertise')
+  const t = useTranslations('Stack')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="expertise" ref={ref} className="py-20 bg-muted/30">
+    <section id="stack" ref={ref} className="py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

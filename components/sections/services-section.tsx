@@ -5,14 +5,18 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import {
+  Code2,
   GraduationCap,
+  Compass,
   Cpu,
-  Brain,
-  Workflow,
+  Mic,
+  Smartphone,
+  Bot,
+  Wrench,
   Users,
-  BarChart3,
-  Zap,
-  Settings,
+  Map,
+  GitBranch,
+  Building2,
 } from 'lucide-react'
 import {
   Card,
@@ -24,48 +28,48 @@ import {
 import { Badge } from '@/components/ui/badge'
 
 export function ServicesSection() {
-  const t = useTranslations('Services')
+  const t = useTranslations('Capabilities')
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const services = [
     {
-      icon: Zap,
-      title: t('aiDev.title'),
-      description: t('aiDev.description'),
+      icon: Code2,
+      title: t('engineering.title'),
+      description: t('engineering.description'),
       features: [
-        { icon: Cpu, text: t('aiDev.feature1') },
-        { icon: Brain, text: t('aiDev.feature2') },
-        { icon: Settings, text: t('aiDev.feature3') },
+        { icon: Cpu, text: t('engineering.feature1') },
+        { icon: Mic, text: t('engineering.feature2') },
+        { icon: Smartphone, text: t('engineering.feature3') },
       ],
       color:
         'bg-yellow-500/10 text-yellow-600 border-yellow-200 dark:border-yellow-800',
-      badge: t('aiDev.badge'),
-    },
-    {
-      icon: Settings,
-      title: t('dx.title'),
-      description: t('dx.description'),
-      features: [
-        { icon: Workflow, text: t('dx.feature1') },
-        { icon: Zap, text: t('dx.feature2') },
-        { icon: BarChart3, text: t('dx.feature3') },
-      ],
-      color:
-        'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
-      badge: t('dx.badge'),
+      badge: t('engineering.badge'),
     },
     {
       icon: GraduationCap,
       title: t('training.title'),
       description: t('training.description'),
       features: [
-        { icon: GraduationCap, text: t('training.feature1') },
-        { icon: BarChart3, text: t('training.feature2') },
+        { icon: Bot, text: t('training.feature1') },
+        { icon: Wrench, text: t('training.feature2') },
         { icon: Users, text: t('training.feature3') },
       ],
-      color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
+      color:
+        'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
       badge: t('training.badge'),
+    },
+    {
+      icon: Compass,
+      title: t('advisory.title'),
+      description: t('advisory.description'),
+      features: [
+        { icon: Map, text: t('advisory.feature1') },
+        { icon: GitBranch, text: t('advisory.feature2') },
+        { icon: Building2, text: t('advisory.feature3') },
+      ],
+      color: 'bg-sky-500/10 text-sky-600 border-sky-200 dark:border-sky-800',
+      badge: t('advisory.badge'),
     },
   ]
 
