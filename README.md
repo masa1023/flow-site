@@ -2,21 +2,11 @@
 
 A modern, responsive corporate website built for Flow Inc., an AI-Native startup specializing in AI development, training, and consulting services.
 
-## 🚀 Project Overview
-
-Flow Inc. is a cutting-edge AI-Native startup that provides comprehensive AI solutions including:
-
-- **AI Development Business**: System development specializing in generative AI (Agents, RAG, MCP, LLM integration)
-- **AI Training Business**: Training programs and executive seminars covering AI fundamentals through advanced topics
-- **DX & Consulting Business**: Workflow optimization, AI tool implementation, and internal automation
-
 ## ✨ Features
 
 ### Core Pages
 
 - **Homepage**: Hero section, services, expertise, team, testimonials, and contact form
-- **Blog System**: Dynamic blog with Markdoc integration and syntax highlighting
-- **Blog Detail Pages**: Individual post pages with author information and social sharing
 - **IR Announcements**: Investor relations page with financial reports and corporate updates
 
 ### Design & UX
@@ -33,7 +23,6 @@ Flow Inc. is a cutting-edge AI-Native startup that provides comprehensive AI sol
 - **Type Safety**: Full TypeScript implementation with strict type checking
 - **Form Validation**: Robust form handling with react-hook-form and Zod validation
 - **Component Architecture**: Modular, reusable components with shadcn/ui
-- **Syntax Highlighting**: Code blocks with Shiki for technical blog posts
 
 ## 🛠 Tech Stack
 
@@ -52,8 +41,6 @@ Flow Inc. is a cutting-edge AI-Native startup that provides comprehensive AI sol
 
 ### Content & Data
 
-- **Markdoc**: Powerful, flexible, Markdown-based authoring framework
-- **Shiki**: Syntax highlighter with VS Code themes
 - **React Hook Form**: Performant forms with easy validation
 - **Zod**: TypeScript-first schema validation
 
@@ -137,7 +124,6 @@ pnpm test:ui
 
 ```
 ├── app/                    # Next.js App Router pages
-│   ├── blog/              # Blog pages and dynamic routes
 │   ├── ir/                # Investor relations pages
 │   ├── globals.css        # Global styles and CSS variables
 │   ├── layout.tsx         # Root layout with navigation
@@ -153,17 +139,7 @@ pnpm test:ui
 └── README.md              # Project documentation
 ```
 
-### Content Management
-
-#### Blog Posts
-
-Blog posts are currently managed as TypeScript objects in the blog pages. For production, consider integrating with:
-
-- **Contentful**: Headless CMS with rich content modeling
-- **Sanity**: Real-time collaborative editing
-- **Markdown files**: Git-based content workflow
-
-#### Customization
+### Customization
 
 1. **Branding**: Update colors, fonts, and logo in `tailwind.config.ts`
 2. **Content**: Modify text content in component files
@@ -303,16 +279,6 @@ pnpm test:ui
 
 This project is proprietary software owned by Flow Inc. All rights reserved.
 
-## 📞 Support
-
-For technical support or questions about the website:
-
-- **Email**: tech@flow-inc.ai
-- **Documentation**: [Internal Wiki](link-to-internal-docs)
-- **Issues**: Use GitHub Issues for bug reports and feature requests
-
 ---
 
 **Built with ❤️ by the Flow Inc. Team**
-
-_Leveraging the power of AI to create exceptional web experiences._
