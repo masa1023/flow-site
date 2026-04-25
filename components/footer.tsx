@@ -21,6 +21,9 @@ export async function Footer() {
       { name: t('founderBlog'), href: 'https://masa373.work/' },
       { name: t('support'), href: '#contact' },
     ],
+    [t('legal')]: [
+      { name: t('securityPolicy'), href: '/security-policy' },
+    ],
   }
 
   return (
