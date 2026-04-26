@@ -35,11 +35,12 @@
     },
     "training": {
       "title": "AI研修・コンサル",
-      "description": "AIをチームの日々の業務に根付かせるご支援です。エンジニアにはClaude Code・AI駆動開発の指導、経営層にはフラットなAI戦略セッションを提供します。",
-      "feature1": "Claude Code・AIコーディング指導",
-      "feature2": "社内AIツール導入 (n8n, Dify, GAS)",
-      "feature3": "経営層向けAI戦略セッション",
-      "badge": "Hands-on"
+      "description": "AIをチームの日々の業務に根付かせるご支援です。Claude Code を中心としたハンズオンで、AIの基礎から業務直結のツール構築までを継続的に伴走します。",
+      "feature1": "Claude Code・AI コーディング指導",
+      "feature2": "業務直結ツールの構築伴走",
+      "feature3": "週次ハンズオン+チャットサポート",
+      "badge": "Hands-on",
+      "cta": "プログラムに申し込む"
     },
     "advisory": {
       "title": "技術アドバイザリー",
@@ -139,7 +140,6 @@
     "conversationHeading": "まずは30分のオンラインMTGから",
     "conversationDescription": "最初はお話を伺うだけ。その上で、具体的な次の一歩をご提案します。営業資料も売り込みもありません。",
     "emailTitle": "Email",
-    "emailDescription": "1営業日以内にご返信します",
     "formTitle": "メッセージを送る",
     "nameLabel": "お名前",
     "namePlaceholder": "お名前を入力",
@@ -169,7 +169,7 @@
     "aiTraining": "AI研修",
     "customSolutions": "カスタムソリューション",
     "ourTeam": "代表",
-    "founderBlog": "ファウンダーブログ",
+    "founderBlog": "代表者ブログ",
     "support": "サポート",
     "securityPolicy": "情報セキュリティ基本方針",
     "address": "150-0021 東京都渋谷区恵比寿西2丁目4番8号ウィンド恵比寿ビル8F",

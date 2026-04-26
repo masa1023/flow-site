@@ -35,11 +35,12 @@
     },
     "training": {
       "title": "AI Training & Consulting",
-      "description": "Help your team adopt AI in their daily work. Engineering teams are coached on Claude Code and AI-driven development; leadership gets clear-eyed sessions on AI strategy.",
+      "description": "Help your team make AI part of daily operations. Through hands-on coaching centered on Claude Code, we walk teams from AI fundamentals through to building tools that directly serve the business.",
       "feature1": "Claude Code & AI coding coaching",
-      "feature2": "Internal AI tooling rollout (n8n, Dify, GAS)",
-      "feature3": "Executive AI strategy sessions",
-      "badge": "Hands-on"
+      "feature2": "Business-tool & dashboard builds",
+      "feature3": "Weekly hands-on + chat support",
+      "badge": "Hands-on",
+      "cta": "Apply to the program"
     },
     "advisory": {
       "title": "Technical Advisory",
@@ -139,7 +140,6 @@
     "conversationHeading": "Start with a 30-minute call",
     "conversationDescription": "We listen first, then sketch concrete next steps. No pitch decks, no pressure.",
     "emailTitle": "Email",
-    "emailDescription": "Reply within one business day",
     "formTitle": "Send a message",
     "nameLabel": "Name",
     "namePlaceholder": "Your full name",
