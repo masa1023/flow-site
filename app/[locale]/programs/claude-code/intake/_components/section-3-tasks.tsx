@@ -11,9 +11,6 @@ import {
   FormDescription,
 } from '@/components/ui/form'
 import { Textarea } from '@/components/ui/textarea'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { Label } from '@/components/ui/label'
-import { AI_SUCCESS_SCORE_OPTIONS } from '@/lib/intake/options'
 import type { IntakeFormValues } from '@/lib/intake/types'
 
 const PLACEHOLDERS = [
@@ -77,42 +74,6 @@ export function Section3Tasks() {
                 rows={4}
                 placeholder="ChatGPTで議事録要約を試した。精度は悪くないが、毎回プロンプトをコピペするのが面倒で続かなかった。"
               />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="ai_success_score"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>うまくいった度合い</FormLabel>
-            <FormDescription>
-              1 = 全く手応えなし / 5 = 業務に定着している
-            </FormDescription>
-            <FormControl>
-              <RadioGroup
-                value={String(field.value ?? '')}
-                onValueChange={(v) => field.onChange(Number(v))}
-                className="flex gap-2"
-              >
-                {AI_SUCCESS_SCORE_OPTIONS.map((opt) => (
-                  <Label
-                    key={opt.value}
-                    htmlFor={`score-${opt.value}`}
-                    className="flex-1 flex items-center justify-center border rounded-md min-h-12 cursor-pointer hover:bg-accent has-[:checked]:border-primary has-[:checked]:bg-primary/5 has-[:checked]:font-semibold"
-                  >
-                    <RadioGroupItem
-                      value={opt.value}
-                      id={`score-${opt.value}`}
-                      className="sr-only"
-                    />
-                    {opt.label}
-                  </Label>
-                ))}
-              </RadioGroup>
             </FormControl>
             <FormMessage />
           </FormItem>

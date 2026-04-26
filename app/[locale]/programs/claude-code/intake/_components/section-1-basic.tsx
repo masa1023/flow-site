@@ -12,14 +12,10 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
-import { Label } from '@/components/ui/label'
-import { PREFERRED_CONTACT_OPTIONS } from '@/lib/intake/options'
 import type { IntakeFormValues } from '@/lib/intake/types'
 
 export function Section1Basic() {
   const form = useFormContext<IntakeFormValues>()
-  const preferredContact = form.watch('preferred_contact')
 
   return (
     <Form {...form}>
@@ -91,54 +87,6 @@ export function Section1Basic() {
           </FormItem>
         )}
       />
-
-      <FormField
-        control={form.control}
-        name="preferred_contact"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>希望連絡手段</FormLabel>
-            <FormDescription>
-              セッション外でのチャットサポートに使います
-            </FormDescription>
-            <FormControl>
-              <RadioGroup
-                value={field.value ?? ''}
-                onValueChange={field.onChange}
-                className="grid grid-cols-2 sm:grid-cols-4 gap-3"
-              >
-                {PREFERRED_CONTACT_OPTIONS.map((opt) => (
-                  <Label
-                    key={opt.value}
-                    htmlFor={`pc-${opt.value}`}
-                    className="flex items-center gap-2 border rounded-md px-3 py-2 cursor-pointer hover:bg-accent has-[:checked]:border-primary has-[:checked]:bg-primary/5"
-                  >
-                    <RadioGroupItem value={opt.value} id={`pc-${opt.value}`} />
-                    <span className="text-sm">{opt.label}</span>
-                  </Label>
-                ))}
-              </RadioGroup>
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      {preferredContact === 'other' && (
-        <FormField
-          control={form.control}
-          name="preferred_contact_other"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>その他の連絡手段</FormLabel>
-              <FormControl>
-                <Input {...field} placeholder="Discord, WhatsApp など" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      )}
     </Form>
   )
 }

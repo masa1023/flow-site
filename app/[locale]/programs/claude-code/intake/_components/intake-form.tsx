@@ -30,31 +30,19 @@ const DEFAULT_VALUES: Partial<IntakeFormValues> = {
   company: '',
   role_business: '',
   email: '',
-  preferred_contact: undefined,
-  preferred_contact_other: '',
 
   goal_3months: '',
-  stance: undefined,
   motivation: '',
 
   busy_tasks: ['', '', ''],
   ai_experience: '',
-  ai_success_score: 3,
 
   ideas: ['', '', ''],
   top_idea: '',
-  top_idea_reason: '',
-  outcome_description: '',
 
   programming_level: undefined,
-  daily_tools: [],
-  daily_tools_other: '',
   pc_os: undefined,
   pc_os_other: '',
-  pc_admin: undefined,
-  pc_spec: '',
-  existing_accounts: [],
-  existing_accounts_other: '',
 
   weekly_hours: undefined,
   monthly_budget: undefined,

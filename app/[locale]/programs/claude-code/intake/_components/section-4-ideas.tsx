@@ -12,7 +12,6 @@ import {
   FormDescription,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
@@ -43,7 +42,7 @@ export function Section4Ideas() {
         name="ideas"
         render={() => (
           <FormItem>
-            <FormLabel>作りたい / 自動化したいもの(ブレスト)</FormLabel>
+            <FormLabel>作りたい / 自動化したいもの</FormLabel>
             <FormDescription>
               思いつくものをすべて。現実味・難易度・実現可能性は一切考慮せず、「あったら嬉しい」だけで選んでOKです。3個以上、最大10個まで。
             </FormDescription>
@@ -136,43 +135,6 @@ export function Section4Ideas() {
                   ))}
                 </RadioGroup>
               )}
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="top_idea_reason"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>その1つを選んだ理由を一言</FormLabel>
-            <FormControl>
-              <Input {...field} placeholder="一番時間が削れそうだから" />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-
-      <FormField
-        control={form.control}
-        name="outcome_description"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>
-              それが完成したら「誰」が「何」をできるようになりますか?
-            </FormLabel>
-            <FormDescription>
-              使うユーザー像と、その人の行動が具体的に変わるポイントを書いてください
-            </FormDescription>
-            <FormControl>
-              <Textarea
-                {...field}
-                rows={5}
-                placeholder="営業担当(自分+パート1名)が、問い合わせメールが来た瞬間にステータス・優先度・回答テンプレが並んだダッシュボードを見て、返信まで3分で済む。メール振り分けに使っていた1日30分がゼロになる。"
-              />
             </FormControl>
             <FormMessage />
           </FormItem>

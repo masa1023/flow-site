@@ -55,35 +55,23 @@ export async function POST(request: NextRequest) {
       company: data.company,
       role_business: data.role_business,
       email: data.email,
-      preferred_contact: data.preferred_contact,
-      preferred_contact_other: data.preferred_contact_other ?? null,
 
       goal_3months: data.goal_3months,
-      stance: data.stance,
       motivation: data.motivation,
 
       busy_tasks: data.busy_tasks,
       ai_experience: data.ai_experience,
-      ai_success_score: data.ai_success_score,
 
       ideas: data.ideas,
       top_idea: data.top_idea,
-      top_idea_reason: data.top_idea_reason,
-      outcome_description: data.outcome_description,
 
       programming_level: data.programming_level,
-      daily_tools: data.daily_tools,
-      daily_tools_other: data.daily_tools_other ?? null,
       pc_os: data.pc_os,
       pc_os_other: data.pc_os_other ?? null,
-      pc_admin: data.pc_admin,
-      pc_spec: data.pc_spec,
-      existing_accounts: data.existing_accounts,
-      existing_accounts_other: data.existing_accounts_other ?? null,
 
       weekly_hours: data.weekly_hours,
       monthly_budget: data.monthly_budget,
-      concerns: data.concerns,
+      concerns: data.concerns?.trim() ? data.concerns : null,
     })
 
   if (insertError) {

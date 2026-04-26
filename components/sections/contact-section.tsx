@@ -110,7 +110,7 @@ export function ContactSection() {
                   isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
                 }
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex items-start space-x-4"
+                className="flex items-center space-x-4"
               >
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
@@ -121,9 +121,6 @@ export function ContactSection() {
                   <h4 className="font-semibold mb-1">{t('emailTitle')}</h4>
                   <p className="text-primary font-medium mb-1">
                     hello@flow-inc.ai
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {t('emailDescription')}
                   </p>
                 </div>
               </motion.div>

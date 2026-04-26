@@ -88,7 +88,10 @@ export function Section6Constraints() {
         name="concerns"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>最も不安なこと、事前に共有しておきたい制約</FormLabel>
+            <FormLabel>
+              最も不安なこと、事前に共有しておきたい制約{' '}
+              <span className="text-muted-foreground font-normal">(任意)</span>
+            </FormLabel>
             <FormDescription>
               継続できるか、時間が確保できるか、扱えないデータ、社内IT統制の制約、出張予定...など何でも
             </FormDescription>
