@@ -17,6 +17,7 @@ import {
   Map,
   GitBranch,
   Building2,
+  ArrowRight,
 } from 'lucide-react'
 import {
   Card,
@@ -26,6 +27,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Link } from '@/i18n/navigation'
 
 export function ServicesSection() {
   const t = useTranslations('Capabilities')
@@ -58,6 +61,7 @@ export function ServicesSection() {
       color:
         'bg-emerald-500/10 text-emerald-600 border-emerald-200 dark:border-emerald-800',
       badge: t('training.badge'),
+      cta: { text: t('training.cta'), href: '/programs/claude-code/intake' },
     },
     {
       icon: Compass,
@@ -126,7 +130,7 @@ export function ServicesSection() {
                   </div>
                 </CardHeader>
 
-                <CardContent>
+                <CardContent className="flex flex-col gap-5">
                   <div className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
                       <div
@@ -142,6 +146,14 @@ export function ServicesSection() {
                       </div>
                     ))}
                   </div>
+                  {service.cta && (
+                    <Button asChild size="sm" className="w-full mt-1">
+                      <Link href={service.cta.href}>
+                        {service.cta.text}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             </motion.div>
