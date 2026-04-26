@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import formData from 'form-data'
 import Mailgun from 'mailgun.js'
 import { intakeSchema } from '@/lib/intake/schema'
-import { getServiceRoleClient } from '@/lib/intake/supabase'
+import { getServiceRoleClient } from '@/lib/supabase'
 import {
   buildIntakeEmailHtml,
   buildIntakeEmailSubject,

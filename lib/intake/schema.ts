@@ -73,15 +73,6 @@ const refineSection5 = (v: Section5Values, ctx: z.RefinementCtx) => {
   }
 }
 
-// --- Section schemas (with refinements, used for per-section validation) ---
-
-export const section1Schema = section1Base
-export const section2Schema = section2Base
-export const section3Schema = section3Base
-export const section4Schema = section4Base.superRefine(refineSection4)
-export const section5Schema = section5Base.superRefine(refineSection5)
-export const section6Schema = section6Base
-
 // --- Whole-form schema (merge bases, then apply all refinements) ---
 
 export const intakeSchema = section1Base
