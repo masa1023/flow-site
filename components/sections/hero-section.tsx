@@ -40,6 +40,7 @@ export function HeroSection() {
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent leading-tight"
           >
             {t('heading')}
+            <br />
             <span className="bg-gradient-to-r from-primary to-sky-500 bg-clip-text text-transparent">
               {t('headingHighlight')}
             </span>
@@ -50,9 +51,12 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            {t('subtitle')}
+            {t('subtitleLead')}
+            <span className="md:hidden"> </span>
+            <br className="hidden md:inline" />
+            {t('subtitleSupport')}
           </motion.p>
 
           {/* Feature Pills */}

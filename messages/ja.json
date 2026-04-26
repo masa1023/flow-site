@@ -14,7 +14,8 @@
   "Hero": {
     "heading": "AI that drives the business.",
     "headingHighlight": "Built by an AI-native team.",
-    "subtitle": "Flowは、自社の業務をAIで運用するAIネイティブな少数精鋭チーム。プロダクト開発・AI研修・技術アドバイザリーを通じて、AIを御社の事業ドライバーへと変えます。",
+    "subtitleLead": "プロダクト開発・AI研修・技術アドバイザリーを通じて、AIを事業のドライバーへ。",
+    "subtitleSupport": "自社の業務にもAIをフル活用しているFlowの少数精鋭チームがサポートいたします。",
     "pillDev": "AI開発",
     "pillWeb": "Web・モバイル開発",
     "pillTraining": "研修・アドバイザリー",

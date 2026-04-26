@@ -14,7 +14,8 @@
   "Hero": {
     "heading": "AI that drives the business.",
     "headingHighlight": "Built by an AI-native team.",
-    "subtitle": "Flow is an AI-native team that runs its own work on AI. Through product engineering, AI training, and technical advisory, we turn AI into a real business driver.",
+    "subtitleLead": "Through product engineering, AI training, and technical advisory, we turn AI into a real business driver.",
+    "subtitleSupport": "Backed by Flow's small, senior team that uses AI in our own work, every day.",
     "pillDev": "AI Development",
     "pillWeb": "Web & Mobile",
     "pillTraining": "Training & Advisory",
