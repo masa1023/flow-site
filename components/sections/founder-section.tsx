@@ -53,7 +53,7 @@ export function FounderSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16 max-w-3xl mx-auto"
+          className="text-center mb-16 max-w-4xl mx-auto"
         >
           <Badge variant="outline" className="mb-4">
             {t('badge')}
