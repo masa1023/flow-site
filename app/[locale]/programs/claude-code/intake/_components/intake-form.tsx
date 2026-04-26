@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -61,7 +61,7 @@ const SECTION_COMPONENTS = [
 export function IntakeForm() {
   const router = useRouter()
   const [section, setSection] = useState(0)
-  const [submitting, setSubmitting] = useState(false)
+  const [isSubmitting, startSubmit] = useTransition()
   const restoredRef = useRef(false)
 
   const methods = useForm<IntakeFormValues>({
@@ -121,28 +121,28 @@ export function IntakeForm() {
     }
   }
 
-  const onSubmit = async (data: IntakeFormValues) => {
-    setSubmitting(true)
-    try {
-      const res = await fetch('/api/intake', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
+  const onSubmit = (data: IntakeFormValues) => {
+    startSubmit(async () => {
+      try {
+        const res = await fetch('/api/intake', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        })
 
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`)
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`)
+        }
+
+        clearDraft()
+        router.push('/programs/claude-code/intake/done')
+      } catch (err) {
+        console.error(err)
+        toast.error('送信に失敗しました', {
+          description: 'しばらく経ってから再度お試しください。',
+        })
       }
-
-      clearDraft()
-      router.push('/programs/claude-code/intake/done')
-    } catch (err) {
-      console.error(err)
-      toast.error('送信に失敗しました', {
-        description: 'しばらく経ってから再度お試しください。',
-      })
-      setSubmitting(false)
-    }
+    })
   }
 
   const onInvalid: Parameters<typeof handleSubmit>[1] = (errors) => {
@@ -184,7 +184,7 @@ export function IntakeForm() {
             intro={SECTION_INTROS[section]}
             isFirst={isFirst}
             isLast={isLast}
-            isSubmitting={submitting}
+            isSubmitting={isSubmitting}
             onBack={handleBack}
             onNext={handleNext}
           >
