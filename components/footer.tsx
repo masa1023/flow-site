@@ -9,10 +9,9 @@ export async function Footer() {
 
   const footerLinks = {
     [t('services')]: [
-      { name: t('aiDevelopment'), href: '#services' },
-      { name: t('dxConsulting'), href: '#services' },
+      { name: t('productEngineering'), href: '#services' },
       { name: t('aiTraining'), href: '#services' },
-      { name: t('customSolutions'), href: '#contact' },
+      { name: t('technicalAdvisory'), href: '#services' },
     ],
     [t('company')]: [
       { name: t('ourTeam'), href: '#team' },

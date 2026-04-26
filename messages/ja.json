@@ -23,9 +23,9 @@
     "ctaSecondary": "実績を見る"
   },
   "Capabilities": {
-    "badge": "Capabilities",
-    "heading": "3つの関わり方",
-    "description": "多くのご相談はこの3つから始まり、長期の伴走パートナーシップに発展します。",
+    "badge": "Services",
+    "heading": "3つのサービス",
+    "description": "プロダクト開発・AI研修・技術アドバイザリーの3つのサービスで、企業のAI活用を構想から本番運用まで一気通貫で支援します。",
     "engineering": {
       "title": "プロダクト開発",
       "description": "Web・モバイル・AIアプリケーションを、構想から本番運用まで一気通貫で。生成AI連携や音声エージェントを得意としつつ、AIを使わない通常のWeb・モバイル開発までフルスタックで対応します。",
@@ -165,10 +165,9 @@
     "services": "Services",
     "company": "Company",
     "resources": "Resources",
-    "aiDevelopment": "AI開発",
-    "dxConsulting": "DXコンサルティング",
-    "aiTraining": "AI研修",
-    "customSolutions": "カスタムソリューション",
+    "productEngineering": "プロダクト開発",
+    "aiTraining": "AI研修・コンサル",
+    "technicalAdvisory": "技術アドバイザリー",
     "ourTeam": "チーム",
     "founderBlog": "代表者ブログ",
     "support": "サポート",

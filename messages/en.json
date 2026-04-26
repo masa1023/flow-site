@@ -23,9 +23,9 @@
     "ctaSecondary": "See Selected Work"
   },
   "Capabilities": {
-    "badge": "Capabilities",
-    "heading": "Three ways to bring us in",
-    "description": "Most engagements start with one of these. Many evolve into long-term embedded partnerships.",
+    "badge": "Services",
+    "heading": "Three core services",
+    "description": "Product engineering, AI training, and technical advisory — three end-to-end services that take your AI initiatives from concept to production.",
     "engineering": {
       "title": "Product Engineering",
       "description": "Web, mobile, and AI applications, built and shipped end-to-end. Our specialty is generative AI integration and voice agents, but we deliver the full stack — with or without AI.",
@@ -165,10 +165,9 @@
     "services": "Services",
     "company": "Company",
     "resources": "Resources",
-    "aiDevelopment": "AI Development",
-    "dxConsulting": "DX Consulting",
-    "aiTraining": "AI Training",
-    "customSolutions": "Custom Solutions",
+    "productEngineering": "Product Engineering",
+    "aiTraining": "AI Training & Consulting",
+    "technicalAdvisory": "Technical Advisory",
     "ourTeam": "Team",
     "founderBlog": "Founder's Blog",
     "support": "Support",
