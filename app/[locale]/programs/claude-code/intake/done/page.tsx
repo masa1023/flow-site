@@ -20,9 +20,9 @@ export default function IntakeDonePage() {
             ご回答ありがとうございました。
           </h1>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            内容を確認のうえ、初回セッションに向けた叩き台のカリキュラム案と
+            内容を確認のうえ、初回セッションに向けたカリキュラム案と
             <br className="hidden sm:inline" />
-            事前準備事項を Email でお送りします（2営業日以内）。
+            事前準備事項を Email でお送りします。
           </p>
           <Button asChild>
             <Link href="/">トップに戻る</Link>

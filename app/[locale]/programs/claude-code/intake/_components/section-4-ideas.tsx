@@ -95,7 +95,6 @@ export function Section4Ideas() {
                 追加
               </Button>
             )}
-            <FormMessage />
           </FormItem>
         )}
       />
