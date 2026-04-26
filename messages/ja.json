@@ -8,7 +8,7 @@
     "home": "ホーム",
     "services": "サービス",
     "work": "実績",
-    "founder": "代表",
+    "founder": "チーム",
     "contact": "お問い合わせ"
   },
   "Hero": {
@@ -94,7 +94,7 @@
     }
   },
   "Founder": {
-    "badge": "The Founder",
+    "badge": "Team",
     "heading": "代表が中心に立ち、専門家チームで動く。",
     "description": "Flowでは代表・南がプロジェクトの中核設計と技術判断に直接関わります。実装は厳選した専門家のなかから、案件ごとに最適なチームを編成します。",
     "name": "南 政暢",
@@ -168,7 +168,7 @@
     "dxConsulting": "DXコンサルティング",
     "aiTraining": "AI研修",
     "customSolutions": "カスタムソリューション",
-    "ourTeam": "代表",
+    "ourTeam": "チーム",
     "founderBlog": "代表者ブログ",
     "support": "サポート",
     "securityPolicy": "情報セキュリティ基本方針",

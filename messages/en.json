@@ -8,7 +8,7 @@
     "home": "Home",
     "services": "Capabilities",
     "work": "Work",
-    "founder": "Founder",
+    "founder": "Team",
     "contact": "Contact"
   },
   "Hero": {
@@ -94,7 +94,7 @@
     }
   },
   "Founder": {
-    "badge": "The Founder",
+    "badge": "Team",
     "heading": "Founder at the core, specialist team around.",
     "description": "On every engagement, Masa is hands-on with the central design and key technical decisions. Implementation is composed per-project from a curated group of specialists.",
     "name": "Masanobu Minami",
@@ -168,7 +168,7 @@
     "dxConsulting": "DX Consulting",
     "aiTraining": "AI Training",
     "customSolutions": "Custom Solutions",
-    "ourTeam": "Founder",
+    "ourTeam": "Team",
     "founderBlog": "Founder's Blog",
     "support": "Support",
     "securityPolicy": "Information Security Policy",
