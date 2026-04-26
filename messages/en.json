@@ -35,10 +35,10 @@
     },
     "training": {
       "title": "AI Training & Consulting",
-      "description": "Help your team adopt AI in their daily work. Engineering teams are coached on Claude Code and AI-driven development; leadership gets clear-eyed sessions on AI strategy.",
+      "description": "Help your team make AI part of daily operations. Through hands-on coaching centered on Claude Code, we walk teams from AI fundamentals through to building tools that directly serve the business.",
       "feature1": "Claude Code & AI coding coaching",
-      "feature2": "Internal AI tooling rollout (n8n, Dify, GAS)",
-      "feature3": "Executive AI strategy sessions",
+      "feature2": "Business-tool & dashboard builds",
+      "feature3": "Weekly hands-on + chat support",
       "badge": "Hands-on"
     },
     "advisory": {

@@ -35,10 +35,10 @@
     },
     "training": {
       "title": "AI研修・コンサル",
-      "description": "AIをチームの日々の業務に根付かせるご支援です。エンジニアにはClaude Code・AI駆動開発の指導、経営層にはフラットなAI戦略セッションを提供します。",
-      "feature1": "Claude Code・AIコーディング指導",
-      "feature2": "社内AIツール導入 (n8n, Dify, GAS)",
-      "feature3": "経営層向けAI戦略セッション",
+      "description": "AIをチームの日々の業務に根付かせるご支援です。Claude Code を中心としたハンズオンで、AIの基礎から業務直結のツール構築までを継続的に伴走します。",
+      "feature1": "Claude Code・AI コーディング指導",
+      "feature2": "業務直結ツールの構築伴走",
+      "feature3": "週次ハンズオン+チャットサポート",
       "badge": "Hands-on"
     },
     "advisory": {
