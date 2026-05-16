@@ -57,6 +57,10 @@ export function Navigation() {
       if (element) {
         e.preventDefault()
         element.scrollIntoView({ behavior: 'smooth' })
+        // Reflect the section in the URL so it matches cross-page
+        // navigation and stays shareable. A relative `#hash` keeps the
+        // current path/locale (e.g. /ja) intact.
+        window.history.pushState(null, '', `#${hash}`)
       }
     }
     setIsOpen(false)
