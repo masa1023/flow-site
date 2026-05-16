@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
+import { Link } from '@/i18n/navigation'
 import { Waves, Mail, MapPin } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import { LanguageSwitcher } from '@/components/language-switcher'
@@ -9,17 +9,17 @@ export async function Footer() {
 
   const footerLinks = {
     [t('services')]: [
-      { name: t('productEngineering'), href: '#services' },
-      { name: t('aiTraining'), href: '#services' },
-      { name: t('technicalAdvisory'), href: '#services' },
+      { name: t('productEngineering'), href: '/#services' },
+      { name: t('aiTraining'), href: '/#services' },
+      { name: t('technicalAdvisory'), href: '/#services' },
     ],
     [t('company')]: [
-      { name: t('ourTeam'), href: '#team' },
+      { name: t('ourTeam'), href: '/#team' },
       { name: t('securityPolicy'), href: '/security-policy' },
     ],
     [t('resources')]: [
       { name: t('founderBlog'), href: 'https://masa373.work/' },
-      { name: t('support'), href: '#contact' },
+      { name: t('support'), href: '/#contact' },
     ],
   }
 
