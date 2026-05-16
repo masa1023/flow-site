@@ -108,6 +108,11 @@ export default async function LocaleLayout({ children, params }: Props) {
           </ThemeProvider>
         </NextIntlClientProvider>
         <Analytics />
+        <script
+          src="https://pub-c323502dc7a54105962f8b169ff52c60.r2.dev/embed.js"
+          data-project-id="461af8b8-8236-4e17-913f-47c713203750"
+          async
+        ></script>
       </body>
     </html>
   )
