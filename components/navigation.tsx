@@ -44,11 +44,18 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     const hash = href.includes('#') ? href.split('#')[1] : null
-    if (hash) {
+    // On the home page, intercept and smooth-scroll to the section.
+    // On subpages, let the Link navigate to `/#section` normally so the
+    // browser lands on the home page at the target section.
+    if (hash && pathname === '/') {
       const element = document.getElementById(hash)
       if (element) {
+        e.preventDefault()
         element.scrollIntoView({ behavior: 'smooth' })
       }
     }
@@ -88,12 +95,7 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={(e) => {
-                  if (item.href.includes('#')) {
-                    e.preventDefault()
-                    handleNavClick(item.href)
-                  }
-                }}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className={cn(
                   'text-sm font-medium transition-colors hover:text-primary relative py-1',
                   'after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:transition-transform after:duration-200 after:origin-center',
@@ -134,14 +136,7 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  onClick={(e) => {
-                    if (item.href.includes('#')) {
-                      e.preventDefault()
-                      handleNavClick(item.href)
-                    } else {
-                      setIsOpen(false)
-                    }
-                  }}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={cn(
                     'block px-3 py-2 text-base font-medium rounded-md transition-colors',
                     isActive(item.href)
